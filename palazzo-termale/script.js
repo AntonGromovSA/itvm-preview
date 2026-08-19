@@ -1,3 +1,9 @@
+// Match the main Palazzo Termale hero title to the premium serif used on the ITVM site.
+const itvmFontStyles=document.createElement('link');
+itvmFontStyles.rel='stylesheet';
+itvmFontStyles.href='./itvm-font.css';
+document.head.appendChild(itvmFontStyles);
+
 // Official-content extensions. All informational text in injected sections is sourced from palazzotermale.ru.
 const extensionStyles=document.createElement('link');
 extensionStyles.rel='stylesheet';
