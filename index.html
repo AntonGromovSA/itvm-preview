@@ -1,0 +1,843 @@
+<!doctype html><html lang=ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ИТВМ — Институт традиционной восточной медицины</title>
+<style>
+:root{--bg:#050605;--panel:#0a0c0b;--fg:#f2ede4;--mut:#a9a198;--gold:#c79858;--line:#c7985838}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+header{position:fixed;z-index:100;top:0;left:0;right:0;height:74px;padding:0 3vw;display:flex;align-items:center;gap:24px;background:#040504e7;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff0d}.logo{font:32px Georgia;color:#e0b879;letter-spacing:.08em}.brand{font-size:8px;line-height:1.35;color:#a9a39a;width:150px}nav{display:flex;gap:21px;margin:auto;font-size:9px;letter-spacing:.07em;text-transform:uppercase}.cta{border:1px solid var(--gold);padding:12px 17px;font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.hero{height:760vh;position:relative}.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:#020302}.heroBase,.scene,.veil,#heroFilm{position:absolute;inset:0}.heroBase{background:#020302;z-index:0}#heroFilm{width:100%;height:100%;object-fit:cover;object-position:center;z-index:1;filter:brightness(.78) saturate(.9)}.scene{z-index:1;background:center/cover no-repeat;opacity:0;transform:scale(1.1);transition:opacity .7s ease,transform 1.15s ease;filter:saturate(.9)}.scene.active{opacity:1;transform:scale(1)}.veil{z-index:2;background:linear-gradient(90deg,#020302e8 0,#0203026c 44%,#02030220 70%,#0203028d),linear-gradient(0deg,#020302a0,transparent 32%)}
+.heroCopy{position:absolute;z-index:5;left:16vw;top:22vh;width:min(720px,60vw)}.ey{color:var(--gold);font-size:10px;letter-spacing:.18em;text-transform:uppercase}.heroCopy h1{font:clamp(54px,6.5vw,100px)/.94 Georgia;margin:15px 0 22px;letter-spacing:-.035em;text-shadow:0 5px 35px #000}.heroCopy p{font-size:16px;line-height:1.65;color:#d0c8be;max-width:510px}.journey{display:flex;align-items:center;gap:13px;margin-top:28px;color:#c8b69c;font-size:9px;text-transform:uppercase;letter-spacing:.1em}.journey i{width:45px;height:45px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-style:normal}
+.rail{position:absolute;z-index:6;left:3vw;top:15vh;display:grid;border-left:1px solid #ffffff3c}.rail button{position:relative;width:105px;height:67px;background:none;border:0;color:#a7a7a7;text-align:left;padding-left:22px;cursor:pointer}.rail button span,.rail button b{display:block;font-size:9px}.rail button b{margin-top:4px}.rail button.active{color:#e2b77b}.rail button.active:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#e2b77b;left:-5px;top:26px;box-shadow:0 0 14px #e2b77b}
+.stats{position:absolute;z-index:5;right:4vw;top:21vh;display:grid;gap:20px}.stats div{padding-bottom:18px;border-bottom:1px solid #c7985848}.stats b{font:34px Georgia;color:#dfb475}.stats span{display:block;font-size:10px;color:#aaa;margin-top:5px}.hint{position:absolute;z-index:6;bottom:25px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.15em;color:#d0aa73;text-transform:uppercase}
+section{padding:105px 4vw;border-top:1px solid var(--line)}h2{font:clamp(44px,5.4vw,78px)/1 Georgia;margin:12px 0 25px}.lead{color:var(--mut);line-height:1.7;font-size:16px;max-width:760px}
+.elements{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);margin-top:48px}.element{min-height:315px;padding:24px;position:relative;overflow:hidden;background:#0a0b0a}.element:before{content:"";position:absolute;inset:0;background:linear-gradient(#0002,#000d),var(--pic) center/cover;transition:.55s}.element:hover:before{transform:scale(1.05);filter:brightness(1.25)}.element>*{position:relative}.element small{color:#d5ad72}.element h3{font:27px Georgia;margin-top:135px;margin-bottom:10px}.element p{font-size:11px;color:#bbb;line-height:1.5}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.storyPic{min-height:620px;background:linear-gradient(#0001,#0007),url(assets/harmony.jpg) center/cover;border:1px solid var(--line)}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:35px}.fact{background:#0b0d0b;padding:23px}.fact b{font:31px Georgia;color:#dcb071}.fact span{display:block;font-size:9px;color:#aaa;margin-top:7px}
+.doctors{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}.doctor{background:linear-gradient(180deg,#111310,#090a09);border:1px solid var(--line);padding-bottom:22px;overflow:hidden;box-shadow:0 20px 55px #0004;transition:.45s cubic-bezier(.2,.7,.2,1)}.doctor:hover{transform:translateY(-7px);border-color:#c7985870}.portrait{overflow:hidden;position:relative;background:radial-gradient(circle at 50% 20%,#33352f,#10110f 66%)}.portrait:after{content:'';position:absolute;inset:0;box-shadow:inset 0 -70px 80px #090a0955;pointer-events:none}.doctor img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 24%;display:block;filter:saturate(.82) contrast(1.02);transition:.65s cubic-bezier(.2,.7,.2,1)}.doctor:hover img{transform:scale(1.035);filter:saturate(.95)}.doctor h3,.doctor p,.doctor a{margin-left:18px;margin-right:18px}.doctor h3{font:22px Georgia;margin-top:18px;margin-bottom:8px}.doctor p{font-size:11px;color:#aaa;line-height:1.55;min-height:50px}.doctor a{font-size:9px;color:#d0a568;text-transform:uppercase}
+.palazzo{min-height:92vh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:#071012}.palazzoFilm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:brightness(.62) saturate(.9)}.palazzoShade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#040706bd,#04070640 50%,#0407068c),linear-gradient(0deg,#040706c7,transparent 50%)}.palazzoContent{position:relative;z-index:2;width:100%;padding:90px 4vw}.water{width:min(620px,76vw);height:94px;border-radius:999px;margin:36px auto 0;border:1px solid #d8b57878;background:#0710126b;backdrop-filter:blur(12px);box-shadow:0 15px 60px #0006;display:grid;place-items:center;cursor:pointer;transition:.8s}.water.open{transform:scale(1.04);background:#c79858;color:#111;box-shadow:0 0 90px #c798584d}.water b{font-size:10px;letter-spacing:.12em}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:45px}.service{background:#0a0c0b;padding:32px;min-height:180px}.service h3{font:25px Georgia}.service p{font-size:12px;color:#aaa;line-height:1.55}
+footer{padding:95px 4vw;text-align:center}footer .cta{display:inline-block;background:var(--gold);color:#111;font-weight:bold;margin-top:20px}
+@media(max-width:900px){nav,.brand,.stats{display:none}.hero{height:520vh}.heroCopy{left:9vw;top:25vh;width:82vw}.rail{display:none}.elements{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr}.doctors{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}}
+
+.intro{position:fixed;inset:0;z-index:999;background:#050605;display:grid;place-items:center;transition:opacity 1s,visibility 1s}.intro.hide{opacity:0;visibility:hidden}.introMark{text-align:center}.introMark b{display:block;font:54px Georgia;color:#dfb879;letter-spacing:.14em}.introMark span{display:block;margin-top:12px;font-size:9px;letter-spacing:.22em;color:#aaa;text-transform:uppercase}
+.progress{position:fixed;z-index:120;left:0;top:73px;height:1px;background:var(--gold);width:0;box-shadow:0 0 12px #c79858}
+::selection{background:#c79858;color:#111}
+
+.instituteFilmSection{position:relative;overflow:hidden;padding-top:0}
+.instituteFilmWrap{height:68vh;min-height:520px;position:relative;margin:0 -4vw 90px;overflow:hidden;border-bottom:1px solid var(--line)}
+.instituteFilm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.70) saturate(.9)}
+.instituteFilmShade{position:absolute;inset:0;background:linear-gradient(90deg,#0506058a,#0506051f 52%,#050605b0),linear-gradient(0deg,#050605e0,transparent 48%)}
+.instituteFilmWrap:after{content:'МЕДИЦИНА · ТРАДИЦИЯ · ТОЧНОСТЬ';position:absolute;left:4vw;bottom:34px;color:#d2ab72;font-size:9px;letter-spacing:.19em}
+
+.cinematicFinal{position:relative;min-height:92vh;padding:0;display:grid;place-items:center;text-align:left;overflow:hidden;border-top:1px solid var(--line)}
+.finalFilm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.64) saturate(.9)}
+.finalShade{position:absolute;inset:0;background:linear-gradient(90deg,#040504dc 0,#04050483 40%,#0405041c 72%,#04050475),linear-gradient(0deg,#040504b5,transparent 45%)}
+.finalContent{position:relative;z-index:2;width:min(1180px,92vw);margin:auto}
+.finalContent h2{font-size:clamp(58px,7vw,105px);max-width:820px;margin-bottom:22px}
+.finalContent .lead{margin:0;max-width:570px;color:#d4cec4}
+.finalContent .cta{display:inline-block;margin-top:28px;background:var(--gold);color:#111;padding:15px 22px}
+section{transition:opacity .7s ease,transform .7s ease}
+.reveal{opacity:.01;transform:translateY(28px)}
+.reveal.visible{opacity:1;transform:none}
+
+.scene[style*="wood.jpg"]{background-position:62% center}
+.scene[style*="earth.jpg"]{background-position:60% center}
+.scene[style*="fire.jpg"]{background-position:62% center}
+.scene[style*="metal.jpg"]{background-position:62% center}
+.scene[style*="harmony.jpg"]{background-position:60% center}
+
+/* v31: original element concept restored */
+.stage>.scene{
+  z-index:1;
+}
+.stage>.scene.active{
+  opacity:1;
+}
+.crestMark{
+  position:absolute;z-index:7;left:16vw;top:4.2vh;
+  width:145px;height:145px;pointer-events:none
+}
+.crestMark img{
+  width:100%;height:100%;object-fit:contain;
+  filter:drop-shadow(0 10px 24px #000d)
+}
+.clinicReal{background:#060706}
+.clinicMosaic{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:245px;gap:8px;margin-top:40px
+}
+.clinicMosaic figure{
+  margin:0;position:relative;overflow:hidden;background:#111
+}
+.clinicMosaic figure.wide{grid-column:span 2;grid-row:span 2}
+.clinicMosaic img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:brightness(.82) saturate(.88);transition:.7s ease
+}
+.clinicMosaic figure:hover img{
+  transform:scale(1.03);filter:brightness(.94) saturate(.98)
+}
+.clinicMosaic figcaption{
+  position:absolute;z-index:2;left:12px;bottom:11px;
+  background:#050605d9;padding:8px 10px;
+  font-size:9px;letter-spacing:.08em;text-transform:uppercase
+}
+@media(max-width:900px){
+  .crestMark{left:9vw;top:7vh;width:105px;height:105px}
+  .clinicMosaic{grid-template-columns:1fr 1fr;grid-auto-rows:210px}
+  .clinicMosaic figure.wide{grid-column:span 2;grid-row:span 1}
+}
+
+
+/* v32 — dedicated first screen */
+.startHero{
+  position:relative;
+  min-height:100vh;
+  padding:0;
+  overflow:hidden;
+  background:#030403;
+  border-top:0
+}
+.startHeroFilm{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  filter:brightness(.58) saturate(.88)
+}
+.startHeroShade{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,#030403f7 0%,#030403df 31%,#03040381 58%,#03040331 78%,#03040373 100%),
+    linear-gradient(0deg,#030403c6 0%,transparent 48%,#03040325 100%)
+}
+.startHeroInner{
+  position:relative;z-index:3;
+  width:min(1320px,92vw);
+  min-height:100vh;
+  margin:auto;
+  padding:110px 0 130px;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start
+}
+.startCrest{
+  width:190px;height:190px;
+  margin:0 0 20px;
+  display:grid;place-items:center;
+  filter:drop-shadow(0 14px 30px #000b)
+}
+.startCrest img{width:100%;height:100%;object-fit:contain}
+.startEy{
+  color:var(--gold);
+  font-size:10px;letter-spacing:.16em;text-transform:uppercase
+}
+.startHero h1{
+  font:clamp(55px,6.4vw,102px)/.92 Georgia;
+  letter-spacing:-.04em;
+  max-width:910px;
+  margin:14px 0 22px;
+  text-shadow:0 8px 34px #0009
+}
+.startHero p{
+  max-width:650px;
+  font-size:17px;line-height:1.68;color:#d4cdc3
+}
+.startActions{display:flex;gap:12px;margin-top:27px}
+.startPrimary,.startGhost{
+  display:inline-block;
+  padding:14px 20px;
+  font-size:9px;letter-spacing:.08em;text-transform:uppercase
+}
+.startPrimary{background:var(--gold);color:#111;font-weight:bold}
+.startGhost{border:1px solid #ffffff45;color:#eee}
+.startStats{
+  position:absolute;z-index:4;right:4vw;bottom:70px;
+  display:grid;grid-template-columns:repeat(3,150px);
+  background:#080908d6;border:1px solid #ffffff10
+}
+.startStats div{padding:18px;border-right:1px solid #ffffff10}
+.startStats div:last-child{border-right:0}
+.startStats b{font:28px Georgia;color:#dfb475}
+.startStats span{display:block;font-size:9px;color:#aaa;margin-top:5px}
+.startHint{
+  position:absolute;z-index:4;bottom:25px;left:50%;
+  transform:translateX(-50%);
+  font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#cda56f
+}
+
+/* element journey cleanup */
+.heroBase{background:#020302!important;transform:none!important}
+.scene.active{opacity:1!important}
+.crestMark{display:none!important}
+
+/* hide obsolete splash if cached */
+.intro{display:none!important}
+
+@media(max-width:900px){
+  .startHeroInner{padding:100px 7vw 120px}
+  .startCrest{width:135px;height:135px}
+  .startStats{left:7vw;right:7vw;bottom:62px;grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  .startStats{display:none}
+  .startHero h1{font-size:48px}
+  .startHero p{font-size:15px}
+  .startActions{flex-direction:column}
+}
+
+
+/* v33 — content architecture */
+.contentSection{background:#070807}
+.sectionHead{display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;align-items:end;margin-bottom:42px}.sectionHead h2{margin-bottom:0}
+.directionGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#c7985830;border:1px solid #c7985830}
+.directionCard{background:#0a0b0a;padding:26px;min-height:275px;position:relative}.directionCard span,.conditionGrid span{color:var(--gold);font-size:9px;letter-spacing:.12em}
+.directionCard h3{font:29px/1.02 Georgia;margin:55px 0 13px}.directionCard p{font-size:12px;line-height:1.62;color:#aaa}.directionCard a{position:absolute;left:26px;bottom:23px;color:#d7a85f;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.methodsSection{background:#0a0b0a}.methodGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.methodGrid article{min-height:245px;padding:22px;background:#060706;border:1px solid #ffffff0d}.methodGrid b{font:21px Georgia;color:#d6a65d}.methodGrid h3{font:24px/1.04 Georgia;margin:45px 0 12px}.methodGrid p{font-size:11px;line-height:1.6;color:#9e9991}
+.programsSection{background:linear-gradient(180deg,#060706,#0b0b09)}.programGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.programCard{min-height:300px;padding:26px;border:1px solid #c7985829;background:linear-gradient(145deg,#11110e,#080908);position:relative;overflow:hidden}.programCard:after{content:"";position:absolute;width:170px;height:170px;border:1px solid #c798581e;border-radius:50%;right:-55px;bottom:-55px}.programCard small{color:#d6aa69;letter-spacing:.1em}.programCard h3{font:29px/1.02 Georgia;margin:75px 0 14px;max-width:310px}.programCard p{font-size:11px;line-height:1.6;color:#a7a199}
+.conditionGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.conditionGrid a{display:block;padding:22px;min-height:230px;border:1px solid #ffffff0d;background:#0a0b0a;transition:.3s ease}.conditionGrid a:hover{transform:translateY(-3px);border-color:#c798584d;background:#0d0e0c}.conditionGrid h3{font:26px/1.04 Georgia;margin:45px 0 12px}.conditionGrid p{font-size:11px;line-height:1.58;color:#9f9a93}
+.priceSection{background:#0b0b09}.priceIntro{display:grid;grid-template-columns:.92fr 1.08fr;gap:8vw;align-items:start}.priceExamples{border-top:1px solid #c7985840}.priceExamples div{display:flex;justify-content:space-between;gap:30px;padding:18px 0;border-bottom:1px solid #ffffff12}.priceExamples span{font-size:12px;color:#bcb5ab}.priceExamples b{font:22px Georgia;color:#e0b470;white-space:nowrap}.priceNote{font-size:10px;color:#777;margin-top:24px}
+.contactPanel{padding:55px 4vw;background:#050605;border-top:1px solid #c7985835;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.contactPanel h2{font:50px/1 Georgia;margin:10px 0 12px}.contactPanel p{color:#aaa}.contactNumbers{display:grid;gap:8px;text-align:right}.contactNumbers a{font:27px Georgia;color:#e3b773}.contactNumbers span{font-size:9px;color:#888;letter-spacing:.08em;text-transform:uppercase}.legalLine{margin-top:35px;max-width:720px;font-size:8px;line-height:1.45;color:#777}
+@media(max-width:1100px){.directionGrid,.programGrid,.conditionGrid{grid-template-columns:1fr 1fr}.methodGrid{grid-template-columns:repeat(2,1fr)}.sectionHead,.priceIntro{grid-template-columns:1fr;gap:20px}}
+@media(max-width:700px){.directionGrid,.programGrid,.conditionGrid,.methodGrid{grid-template-columns:1fr}.contactPanel{grid-template-columns:1fr}.contactNumbers{text-align:left}.contactNumbers a{font-size:22px}}
+
+
+/* v34 refinement */
+.siteHeader{
+  position:fixed!important;top:0;left:0;right:0;z-index:80;
+  min-height:76px;
+  background:rgba(4,5,4,.94)!important;
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(216,170,95,.30)!important;
+  box-shadow:0 12px 38px rgba(0,0,0,.28)
+}
+.siteHeader .logo{font-size:23px!important;color:#f4eee3!important}
+.siteHeader .brand{color:#d5cec2!important;opacity:1!important}
+.siteHeader nav a{color:#e8e2d9!important;font-weight:700!important;font-size:10px!important;letter-spacing:.05em}
+.siteHeader nav a:hover{color:#e1b36a!important}
+.siteHeader .cta{border-color:#d1a45d!important;color:#f5ead9!important;background:rgba(209,164,93,.08)}
+
+.startHeroInner{padding-top:130px!important;padding-bottom:175px!important}
+.startCrest{width:165px!important;height:165px!important;margin-bottom:14px!important}
+.startEy{font-size:11px!important;color:#e1b36a!important}
+.startHero h1{font-size:clamp(50px,5.2vw,84px)!important;max-width:980px!important;margin-bottom:16px!important}
+.startProfile{
+  font:600 18px/1.3 Arial,sans-serif;
+  color:#f4eee4;
+  margin:0 0 11px;
+  letter-spacing:.01em
+}
+.startHero p{max-width:720px!important;font-size:16px!important}
+.startActions{margin-top:24px!important}
+.startPrimary{padding:15px 22px!important;font-size:10px!important}
+.startStats{
+  left:4vw!important;right:4vw!important;bottom:0!important;
+  width:auto!important;
+  grid-template-columns:repeat(3,1fr)!important;
+  background:rgba(6,7,6,.90)!important;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.10)!important
+}
+.startStats div{padding:21px 28px!important}
+.startStats b{font-size:30px!important}
+.startStats span{font-size:10px!important}
+.startHint{bottom:105px!important}
+
+.elementMeaning{
+  display:inline-flex;
+  align-items:center;
+  margin:0 0 17px;
+  padding:8px 11px;
+  border-left:2px solid #d2a65f;
+  background:rgba(6,7,6,.62);
+  color:#e5b66c;
+  font:700 11px/1.2 Arial,sans-serif;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+.heroCopy p{max-width:660px!important;font-size:16px!important;line-height:1.6!important}
+
+.elementsMeaningSection .lead{max-width:900px}
+.elementsMeaningSection .elements{margin-top:34px}
+.element{min-height:390px!important}
+.element:before{filter:brightness(.68) saturate(.82)!important}
+.element:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,5,.05),rgba(5,5,5,.78));z-index:1}
+.element small,.element h3,.element p,.element strong{position:relative;z-index:2}
+.element strong{
+  display:block;
+  margin:8px 0 8px;
+  color:#e2b36b;
+  font:700 10px/1.2 Arial,sans-serif;
+  letter-spacing:.10em;
+  text-transform:uppercase
+}
+.element p{max-width:250px!important;line-height:1.55!important}
+
+.palazzoBrand{
+  font:italic 500 clamp(48px,6vw,92px)/.95 Georgia,serif;
+  color:#f4eadb;
+  letter-spacing:-.035em;
+  margin-bottom:13px;
+  text-shadow:0 12px 40px rgba(0,0,0,.48)
+}
+.palazzo .ey{margin-bottom:8px}
+.palazzoLink{
+  display:inline-block;
+  margin-top:25px;
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(224,177,105,.8);
+  color:#e2b36b;
+  font:700 10px Arial,sans-serif;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+.water{display:none!important}
+
+.directionGrid{gap:8px!important;background:none!important;border:none!important}
+.directionCard{
+  min-height:340px!important;
+  overflow:hidden;
+  background:#080908!important;
+  border:1px solid rgba(255,255,255,.08)!important
+}
+.directionCard:before{
+  content:"";position:absolute;inset:0;
+  background:var(--bg) center/cover no-repeat;
+  filter:brightness(.34) saturate(.72);
+  transform:scale(1.02);
+  transition:.6s ease
+}
+.directionCard:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(4,5,4,.10),rgba(4,5,4,.88))
+}
+.directionCard:hover:before{transform:scale(1.055);filter:brightness(.42) saturate(.80)}
+.directionCard span,.directionCard h3,.directionCard p,.directionCard a{position:relative;z-index:2}
+.directionCard h3{margin-top:105px!important;color:#f1eadf!important}
+.directionCard p{color:#cdc5b9!important}
+.directionCard a{color:#e4b66e!important}
+
+.methodsSection{
+  position:relative;overflow:hidden;background:#050605!important
+}
+.methodsBackdrop{
+  position:absolute;inset:0;
+  background:url(assets/real_treatment_bamboo.jpg) center/cover no-repeat;
+  filter:brightness(.27) saturate(.70);
+  transform:scale(1.04)
+}
+.methodsShade{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(4,5,4,.92),rgba(4,5,4,.68)),linear-gradient(0deg,#050605 0%,transparent 45%,#050605 100%)
+}
+.methodsInner{position:relative;z-index:2}
+.methodGrid{gap:10px!important}
+.methodGrid article{
+  background:rgba(9,10,9,.72)!important;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.11)!important;
+  min-height:260px!important;
+  transition:.3s ease
+}
+.methodGrid article:hover{transform:translateY(-4px);border-color:rgba(214,170,94,.38)!important;background:rgba(12,13,11,.84)!important}
+.methodGrid h3{color:#f0e9dd}
+.methodGrid p{color:#c4bcb0!important}
+
+@media(max-width:900px){
+  .siteHeader .brand{display:none}
+  .siteHeader nav{display:none}
+  .startStats{left:3vw!important;right:3vw!important}
+}
+
+
+/* ==========================================================
+   v35 — typography / header / element clarity
+   ========================================================== */
+
+/* HEADER */
+.siteHeader{
+  height:88px!important;
+  padding:0 32px!important;
+  display:grid!important;
+  grid-template-columns:auto 1fr auto!important;
+  align-items:center!important;
+  gap:34px!important;
+  background:#050605!important;
+  border-bottom:1px solid rgba(220,174,98,.38)!important;
+  box-shadow:0 12px 38px rgba(0,0,0,.38)!important;
+}
+.headerIdentity{display:flex;align-items:center;gap:18px;min-width:290px}
+.siteHeader .logo{
+  font:600 28px/1 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.12em!important;
+  color:#e1b36c!important;
+}
+.siteHeader .brand{
+  font:600 9px/1.35 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.045em!important;
+  color:#cfc7bb!important;
+  opacity:1!important;
+}
+.siteHeader nav{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:28px!important;
+}
+.siteHeader nav a{
+  font:600 11px/1 "Segoe UI",Arial,sans-serif!important;
+  color:#e8e2d8!important;
+  letter-spacing:.045em!important;
+  opacity:.92!important;
+}
+.siteHeader nav a:hover{color:#e2b46e!important}
+.headerContact{display:flex;align-items:center;gap:20px;white-space:nowrap}
+.headerPhone{
+  color:#e7d7bd!important;
+  font:500 14px/1 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.02em!important;
+}
+.siteHeader .cta{
+  padding:12px 16px!important;
+  font:700 10px/1 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.07em!important;
+  color:#f6ead7!important;
+  border:1px solid rgba(221,173,94,.68)!important;
+  background:rgba(221,173,94,.07)!important;
+}
+
+/* START HERO */
+.startHero{min-height:100vh!important}
+.startHeroInner{
+  width:min(1320px,92vw)!important;
+  padding:132px 0 90px!important;
+}
+.startCrest{
+  width:145px!important;
+  height:145px!important;
+  margin-bottom:18px!important;
+}
+.startEy{
+  margin-bottom:18px!important;
+  font:700 11px/1 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.17em!important;
+}
+.startHero h1{
+  margin:0!important;
+  max-width:900px!important;
+  font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif!important;
+  font-size:clamp(46px,5vw,78px)!important;
+  font-weight:300!important;
+  line-height:.98!important;
+  letter-spacing:-.045em!important;
+  text-transform:none!important;
+  text-shadow:0 12px 38px rgba(0,0,0,.35)!important;
+}
+.startHero h1 span{display:block}
+.startProfile{
+  margin:26px 0 10px!important;
+  font:600 18px/1.35 "Segoe UI",Arial,sans-serif!important;
+  color:#e5b56c!important;
+  letter-spacing:.015em!important;
+}
+.startHero p{
+  max-width:710px!important;
+  margin:0!important;
+  font:400 16px/1.65 "Segoe UI",Arial,sans-serif!important;
+  color:#d1cbc2!important;
+}
+.heroContactLine{
+  display:flex;align-items:center;gap:13px;
+  margin-top:24px;
+  color:#aaa49b;
+  font:500 12px/1 "Segoe UI",Arial,sans-serif;
+  letter-spacing:.025em
+}
+.heroContactLine i{width:24px;height:1px;background:#b68a4b}
+.heroContactLine a{color:#e4c28e;font-size:13px}
+.startHint{bottom:28px!important}
+
+/* OLD CORNER STATS MUST NEVER SHOW */
+.startStats{display:none!important}
+
+/* FULL-WIDTH FACTS, NOT A CORNER INSERT */
+.factsStrip{
+  padding:0 4vw!important;
+  min-height:118px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:#080908;
+  border-top:1px solid rgba(216,170,94,.28);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.fact{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:118px;
+  padding:18px 28px;
+  border-right:1px solid rgba(255,255,255,.08)
+}
+.fact:last-child{border-right:0}
+.fact b{
+  font:300 34px/1 "Segoe UI",Arial,sans-serif;
+  color:#e2b36b;
+  letter-spacing:-.03em
+}
+.fact span{
+  margin-top:8px;
+  font:500 11px/1.3 "Segoe UI",Arial,sans-serif;
+  color:#9f9991;
+  letter-spacing:.025em
+}
+.factText strong{
+  font:600 23px/1 "Segoe UI",Arial,sans-serif;
+  color:#efe9df;
+  letter-spacing:.09em
+}
+
+/* ELEMENT COPY — deliberately not huge serif */
+.heroCopy{
+  left:16.8vw!important;
+  top:18vh!important;
+  max-width:760px!important;
+}
+.journeyPurpose{
+  width:max-content;
+  max-width:620px;
+  margin-bottom:22px;
+  padding:8px 12px;
+  background:rgba(5,6,5,.72);
+  border:1px solid rgba(255,255,255,.11);
+  color:#c8c0b5;
+  font:600 10px/1.25 "Segoe UI",Arial,sans-serif;
+  letter-spacing:.10em;
+}
+.heroCopy .ey{
+  font:700 11px/1 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.17em!important;
+  color:#dfad60!important;
+  margin-bottom:15px!important
+}
+.heroCopy h1{
+  max-width:720px!important;
+  margin:0 0 19px!important;
+  font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif!important;
+  font-size:clamp(54px,5.7vw,88px)!important;
+  font-weight:300!important;
+  line-height:.92!important;
+  letter-spacing:-.055em!important;
+  text-shadow:0 10px 34px rgba(0,0,0,.42)!important
+}
+.elementMeaning{
+  display:inline-flex!important;
+  margin:0 0 16px!important;
+  padding:10px 13px!important;
+  background:#d5a55d!important;
+  border:0!important;
+  color:#10110f!important;
+  font:800 12px/1 "Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.08em!important;
+}
+.heroCopy #heroText{
+  max-width:650px!important;
+  margin:0!important;
+  color:#ded8cf!important;
+  font:400 16px/1.62 "Segoe UI",Arial,sans-serif!important;
+  text-shadow:0 3px 14px rgba(0,0,0,.55)!important
+}
+
+/* remove the old ambiguous play icon / travel hint from the element slides */
+.heroCopy .play{
+  display:none!important
+}
+
+/* rail clearer */
+.rail button{
+  font-family:"Segoe UI",Arial,sans-serif!important;
+}
+.rail button span{
+  font-size:10px!important;
+  color:#9c968d!important
+}
+.rail button b{
+  margin-top:4px;
+  font-size:10px!important;
+  letter-spacing:.08em!important
+}
+.rail button.active b,.rail button.active span{color:#e2b36b!important}
+
+/* responsive */
+@media(max-width:1180px){
+  .siteHeader{grid-template-columns:auto 1fr auto!important;gap:20px!important}
+  .siteHeader nav{gap:16px!important}
+  .headerPhone{display:none}
+}
+@media(max-width:900px){
+  .siteHeader{height:72px!important;padding:0 18px!important}
+  .headerIdentity{min-width:0}
+  .siteHeader nav{display:none!important}
+  .headerContact{margin-left:auto}
+  .factsStrip{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .heroCopy{left:7vw!important;right:7vw!important;top:17vh!important}
+  .journeyPurpose{width:auto}
+}
+@media(max-width:600px){
+  .siteHeader .brand{display:none!important}
+  .factsStrip{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .startHero h1{font-size:43px!important}
+  .heroCopy h1{font-size:48px!important}
+  .heroContactLine{flex-wrap:wrap}
+}
+
+</style></head><body><div class=progress></div>
+<header class=siteHeader>
+  <div class=headerIdentity>
+    <div class=logo>ИТВМ</div>
+    <div class=brand>ИНСТИТУТ ТРАДИЦИОННОЙ<br>ВОСТОЧНОЙ МЕДИЦИНЫ</div>
+  </div>
+  <nav>
+    <a href=#aboutClinic>О клинике</a>
+    <a href=#services>Направления</a>
+    <a href=#methods>Методы</a>
+    <a href=#programs>Программы</a>
+    <a href=#doctors>Специалисты</a>
+    <a href=#clinicReal>Клиника</a>
+  </nav>
+  <div class=headerContact>
+    <a class=headerPhone href="tel:+74995209736">+7 (499) 520-97-36</a>
+    <a class=cta href=#contact>Записаться</a>
+  </div>
+</header>
+
+<section class="startHero" id="start">
+  <video class="startHeroFilm" autoplay muted loop playsinline preload="auto">
+    <source src="assets/itvm-hero-veo.mp4" type="video/mp4">
+  </video>
+  <div class="startHeroShade"></div>
+
+  <div class="startHeroInner">
+    <div class="startCrest"><img src="assets/itvm-crest.png" alt="Герб ИТВМ"></div>
+    <div class="startEy">ИТВМ · МОСКВА · АРБАТ</div>
+
+    <h1>
+      <span>Институт традиционной</span>
+      <span>восточной медицины</span>
+    </h1>
+
+    <div class="startProfile">Многопрофильная медицинская клиника на Арбате</div>
+
+    <p>Диагностика, лечение и восстановительная медицина. Современные медицинские методы и традиционные подходы объединяются в персональную программу для каждого пациента.</p>
+
+    <div class="heroContactLine">
+      <span>Филипповский переулок, 18</span>
+      <i></i>
+      <a href="tel:+74995209736">+7 (499) 520-97-36</a>
+    </div>
+  </div>
+
+  <div class="startHint">Прокручивайте ниже</div>
+</section>
+
+<section class="factsStrip" id="aboutClinic">
+  <div class="fact"><b>30+</b><span>лет работы на Арбате</span></div>
+  <div class="fact"><b>29</b><span>специалистов клиники</span></div>
+  <div class="fact"><b>100+</b><span>медицинских услуг</span></div>
+  <div class="fact factText"><strong>ИТВМ</strong><span>диагностика · лечение · восстановление</span></div>
+</section>
+<div class=hero id=journey><div class=stage><div class=heroBase></div>
+<div class="scene active" style="background-image:url(assets/water.jpg)"></div>
+<div class="scene" style="background-image:url(assets/wood.jpg)"></div>
+<div class="scene" style="background-image:url(assets/earth.jpg)"></div>
+<div class="scene" style="background-image:url(assets/fire.jpg)"></div>
+<div class="scene" style="background-image:url(assets/metal.jpg)"></div>
+<div class="scene" style="background-image:url(assets/harmony.jpg)"></div>
+<div class=veil></div><div class=rail><button data-i="0"><span>01</span><b>ВОДА</b></button><button data-i="1"><span>02</span><b>ДЕРЕВО</b></button><button data-i="2"><span>03</span><b>ЗЕМЛЯ</b></button><button data-i="3"><span>04</span><b>ОГОНЬ</b></button><button data-i="4"><span>05</span><b>МЕТАЛЛ</b></button><button data-i="5"><span>ИТВМ</span><b>ГАРМОНИЯ</b></button></div>
+<div class=heroCopy><div class=journeyPurpose>ПЯТЬ ЭЛЕМЕНТОВ — МЕТАФОРА ПЕРСОНАЛЬНОГО МАРШРУТА ЛЕЧЕНИЯ</div><div class=ey id=chapter>01 / ВОДА</div><h1 id=heroTitle>ТЕКУЧЕСТЬ.<br>ОЧИЩЕНИЕ.</h1><div class=elementMeaning id=elementMeaning>ДИАГНОСТИКА — ПОНЯТЬ СОСТОЯНИЕ</div><p id=heroText>Диагностика и спокойствие помогают понять состояние организма и выбрать верное направление лечения.</p><div class=journey><i>▶</i><span>Прокручивайте для путешествия</span></div></div>
+<div class=stats><div><b>30+</b><span>лет на Арбате</span></div><div><b>100+</b><span>услуг</span></div><div><b>29</b><span>специалистов</span></div></div><div class=hint>Пять элементов · один путь</div></div></div>
+<section id=elements class=elementsMeaningSection>
+<div class=ey>Пять элементов ИТВМ</div>
+<h2>Метафора персонального маршрута лечения.</h2>
+<p class=lead>Каждый элемент обозначает конкретный этап работы с пациентом — от понимания состояния до объединения диагностики, лечения и восстановления в одну систему.</p>
+<div class=elements>
+  <article class=element style="--pic:url(assets/real_reception_water.jpg)"><small>01</small><h3>Вода</h3><strong>Диагностика</strong><p>Понять состояние и определить отправную точку.</p></article>
+  <article class=element style="--pic:url(assets/real_treatment_bamboo.jpg)"><small>02</small><h3>Дерево</h3><strong>Восстановление</strong><p>Вернуть ресурс и запустить процессы обновления.</p></article>
+  <article class=element style="--pic:url(assets/real_mountain_room.jpg)"><small>03</small><h3>Земля</h3><strong>Опора</strong><p>Создать стабильную основу для лечения.</p></article>
+  <article class=element style="--pic:url(assets/real_sauna.jpg)"><small>04</small><h3>Огонь</h3><strong>Активация</strong><p>Вернуть энергию и жизненный тонус.</p></article>
+  <article class=element style="--pic:url(assets/real_clinic_room.jpg)"><small>05</small><h3>Металл</h3><strong>Точность</strong><p>Выстроить медицинские назначения и контроль.</p></article>
+  <article class=element style="--pic:url(assets/real_lobby.jpg)"><small>ИТВМ</small><h3>Гармония</h3><strong>Персональный маршрут</strong><p>Собрать всё в единую систему здоровья.</p></article>
+</div></section>
+<section id=story class=instituteFilmSection><div class=instituteFilmWrap><video class=instituteFilm autoplay muted loop playsinline preload=auto><source src="assets/institute-veo.mp4" type="video/mp4"></video><div class=instituteFilmShade></div></div><div class=story><div class=storyPic></div><div><div class=ey>Институт</div><h2>30 лет на Арбате.<br>Искусство врачевания для жизни.</h2><p class=lead>Восточная медицинская традиция соединяется с современной клинической экспертизой и персональным подходом к здоровью и долголетию.</p><div class=facts><div class=fact><b>30+</b><span>лет практики</span></div><div class=fact><b>100+</b><span>услуг</span></div><div class=fact><b>29</b><span>специалистов</span></div></div></div></div></section>
+<section id=doctors><div class=ey>Ведущие специалисты</div><h2>Люди за медициной.</h2><div class=doctors><article class=doctor><div class=portrait><img src="assets/desyaterik.jpg"></div><h3>Десятерик Александр Евгеньевич</h3><p>Главный врач института традиционной восточной медицины</p><a href=#contact>Подробнее →</a></article><article class=doctor><div class=portrait><img src="assets/koroleva.jpg"></div><h3>Королёва Оксана Михайловна</h3><p>Руководитель департамента по науке и инновациям, к.м.н., доцент</p><a href=#contact>Подробнее →</a></article><article class=doctor><div class=portrait><img src="assets/shakhova.jpg"></div><h3>Шахова Марина Александровна</h3><p>Врач гинеколог-репродуктолог высшей квалификационной категории, д.м.н., профессор</p><a href=#contact>Подробнее →</a></article><article class=doctor><div class=portrait><img src="assets/nechaeva.jpg"></div><h3>Нечаева Ирина Анатольевна</h3><p>Врач венеролог-дерматолог высшей квалификационной категории, д.м.н.</p><a href=#contact>Подробнее →</a></article></div></section>
+<section class=palazzo id=palazzo>
+<video class=palazzoFilm autoplay muted loop playsinline preload=auto><source src="assets/palazzo-veo.mp4" type="video/mp4"></video>
+<div class=palazzoShade></div>
+<div class=palazzoContent>
+  <div class=palazzoBrand>Palazzo Termale</div>
+  <div class=ey>Термальный комплекс ИТВМ</div>
+  <h2>Место, где время<br>течёт иначе.</h2>
+  <p class=lead style="margin:auto">Термальный курорт и ингаляционное отделение в центре Москвы — отдельное пространство восстановления внутри клиники.</p>
+  <a class=palazzoLink href=#programs>Посмотреть программу →</a>
+</div>
+</section>
+
+<section id=services class=contentSection>
+<div class=sectionHead>
+  <div><div class=ey>Чем мы можем помочь</div><h2>Медицинские направления.</h2></div>
+  <p class=lead>На действующем сайте ИТВМ заявлено более 100 услуг. На главной показываем ключевые направления, чтобы посетитель сразу понимал, с чем работает клиника.</p>
+</div>
+<div class=directionGrid>
+<article class=directionCard style="--bg:url(assets/real_clinic_room.jpg)"><span>01</span><h3>Диагностика</h3><p>Аппаратная и классическая диагностика, первичная оценка состояния и выбор дальнейшего маршрута.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_wood_tub.jpg)"><span>02</span><h3>Восстановительная медицина</h3><p>Реабилитация, массаж, восстановительные процедуры и возвращение к привычной активности.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_waiting_warm.jpg)"><span>03</span><h3>Гинекология</h3><p>Консультации, диагностика и программы женского здоровья.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_mountain_room.jpg)"><span>04</span><h3>Неврология</h3><p>Работа с заболеваниями нервной системы, болевыми синдромами и восстановлением.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_lobby.jpg)"><span>05</span><h3>Педиатрия</h3><p>Консультации и программы для детей с учётом возраста и индивидуальных особенностей.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_corridor.jpg)"><span>06</span><h3>Терапия</h3><p>Комплексная оценка состояния, консультации врача и координация лечения.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_reception_water.jpg)"><span>07</span><h3>Кардиология</h3><p>Диагностика, профилактика и сопровождение заболеваний сердца и сосудов.</p><a href=#contact>Записаться →</a></article>
+<article class=directionCard style="--bg:url(assets/real_treatment_bamboo.jpg)"><span>08</span><h3>Косметология</h3><p>Медицинская косметология и процедуры, направленные на здоровье и качество кожи.</p><a href=#contact>Записаться →</a></article>
+</div></section>
+<section id=methods class="contentSection methodsSection"><div class=methodsBackdrop></div><div class=methodsShade></div><div class=methodsInner>
+<div class=sectionHead>
+  <div><div class=ey>Методы лечения</div><h2>Инструменты современной и восточной медицины.</h2></div>
+  <p class=lead>На главной — только основные методы. Полный каталог можно вынести на отдельную страницу без перегрузки первого знакомства с клиникой.</p>
+</div>
+<div class=methodGrid>
+<article><b>01</b><h3>ТЭС-терапия</h3><p>Неинвазивная транскраниальная электрическая стимуляция как физиотерапевтический метод.</p></article>
+<article><b>02</b><h3>Иглоукалывание</h3><p>Воздействие на биологически активные точки с помощью акупунктурных игл.</p></article>
+<article><b>03</b><h3>Рефлексотерапия</h3><p>Воздействие на активные точки организма в составе лечебной программы.</p></article>
+<article><b>04</b><h3>Остеопатия</h3><p>Работа с функциональными нарушениями опорно-двигательной системы и мягких тканей.</p></article>
+<article><b>05</b><h3>Кинезиотерапия</h3><p>Восстановление через движение и работу с двигательными функциями.</p></article>
+<article><b>06</b><h3>Су-джок-терапия</h3><p>Воздействие на рефлекторные точки кистей и стоп.</p></article>
+<article><b>07</b><h3>Массаж Туйна</h3><p>Традиционная массажная техника восточной медицины.</p></article>
+<article><b>08</b><h3>Вакуум-градиентная терапия</h3><p>Локальное воздействие на мягкие ткани пониженным давлением.</p></article>
+<article><b>09</b><h3>Гирудотерапия</h3><p>Метод с использованием медицинских пиявок по медицинским показаниям.</p></article>
+<article><b>10</b><h3>Озонотерапия</h3><p>Метод, применяемый в клинике в составе медицинских программ по показаниям.</p></article>
+</div></div></section>
+
+<section id=programs class="contentSection programsSection">
+<div class=sectionHead>
+  <div><div class=ey>Комплексные программы</div><h2>Не отдельная процедура, а маршрут.</h2></div>
+  <p class=lead>Комплексные программы объединяют консультации, диагностику и процедуры вокруг конкретной задачи пациента.</p>
+</div>
+<div class=programGrid>
+<article class=programCard><small>01</small><h3>Восстановление после операций и травм</h3><p>Комплексный маршрут реабилитации и возвращения к активности.</p></article>
+<article class=programCard><small>02</small><h3>Лечение менопаузы</h3><p>Комплексная программа для женщин в период гормональной перестройки.</p></article>
+<article class=programCard><small>03</small><h3>Омоложение и регенерация</h3><p>Комплекс процедур, направленных на восстановление и поддержание качества жизни.</p></article>
+<article class=programCard><small>04</small><h3>Мужское и женское здоровье</h3><p>Персональные программы диагностики и лечения профильных заболеваний.</p></article>
+<article class=programCard><small>05</small><h3>Диагностика и профилактика здоровья</h3><p>Комплексная оценка состояния с дальнейшими рекомендациями.</p></article>
+<article class=programCard><small>06</small><h3>Термальный комплекс</h3><p>Восстановительные и термальные процедуры в отдельном пространстве клиники.</p></article>
+<article class=programCard><small>07</small><h3>Институт обоняния и ольфакторной патологии</h3><p>Профильное направление диагностики и лечения нарушений обоняния.</p></article>
+<article class=programCard><small>08</small><h3>Программы для сердца и сосудов</h3><p>Профилактика и лечение сердечно-сосудистых заболеваний в рамках комплексного подхода.</p></article>
+</div></section>
+
+
+
+
+<section id=conditions class="contentSection conditionsSection">
+<div class=sectionHead>
+  <div><div class=ey>С чем обращаются</div><h2>Найдите своё направление.</h2></div>
+  <p class=lead>Вместо длинного каталога диагнозов — понятные категории. Подробные заболевания можно раскрыть на внутренних страницах.</p>
+</div>
+<div class=conditionGrid>
+<a href=#contact><span>01</span><h3>Спина, суставы и движение</h3><p>Опорно-двигательный аппарат, восстановление после травм, боли и ограничения движения.</p></a>
+<a href=#contact><span>02</span><h3>Нервная система</h3><p>Невралгии, мигрень, нарушения сна, хроническая усталость и другие состояния.</p></a>
+<a href=#contact><span>03</span><h3>Женское здоровье</h3><p>Гинекологические заболевания, репродуктивное здоровье и период менопаузы.</p></a>
+<a href=#contact><span>04</span><h3>Пищеварение</h3><p>Заболевания желудочно-кишечного тракта и нарушения пищеварения.</p></a>
+<a href=#contact><span>05</span><h3>Сердце и сосуды</h3><p>Артериальное давление, сердечно-сосудистые заболевания и восстановление.</p></a>
+<a href=#contact><span>06</span><h3>Кожа</h3><p>Дерматологические заболевания и медицинская косметология.</p></a>
+<a href=#contact><span>07</span><h3>Эндокринная система</h3><p>Состояния, связанные с обменом веществ и функцией щитовидной железы.</p></a>
+<a href=#contact><span>08</span><h3>Мужское здоровье</h3><p>Урологические заболевания и комплексные программы мужского здоровья.</p></a>
+</div></section>
+<section id=clinicReal class=clinicReal>
+  <div class=ey>Реальная клиника</div>
+  <h2>Пространства ИТВМ.</h2>
+  <p class=lead>Реальные кабинеты, зоны ожидания и пространства для лечения и восстановления.</p>
+  <div class=clinicMosaic>
+    <figure class=wide><img src="assets/real_reception_water.jpg"><figcaption>Ресепшен</figcaption></figure>
+    <figure><img src="assets/real_lobby.jpg"><figcaption>Клиника</figcaption></figure>
+    <figure><img src="assets/real_waiting_warm.jpg"><figcaption>Зона ожидания</figcaption></figure>
+    <figure><img src="assets/real_corridor.jpg"><figcaption>Интерьеры</figcaption></figure>
+    <figure><img src="assets/real_clinic_room.jpg"><figcaption>Медицинский кабинет</figcaption></figure>
+    <figure><img src="assets/real_treatment_bamboo.jpg"><figcaption>Процедурный кабинет</figcaption></figure>
+    <figure><img src="assets/real_mountain_room.jpg"><figcaption>Кабинет консультаций</figcaption></figure>
+    <figure><img src="assets/real_wood_tub.jpg"><figcaption>Зона восстановления</figcaption></figure>
+    <figure><img src="assets/real_sauna.jpg"><figcaption>Сауна</figcaption></figure>
+  </div>
+</section>
+
+<section id=prices class="contentSection priceSection">
+<div class=priceIntro>
+  <div><div class=ey>Стоимость</div><h2>Понятный первый шаг.</h2><p class=lead>На сайте ИТВМ опубликован подробный прайс. На главной оставляем несколько ориентиров, а полный список лучше вынести на отдельную страницу.</p></div>
+  <div class=priceExamples>
+    <div><span>Приём главного врача</span><b>7 000 ₽</b></div>
+    <div><span>Приём врача-терапевта</span><b>5 000 ₽</b></div>
+    <div><span>Классический массаж, 30 минут</span><b>4 500 ₽</b></div>
+    <div><span>Су-джок</span><b>3 500 ₽</b></div>
+    <div><span>Кедровая фитобочка, 30 минут</span><b>1 800 ₽</b></div>
+  </div>
+</div>
+<p class=priceNote>Стоимость приведена по опубликованному прайсу и перед запуском сайта должна быть подтверждена клиникой.</p>
+</section>
+
+<section class=contactPanel id=clinicContacts>
+<div><div class=ey>Контакты</div><h2>ИТВМ на Арбате.</h2><p>Москва, Филипповский переулок, 18 · м. Арбатская</p></div>
+<div class=contactNumbers>
+<a href="tel:+74995209736">+7 (499) 520-97-36</a>
+<a href="tel:+74956916612">+7 (495) 691-66-12</a>
+<a href="tel:+74956916672">+7 (495) 691-66-72</a>
+<span>Запись и справочная информация</span>
+</div></section>
+<footer id=contact class=cinematicFinal>
+<video class=finalFilm autoplay muted loop playsinline preload=auto><source src="assets/final-harmony-veo.mp4" type="video/mp4"></video>
+<div class=finalShade></div>
+<div class=finalContent><div class=ey>ИТВМ · ГАРМОНИЯ</div><h2>Ваш путь<br>начинается здесь.</h2><p class=lead>Персональная медицина, восстановление и долголетие — в единой системе заботы о человеке.</p><a class=cta href="tel:+74955209736">Записаться на консультацию</a></div>
+</footer>
+<script>
+const hero=document.querySelector('.hero');
+const scenes=[...document.querySelectorAll('.scene')];
+const buttons=[...document.querySelectorAll('.rail button')];
+const data=[
+['01 / ВОДА','ПОНЯТЬ<br>СОСТОЯНИЕ','ЭТАП 1 · ДИАГНОСТИКА','Вода — образ ясности и движения. Начинаем с диагностики: оцениваем состояние организма и определяем дальнейший маршрут.'],
+['02 / ДЕРЕВО','ВЕРНУТЬ<br>РЕСУРС','ЭТАП 2 · ВОССТАНОВЛЕНИЕ','Дерево — образ роста и обновления. Подбираем методы, которые помогают организму восстановить ресурс и естественные процессы.'],
+['03 / ЗЕМЛЯ','СОЗДАТЬ<br>ОПОРУ','ЭТАП 3 · СТАБИЛИЗАЦИЯ','Земля — образ устойчивости. Формируем основу лечения: режим, питание, поддерживающие процедуры и контроль состояния.'],
+['04 / ОГОНЬ','ВЕРНУТЬ<br>ЭНЕРГИЮ','ЭТАП 4 · АКТИВАЦИЯ','Огонь — образ энергии и динамики. Работаем с жизненным тонусом, циркуляцией и восстановлением активности.'],
+['05 / МЕТАЛЛ','НАСТРОИТЬ<br>ЛЕЧЕНИЕ','ЭТАП 5 · ТОЧНОСТЬ','Металл — образ точности и структуры. Анализы, медицинские назначения и контроль результата собираются в понятную систему.'],
+['ИТВМ / ГАРМОНИЯ','СОБРАТЬ<br>В СИСТЕМУ','ИТОГ · ПЕРСОНАЛЬНЫЙ МАРШРУТ','Гармония — итог всего пути. Диагностика, лечение и восстановление объединяются в единую персональную программу здоровья.']
+];
+let last=-1;
+function activateScene(i){
+  scenes.forEach((s,j)=>s.classList.toggle('active',j===i));
+  buttons.forEach((b,j)=>b.classList.toggle('active',j===i));
+  chapter.innerHTML=data[i][0];
+  heroTitle.innerHTML=data[i][1];
+  elementMeaning.innerHTML=data[i][2];
+  heroText.innerHTML=data[i][3];
+}
+function update(){
+  const r=hero.getBoundingClientRect();
+  const max=Math.max(1,hero.offsetHeight-innerHeight);
+  const p=Math.max(0,Math.min(.999,-r.top/max));
+  const i=Math.min(5,Math.floor(p*6));
+  if(i===last)return;
+  last=i;
+  activateScene(i);
+}
+addEventListener('scroll',update,{passive:true});
+addEventListener('resize',update);
+buttons.forEach((b,i)=>b.onclick=()=>scrollTo({
+  top:hero.offsetTop+i*(hero.offsetHeight-innerHeight)/6,
+  behavior:'smooth'
+}));
+activateScene(0);
+update();
+
+let timer;function start(){timer=setTimeout(()=>{water.classList.add('open');water.innerHTML='<b>ТЕРМАЛЬНЫЙ КОМПЛЕКС · ДОБРО ПОЖАЛОВАТЬ</b>'},650)}function stop(){clearTimeout(timer)};['mousedown','touchstart'].forEach(e=>water.addEventListener(e,start));['mouseup','mouseleave','touchend','touchcancel'].forEach(e=>water.addEventListener(e,stop));
+
+const prog=document.querySelector('.progress');
+addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;prog.style.width=((scrollY/m)*100)+'%'},{passive:true});
+addEventListener('load',()=>setTimeout(()=>document.querySelector('.intro').classList.add('hide'),450));
+
+const palFilm=document.querySelector('.palazzoFilm'),instituteFilm=document.querySelector('.instituteFilm'),finalFilm=document.querySelector('.finalFilm');
+function ensureFilm(){if(palFilm&&palFilm.paused)palFilm.play().catch(()=>{});if(instituteFilm&&instituteFilm.paused)instituteFilm.play().catch(()=>{});if(finalFilm&&finalFilm.paused)finalFilm.play().catch(()=>{})}
+addEventListener('click',ensureFilm,{once:true});
+addEventListener('scroll',ensureFilm,{once:true,passive:true});
+
+document.querySelectorAll('section').forEach(s=>s.classList.add('reveal'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(s=>io.observe(s));
+</script></body></html>
