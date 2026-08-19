@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+/* Premium first-screen theme */
+.startHeroShade{
+  background:
+    radial-gradient(circle at 19% 30%,rgba(199,152,88,.08),transparent 28%),
+    linear-gradient(90deg,#030403fa 0%,#030403ec 30%,#030403a8 51%,#0304033d 76%,#03040378 100%),
+    linear-gradient(0deg,#030403c7 0%,transparent 50%,#03040328 100%)!important;
+}
+
+.startHeroInner{
+  padding-top:112px!important;
+}
+
+.startCrest{
+  position:relative;
+  width:245px!important;
+  height:245px!important;
+  margin:0 0 24px 6px!important;
+  filter:drop-shadow(0 18px 36px rgba(0,0,0,.72))!important;
+}
+
+.startCrest:before{
+  content:"";
+  position:absolute;
+  inset:10%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(203,159,92,.14),rgba(203,159,92,.035) 52%,transparent 72%);
+  filter:blur(12px);
+  pointer-events:none;
+}
+
+.startCrest img{position:relative;z-index:1}
+
+.startEy{
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.22em!important;
+  color:#d9a85f!important;
+  margin:0 0 20px 4px!important;
+}
+
+.startHero h1{
+  position:relative;
+  max-width:1040px!important;
+  margin:0!important;
+  font-family:"Prata",Georgia,serif!important;
+  font-size:clamp(49px,5.35vw,84px)!important;
+  font-weight:400!important;
+  line-height:1.04!important;
+  letter-spacing:-.028em!important;
+  color:#f4efe7!important;
+  text-shadow:0 10px 42px rgba(0,0,0,.48)!important;
+  text-wrap:balance;
+}
+
+.startHero h1:after{
+  content:"";
+  display:block;
+  width:92px;
+  height:1px;
+  margin:26px 0 0 4px;
+  background:linear-gradient(90deg,#d6a45c,rgba(214,164,92,0));
+}
+
+.startProfile{
+  margin:22px 0 12px 4px!important;
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:17px!important;
+  font-weight:600!important;
+  line-height:1.35!important;
+  letter-spacing:.005em!important;
+  color:#e1b36c!important;
+}
+
+.startHero p{
+  max-width:760px!important;
+  margin-left:4px!important;
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:15px!important;
+  font-weight:400!important;
+  line-height:1.72!important;
+  color:#d3cdc3!important;
+}
+
+.heroContactLine{
+  margin-left:4px!important;
+  margin-top:22px!important;
+}
+
+@media(max-width:900px){
+  .startCrest{width:195px!important;height:195px!important}
+  .startHero h1{font-size:clamp(44px,7.8vw,66px)!important}
+}
+
+@media(max-width:600px){
+  .startCrest{width:170px!important;height:170px!important}
+  .startHero h1{font-size:41px!important;line-height:1.06!important}
+}
