@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Prata&display=swap');
 
 /* Premium first-screen theme */
 .startHeroShade{
@@ -8,9 +8,7 @@
     linear-gradient(0deg,#030403c7 0%,transparent 50%,#03040328 100%)!important;
 }
 
-.startHeroInner{
-  padding-top:112px!important;
-}
+.startHeroInner{padding-top:112px!important;}
 
 .startCrest{
   position:relative;
@@ -84,49 +82,58 @@
   color:#d3cdc3!important;
 }
 
-.heroContactLine{
-  margin-left:4px!important;
-  margin-top:22px!important;
-}
+.heroContactLine{margin-left:4px!important;margin-top:22px!important;}
 
-/* Palazzo Termale — luxury focal point */
+/* Palazzo Termale — architectural luxury, deliberately non-italic */
 .palazzoBrand{
   position:relative!important;
   display:inline-block!important;
-  margin:0 auto 30px!important;
-  padding:0 .04em!important;
-  font-family:"Cormorant Garamond",Georgia,serif!important;
-  font-style:italic!important;
-  font-size:clamp(82px,9vw,150px)!important;
-  font-weight:600!important;
-  line-height:.88!important;
-  letter-spacing:-.035em!important;
-  background:linear-gradient(180deg,#fff9ee 0%,#f3e1bd 34%,#d7aa65 62%,#f6e7c9 100%)!important;
+  margin:0 auto 34px!important;
+  padding:0 .08em 20px!important;
+  font-family:"Italiana","Times New Roman",serif!important;
+  font-style:normal!important;
+  font-size:clamp(76px,8.6vw,148px)!important;
+  font-weight:400!important;
+  line-height:.90!important;
+  letter-spacing:.012em!important;
+  background:linear-gradient(180deg,#fffdf8 0%,#f7ead0 35%,#d7ac67 70%,#fff1d5 100%)!important;
   -webkit-background-clip:text!important;
   background-clip:text!important;
   -webkit-text-fill-color:transparent!important;
   color:transparent!important;
   text-shadow:none!important;
-  filter:drop-shadow(0 13px 28px rgba(0,0,0,.46)) drop-shadow(0 0 18px rgba(210,164,91,.08))!important;
+  filter:drop-shadow(0 14px 34px rgba(0,0,0,.54)) drop-shadow(0 0 14px rgba(218,174,103,.07))!important;
   white-space:nowrap;
 }
 
 .palazzoBrand:before{
   content:"";
   position:absolute;
-  left:10%;right:10%;bottom:-17px;
+  left:17%;right:17%;bottom:4px;
   height:1px;
-  background:linear-gradient(90deg,transparent,rgba(225,183,111,.28) 18%,rgba(247,222,174,.76) 50%,rgba(225,183,111,.28) 82%,transparent);
+  background:linear-gradient(90deg,transparent,rgba(225,183,111,.38) 16%,rgba(250,228,188,.94) 50%,rgba(225,183,111,.38) 84%,transparent);
 }
 
-.palazzoContent{
-  padding-top:74px!important;
-  padding-bottom:82px!important;
+.palazzoBrand:after{
+  content:"PALAZZO · ROMA · ARBAT";
+  position:absolute;
+  left:50%;bottom:-14px;
+  transform:translateX(-50%);
+  width:max-content;
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:8px!important;
+  font-weight:700!important;
+  letter-spacing:.34em!important;
+  color:#c99a55!important;
+  -webkit-text-fill-color:#c99a55!important;
+  background:none!important;
 }
+
+.palazzoContent{padding-top:76px!important;padding-bottom:84px!important;}
 
 .palazzoContent>.ey{
-  margin-top:2px!important;
-  margin-bottom:22px!important;
+  margin-top:8px!important;
+  margin-bottom:24px!important;
   font-family:"Manrope",system-ui,sans-serif!important;
   font-size:9px!important;
   font-weight:700!important;
@@ -166,12 +173,13 @@
 @media(max-width:900px){
   .startCrest{width:195px!important;height:195px!important}
   .startHero h1{font-size:clamp(44px,7.8vw,66px)!important}
-  .palazzoBrand{font-size:clamp(66px,13vw,110px)!important;white-space:normal}
+  .palazzoBrand{font-size:clamp(62px,12vw,108px)!important;white-space:normal}
 }
 
 @media(max-width:600px){
   .startCrest{width:170px!important;height:170px!important}
   .startHero h1{font-size:41px!important;line-height:1.06!important}
-  .palazzoBrand{font-size:60px!important;line-height:.94!important}
+  .palazzoBrand{font-size:54px!important;line-height:.96!important}
+  .palazzoBrand:after{font-size:6px!important;letter-spacing:.22em!important}
   .palazzoContent h2{font-size:43px!important}
 }
