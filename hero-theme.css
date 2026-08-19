@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Prata&display=swap');
 
 /* Premium first-screen theme */
 .startHeroShade{
@@ -89,12 +89,89 @@
   margin-top:22px!important;
 }
 
+/* Palazzo Termale — luxury focal point */
+.palazzoBrand{
+  position:relative!important;
+  display:inline-block!important;
+  margin:0 auto 30px!important;
+  padding:0 .08em!important;
+  font-family:"Bodoni Moda","Times New Roman",serif!important;
+  font-style:italic!important;
+  font-size:clamp(78px,9.2vw,156px)!important;
+  font-weight:500!important;
+  line-height:.86!important;
+  letter-spacing:-.058em!important;
+  background:linear-gradient(180deg,#fff9ec 0%,#f6e6c5 28%,#d4a65f 58%,#f2d9aa 82%,#fff4df 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  text-shadow:none!important;
+  filter:drop-shadow(0 12px 30px rgba(0,0,0,.48)) drop-shadow(0 0 20px rgba(210,164,91,.10))!important;
+  white-space:nowrap;
+}
+
+.palazzoBrand:before{
+  content:"";
+  position:absolute;
+  left:8%;right:8%;bottom:-18px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(225,183,111,.34) 18%,rgba(247,222,174,.82) 50%,rgba(225,183,111,.34) 82%,transparent);
+}
+
+.palazzoContent{
+  padding-top:74px!important;
+  padding-bottom:82px!important;
+}
+
+.palazzoContent>.ey{
+  margin-top:2px!important;
+  margin-bottom:22px!important;
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:9px!important;
+  font-weight:700!important;
+  letter-spacing:.28em!important;
+  color:#d6a258!important;
+}
+
+.palazzoContent h2{
+  max-width:980px!important;
+  margin:0 auto 24px!important;
+  font-family:"Prata",Georgia,serif!important;
+  font-size:clamp(52px,5.8vw,88px)!important;
+  font-weight:400!important;
+  line-height:.98!important;
+  letter-spacing:-.035em!important;
+  color:#f2ede5!important;
+  text-shadow:0 12px 38px rgba(0,0,0,.46)!important;
+}
+
+.palazzoContent .lead{
+  max-width:780px!important;
+  color:#d0c9bf!important;
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:14px!important;
+  line-height:1.7!important;
+}
+
+.palazzoLink{
+  margin-top:30px!important;
+  color:#e6b86f!important;
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.13em!important;
+}
+
 @media(max-width:900px){
   .startCrest{width:195px!important;height:195px!important}
   .startHero h1{font-size:clamp(44px,7.8vw,66px)!important}
+  .palazzoBrand{font-size:clamp(64px,13vw,112px)!important;white-space:normal}
 }
 
 @media(max-width:600px){
   .startCrest{width:170px!important;height:170px!important}
   .startHero h1{font-size:41px!important;line-height:1.06!important}
+  .palazzoBrand{font-size:58px!important;line-height:.92!important}
+  .palazzoContent h2{font-size:43px!important}
 }
