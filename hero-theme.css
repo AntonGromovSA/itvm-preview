@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Prata&display=swap');
 
 /* Premium first-screen theme */
 .startHeroShade{
@@ -94,29 +94,29 @@
   position:relative!important;
   display:inline-block!important;
   margin:0 auto 30px!important;
-  padding:0 .08em!important;
-  font-family:"Bodoni Moda","Times New Roman",serif!important;
+  padding:0 .04em!important;
+  font-family:"Cormorant Garamond",Georgia,serif!important;
   font-style:italic!important;
-  font-size:clamp(78px,9.2vw,156px)!important;
-  font-weight:500!important;
-  line-height:.86!important;
-  letter-spacing:-.058em!important;
-  background:linear-gradient(180deg,#fff9ec 0%,#f6e6c5 28%,#d4a65f 58%,#f2d9aa 82%,#fff4df 100%)!important;
+  font-size:clamp(82px,9vw,150px)!important;
+  font-weight:600!important;
+  line-height:.88!important;
+  letter-spacing:-.035em!important;
+  background:linear-gradient(180deg,#fff9ee 0%,#f3e1bd 34%,#d7aa65 62%,#f6e7c9 100%)!important;
   -webkit-background-clip:text!important;
   background-clip:text!important;
   -webkit-text-fill-color:transparent!important;
   color:transparent!important;
   text-shadow:none!important;
-  filter:drop-shadow(0 12px 30px rgba(0,0,0,.48)) drop-shadow(0 0 20px rgba(210,164,91,.10))!important;
+  filter:drop-shadow(0 13px 28px rgba(0,0,0,.46)) drop-shadow(0 0 18px rgba(210,164,91,.08))!important;
   white-space:nowrap;
 }
 
 .palazzoBrand:before{
   content:"";
   position:absolute;
-  left:8%;right:8%;bottom:-18px;
+  left:10%;right:10%;bottom:-17px;
   height:1px;
-  background:linear-gradient(90deg,transparent,rgba(225,183,111,.34) 18%,rgba(247,222,174,.82) 50%,rgba(225,183,111,.34) 82%,transparent);
+  background:linear-gradient(90deg,transparent,rgba(225,183,111,.28) 18%,rgba(247,222,174,.76) 50%,rgba(225,183,111,.28) 82%,transparent);
 }
 
 .palazzoContent{
@@ -166,12 +166,12 @@
 @media(max-width:900px){
   .startCrest{width:195px!important;height:195px!important}
   .startHero h1{font-size:clamp(44px,7.8vw,66px)!important}
-  .palazzoBrand{font-size:clamp(64px,13vw,112px)!important;white-space:normal}
+  .palazzoBrand{font-size:clamp(66px,13vw,110px)!important;white-space:normal}
 }
 
 @media(max-width:600px){
   .startCrest{width:170px!important;height:170px!important}
   .startHero h1{font-size:41px!important;line-height:1.06!important}
-  .palazzoBrand{font-size:58px!important;line-height:.92!important}
+  .palazzoBrand{font-size:60px!important;line-height:.94!important}
   .palazzoContent h2{font-size:43px!important}
 }
