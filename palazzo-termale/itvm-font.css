@@ -1,69 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
-/* Palazzo Termale — same title typography as the approved ITVM first screen. */
+/* Exact Palazzo Termale typeface from the approved ITVM #programs block. */
 .hero h1{
   position:relative!important;
   display:block!important;
   width:max-content!important;
   max-width:calc(100vw - 96px)!important;
-  margin:24px 0 28px!important;
-  padding:.14em .03em .08em 0!important;
+  margin:18px 0 30px!important;
+  padding:.22em .03em .14em 0!important;
   overflow:visible!important;
 
-  /* copied from ITVM */
-  font-family:"Prata",Georgia,serif!important;
+  font-family:"Italiana","Times New Roman",serif!important;
+  font-style:normal!important;
   font-weight:400!important;
-  line-height:1.04!important;
-  letter-spacing:-.028em!important;
+  line-height:.90!important;
+  letter-spacing:.012em!important;
 
-  /* sized only to keep the full name on one line */
-  font-size:clamp(68px,7.35vw,126px)!important;
+  font-size:clamp(76px,8.6vw,148px)!important;
   white-space:nowrap!important;
 
-  color:#f4efe7!important;
-  -webkit-text-fill-color:#f4efe7!important;
-  background:none!important;
-  text-shadow:0 10px 42px rgba(0,0,0,.48)!important;
-  filter:none!important;
+  background:linear-gradient(180deg,#fffdf8 0%,#f7ead0 35%,#d7ac67 70%,#fff1d5 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  text-shadow:none!important;
+  filter:drop-shadow(0 14px 34px rgba(0,0,0,.54)) drop-shadow(0 0 14px rgba(218,174,103,.07))!important;
 }
 
-/* The original markup contains <br>; on desktop it becomes a real horizontal gap, never a line break. */
+/* Desktop: the existing fallback <br> becomes a fixed horizontal gap, never a new line. */
 .hero h1 br{
   display:inline-block!important;
-  width:.24em!important;
+  width:.18em!important;
   height:0!important;
   line-height:0!important;
-  content:""!important;
 }
 
 .hero h1:after{
   content:"";
-  display:block;
-  width:92px;
+  position:absolute;
+  left:17%;
+  right:17%;
+  bottom:-2px;
   height:1px;
-  margin:24px 0 0 4px;
-  background:linear-gradient(90deg,#d6a45c,rgba(214,164,92,0));
+  background:linear-gradient(90deg,transparent,rgba(225,183,111,.38) 16%,rgba(250,228,188,.94) 50%,rgba(225,183,111,.38) 84%,transparent);
 }
 
 @media(max-width:1100px){
   .hero h1{
-    font-size:clamp(58px,7.4vw,86px)!important;
+    font-size:clamp(62px,8vw,104px)!important;
     max-width:calc(100vw - 64px)!important;
+    padding-top:.22em!important;
   }
 }
 
 @media(max-width:760px){
   .hero h1{
-    width:max-content!important;
-    max-width:none!important;
-    font-size:clamp(40px,10vw,58px)!important;
-    line-height:1.04!important;
-    letter-spacing:-.028em!important;
+    font-size:clamp(42px,10vw,62px)!important;
+    max-width:calc(100vw - 36px)!important;
     white-space:nowrap!important;
-    padding-top:.14em!important;
+    padding-top:.24em!important;
   }
   .hero h1 br{
     display:inline-block!important;
-    width:.22em!important;
+    width:.16em!important;
   }
 }
