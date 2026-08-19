@@ -1,33 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
-/* Palazzo Termale hero title — same premium serif language as the ITVM hero,
-   presented as one large luxury wordmark line. */
+/* Palazzo Termale — same title typography as the approved ITVM first screen. */
 .hero h1{
   position:relative!important;
   display:block!important;
   width:max-content!important;
-  max-width:none!important;
-  margin:28px 0 32px!important;
-  padding:0 .03em .08em 0!important;
+  max-width:calc(100vw - 96px)!important;
+  margin:24px 0 28px!important;
+  padding:.14em .03em .08em 0!important;
+  overflow:visible!important;
+
+  /* copied from ITVM */
   font-family:"Prata",Georgia,serif!important;
-  font-size:clamp(72px,8.45vw,148px)!important;
   font-weight:400!important;
-  line-height:.92!important;
-  letter-spacing:-.052em!important;
+  line-height:1.04!important;
+  letter-spacing:-.028em!important;
+
+  /* sized only to keep the full name on one line */
+  font-size:clamp(68px,7.35vw,126px)!important;
   white-space:nowrap!important;
-  background:linear-gradient(180deg,#fffaf0 0%,#f8edd8 40%,#ddb064 72%,#f6e2bb 100%)!important;
-  -webkit-background-clip:text!important;
-  background-clip:text!important;
-  -webkit-text-fill-color:transparent!important;
-  color:transparent!important;
-  text-shadow:none!important;
-  filter:drop-shadow(0 14px 32px rgba(0,0,0,.42))!important;
+
+  color:#f4efe7!important;
+  -webkit-text-fill-color:#f4efe7!important;
+  background:none!important;
+  text-shadow:0 10px 42px rgba(0,0,0,.48)!important;
+  filter:none!important;
 }
 
-/* Desktop: keep the original <br>, but turn it into a controlled word gap. */
+/* The original markup contains <br>; on desktop it becomes a real horizontal gap, never a line break. */
 .hero h1 br{
   display:inline-block!important;
-  width:.20em!important;
+  width:.24em!important;
   height:0!important;
   line-height:0!important;
   content:""!important;
@@ -35,33 +38,32 @@
 
 .hero h1:after{
   content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-13px;
+  display:block;
+  width:92px;
   height:1px;
-  background:linear-gradient(90deg,transparent,rgba(224,177,102,.32) 8%,rgba(246,222,179,.72) 50%,rgba(224,177,102,.32) 92%,transparent);
+  margin:24px 0 0 4px;
+  background:linear-gradient(90deg,#d6a45c,rgba(214,164,92,0));
 }
 
-@media(max-width:1050px){
+@media(max-width:1100px){
   .hero h1{
-    font-size:clamp(62px,9vw,100px)!important;
-    letter-spacing:-.048em!important;
+    font-size:clamp(58px,7.4vw,86px)!important;
+    max-width:calc(100vw - 64px)!important;
   }
 }
 
 @media(max-width:760px){
   .hero h1{
-    width:auto!important;
-    max-width:100%!important;
-    font-size:clamp(52px,10.5vw,76px)!important;
-    line-height:.96!important;
-    letter-spacing:-.04em!important;
-    white-space:normal!important;
+    width:max-content!important;
+    max-width:none!important;
+    font-size:clamp(40px,10vw,58px)!important;
+    line-height:1.04!important;
+    letter-spacing:-.028em!important;
+    white-space:nowrap!important;
+    padding-top:.14em!important;
   }
   .hero h1 br{
-    display:block!important;
-    width:auto!important;
-    height:auto!important;
+    display:inline-block!important;
+    width:.22em!important;
   }
 }
