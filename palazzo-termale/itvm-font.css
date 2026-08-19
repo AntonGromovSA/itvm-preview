@@ -1,17 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
-/* Palazzo Termale hero title — same premium serif as the ITVM hero */
+/* Palazzo Termale hero title — same premium serif language as the ITVM hero,
+   presented as one large luxury wordmark line. */
 .hero h1{
+  position:relative!important;
+  display:block!important;
+  width:max-content!important;
+  max-width:none!important;
+  margin:28px 0 32px!important;
+  padding:0 .03em .08em 0!important;
   font-family:"Prata",Georgia,serif!important;
+  font-size:clamp(72px,8.65vw,152px)!important;
   font-weight:400!important;
-  letter-spacing:-.045em!important;
-  line-height:.78!important;
+  line-height:.92!important;
+  letter-spacing:-.052em!important;
+  white-space:nowrap!important;
+  background:linear-gradient(180deg,#fffaf0 0%,#f8edd8 40%,#ddb064 72%,#f6e2bb 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  text-shadow:none!important;
+  filter:drop-shadow(0 14px 32px rgba(0,0,0,.42))!important;
 }
 
-@media(max-width:650px){
+/* The markup keeps a <br> for fallback, but desktop presentation is one line. */
+.hero h1 br{display:none!important}
+
+.hero h1:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-13px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(224,177,102,.32) 8%,rgba(246,222,179,.72) 50%,rgba(224,177,102,.32) 92%,transparent);
+}
+
+@media(max-width:1050px){
   .hero h1{
-    font-family:"Prata",Georgia,serif!important;
-    letter-spacing:-.035em!important;
-    line-height:.84!important;
+    font-size:clamp(62px,9.2vw,102px)!important;
+    letter-spacing:-.048em!important;
   }
+}
+
+@media(max-width:760px){
+  .hero h1{
+    width:auto!important;
+    max-width:100%!important;
+    font-size:clamp(52px,10.5vw,76px)!important;
+    line-height:.96!important;
+    letter-spacing:-.04em!important;
+    white-space:normal!important;
+  }
+  .hero h1 br{display:block!important}
 }
