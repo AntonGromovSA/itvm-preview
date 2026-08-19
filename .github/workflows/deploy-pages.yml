@@ -28,6 +28,18 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Attach live hero theme
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          html = p.read_text(encoding='utf-8')
+          tag = '<link rel="stylesheet" href="hero-theme.css">'
+          if tag not in html:
+              html = html.replace('</head>', tag + '</head>')
+          p.write_text(html, encoding='utf-8')
+          PY
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
