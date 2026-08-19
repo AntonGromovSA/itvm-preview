@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+/* Palazzo Termale hero title — same premium serif as the ITVM hero */
+.hero h1{
+  font-family:"Prata",Georgia,serif!important;
+  font-weight:400!important;
+  letter-spacing:-.045em!important;
+  line-height:.78!important;
+}
+
+@media(max-width:650px){
+  .hero h1{
+    font-family:"Prata",Georgia,serif!important;
+    letter-spacing:-.035em!important;
+    line-height:.84!important;
+  }
+}
