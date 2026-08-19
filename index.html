@@ -1,4 +1,4 @@
-<!doctype html><html lang=ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ИТВМ — Институт традиционной восточной медицины</title>
+<!doctype html><html lang=ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ИТВМ — Институт традиционной восточной медицины</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#050605;--panel:#0a0c0b;--fg:#f2ede4;--mut:#a9a198;--gold:#c79858;--line:#c7985838}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
@@ -134,51 +134,45 @@ section{transition:opacity .7s ease,transform .7s ease}
 }
 .startHero p{
   max-width:650px;
-  font-size:17px;line-height:1.68;color:#d4cdc3
+  font-size:15px;
+  line-height:1.65;
+  color:#c7c0b6;
+  margin:0 0 26px
 }
-.startActions{display:flex;gap:12px;margin-top:27px}
-.startPrimary,.startGhost{
-  display:inline-block;
-  padding:14px 20px;
-  font-size:9px;letter-spacing:.08em;text-transform:uppercase
+.startActions{display:flex;gap:12px;flex-wrap:wrap}
+.startPrimary,.startSecondary{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:0 22px;
+  font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--gold)
 }
-.startPrimary{background:var(--gold);color:#111;font-weight:bold}
-.startGhost{border:1px solid #ffffff45;color:#eee}
+.startPrimary{background:#c79858;color:#10110f}
+.startSecondary{background:#06070675;color:#eee;border-color:#ffffff3b;backdrop-filter:blur(8px)}
 .startStats{
-  position:absolute;z-index:4;right:4vw;bottom:70px;
-  display:grid;grid-template-columns:repeat(3,150px);
-  background:#080908d6;border:1px solid #ffffff10
+  position:absolute;z-index:4;right:4vw;bottom:0;
+  display:grid;grid-template-columns:repeat(3,145px);
+  border:1px solid #ffffff12;border-bottom:0;
+  background:#050605b3;backdrop-filter:blur(14px)
 }
-.startStats div{padding:18px;border-right:1px solid #ffffff10}
+.startStats div{padding:19px 18px;border-right:1px solid #ffffff12}
 .startStats div:last-child{border-right:0}
-.startStats b{font:28px Georgia;color:#dfb475}
-.startStats span{display:block;font-size:9px;color:#aaa;margin-top:5px}
+.startStats b{display:block;font:29px Georgia;color:#dfb475}
+.startStats span{display:block;margin-top:5px;font-size:9px;color:#9f9b94}
 .startHint{
-  position:absolute;z-index:4;bottom:25px;left:50%;
-  transform:translateX(-50%);
-  font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#cda56f
+  position:absolute;z-index:4;left:50%;bottom:22px;transform:translateX(-50%);
+  color:#d2a96c;font-size:8px;letter-spacing:.15em;text-transform:uppercase
 }
-
-/* element journey cleanup */
-.heroBase{background:#020302!important;transform:none!important}
-.scene.active{opacity:1!important}
-.crestMark{display:none!important}
-
-/* hide obsolete splash if cached */
-.intro{display:none!important}
-
 @media(max-width:900px){
-  .startHeroInner{padding:100px 7vw 120px}
-  .startCrest{width:135px;height:135px}
-  .startStats{left:7vw;right:7vw;bottom:62px;grid-template-columns:repeat(3,1fr)}
+  .startHeroInner{padding-top:100px;padding-bottom:150px}
+  .startCrest{width:145px;height:145px}
+  .startHero h1{font-size:54px;max-width:720px}
+  .startStats{left:4vw;right:4vw;grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:600px){
+  .startHero h1{font-size:44px}
   .startStats{display:none}
-  .startHero h1{font-size:48px}
-  .startHero p{font-size:15px}
-  .startActions{flex-direction:column}
+  .startHint{bottom:18px}
 }
-
 
 /* v33 — content architecture */
 .contentSection{background:#070807}
@@ -193,7 +187,6 @@ section{transition:opacity .7s ease,transform .7s ease}
 .contactPanel{padding:55px 4vw;background:#050605;border-top:1px solid #c7985835;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.contactPanel h2{font:50px/1 Georgia;margin:10px 0 12px}.contactPanel p{color:#aaa}.contactNumbers{display:grid;gap:8px;text-align:right}.contactNumbers a{font:27px Georgia;color:#e3b773}.contactNumbers span{font-size:9px;color:#888;letter-spacing:.08em;text-transform:uppercase}.legalLine{margin-top:35px;max-width:720px;font-size:8px;line-height:1.45;color:#777}
 @media(max-width:1100px){.directionGrid,.programGrid,.conditionGrid{grid-template-columns:1fr 1fr}.methodGrid{grid-template-columns:repeat(2,1fr)}.sectionHead,.priceIntro{grid-template-columns:1fr;gap:20px}}
 @media(max-width:700px){.directionGrid,.programGrid,.conditionGrid,.methodGrid{grid-template-columns:1fr}.contactPanel{grid-template-columns:1fr}.contactNumbers{text-align:left}.contactNumbers a{font-size:22px}}
-
 
 /* v34 refinement */
 .siteHeader{
@@ -341,7 +334,6 @@ section{transition:opacity .7s ease,transform .7s ease}
   .siteHeader nav{display:none}
   .startStats{left:3vw!important;right:3vw!important}
 }
-
 
 /* ==========================================================
    v35 — typography / header / element clarity
@@ -585,7 +577,64 @@ section{transition:opacity .7s ease,transform .7s ease}
   .heroContactLine{flex-wrap:wrap}
 }
 
-</style></head><body><div class=progress></div>
+/* v36 — hero typography and crest scale */
+body{
+  font-family:"Manrope",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+}
+.siteHeader .logo,
+.siteHeader .brand,
+.siteHeader nav a,
+.headerPhone,
+.siteHeader .cta{
+  font-family:"Manrope",system-ui,sans-serif!important;
+}
+.startCrest{
+  width:220px!important;
+  height:220px!important;
+  margin-bottom:20px!important;
+}
+.startHeroInner{
+  padding-top:118px!important;
+}
+.startEy{
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-weight:700!important;
+  letter-spacing:.16em!important;
+}
+.startHero h1{
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:clamp(48px,5.15vw,82px)!important;
+  font-weight:400!important;
+  line-height:1.02!important;
+  letter-spacing:-.055em!important;
+  max-width:980px!important;
+}
+.startProfile{
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:18px!important;
+  font-weight:650!important;
+  letter-spacing:-.012em!important;
+}
+.startHero p{
+  font-family:"Manrope",system-ui,sans-serif!important;
+  font-size:15px!important;
+  font-weight:400!important;
+  line-height:1.72!important;
+  letter-spacing:-.008em!important;
+}
+.heroContactLine{
+  font-family:"Manrope",system-ui,sans-serif!important;
+}
+@media(max-width:900px){
+  .startCrest{width:175px!important;height:175px!important}
+}
+@media(max-width:600px){
+  .startCrest{width:150px!important;height:150px!important}
+  .startHero h1{font-size:42px!important;line-height:1.02!important}
+}
+
+</style></head><body>
+<div class=intro><div class=introMark><b>ИТВМ</b><span>Институт традиционной восточной медицины</span></div></div><div class=progress></div>
 <header class=siteHeader>
   <div class=headerIdentity>
     <div class=logo>ИТВМ</div>
@@ -604,7 +653,6 @@ section{transition:opacity .7s ease,transform .7s ease}
     <a class=cta href=#contact>Записаться</a>
   </div>
 </header>
-
 <section class="startHero" id="start">
   <video class="startHeroFilm" autoplay muted loop playsinline preload="auto">
     <source src="assets/itvm-hero-veo.mp4" type="video/mp4">
@@ -639,17 +687,7 @@ section{transition:opacity .7s ease,transform .7s ease}
   <div class="fact"><b>29</b><span>специалистов клиники</span></div>
   <div class="fact"><b>100+</b><span>медицинских услуг</span></div>
   <div class="fact factText"><strong>ИТВМ</strong><span>диагностика · лечение · восстановление</span></div>
-</section>
-<div class=hero id=journey><div class=stage><div class=heroBase></div>
-<div class="scene active" style="background-image:url(assets/water.jpg)"></div>
-<div class="scene" style="background-image:url(assets/wood.jpg)"></div>
-<div class="scene" style="background-image:url(assets/earth.jpg)"></div>
-<div class="scene" style="background-image:url(assets/fire.jpg)"></div>
-<div class="scene" style="background-image:url(assets/metal.jpg)"></div>
-<div class="scene" style="background-image:url(assets/harmony.jpg)"></div>
-<div class=veil></div><div class=rail><button data-i="0"><span>01</span><b>ВОДА</b></button><button data-i="1"><span>02</span><b>ДЕРЕВО</b></button><button data-i="2"><span>03</span><b>ЗЕМЛЯ</b></button><button data-i="3"><span>04</span><b>ОГОНЬ</b></button><button data-i="4"><span>05</span><b>МЕТАЛЛ</b></button><button data-i="5"><span>ИТВМ</span><b>ГАРМОНИЯ</b></button></div>
-<div class=heroCopy><div class=journeyPurpose>ПЯТЬ ЭЛЕМЕНТОВ — МЕТАФОРА ПЕРСОНАЛЬНОГО МАРШРУТА ЛЕЧЕНИЯ</div><div class=ey id=chapter>01 / ВОДА</div><h1 id=heroTitle>ТЕКУЧЕСТЬ.<br>ОЧИЩЕНИЕ.</h1><div class=elementMeaning id=elementMeaning>ДИАГНОСТИКА — ПОНЯТЬ СОСТОЯНИЕ</div><p id=heroText>Диагностика и спокойствие помогают понять состояние организма и выбрать верное направление лечения.</p><div class=journey><i>▶</i><span>Прокручивайте для путешествия</span></div></div>
-<div class=stats><div><b>30+</b><span>лет на Арбате</span></div><div><b>100+</b><span>услуг</span></div><div><b>29</b><span>специалистов</span></div></div><div class=hint>Пять элементов · один путь</div></div></div>
+</section><div class=hero id=journey><div class=stage><div class=heroBase></div><div class=scene style="background-image:url(assets/water.jpg)"></div><div class=scene style="background-image:url(assets/wood.jpg)"></div><div class=scene style="background-image:url(assets/earth.jpg)"></div><div class=scene style="background-image:url(assets/fire.jpg)"></div><div class=scene style="background-image:url(assets/metal.jpg)"></div><div class=scene style="background-image:url(assets/harmony.jpg)"></div><div class=veil></div><div class=rail></div><div class=heroCopy><div class=journeyPurpose>ПЯТЬ ЭЛЕМЕНТОВ — МЕТАФОРА ПЕРСОНАЛЬНОГО МАРШРУТА ЛЕЧЕНИЯ</div><div class=ey id=chapter>01 / ВОДА</div><h1 id=heroTitle>ТЕКУЧЕСТЬ.<br>ОЧИЩЕНИЕ.</h1><div class=elementMeaning id=elementMeaning>ДИАГНОСТИКА — ПОНЯТЬ СОСТОЯНИЕ</div><p id=heroText>Диагностика и мягкие водные практики помогают понять состояние организма и задать верное направление лечения.</p><div class=journey><i>▶</i><b>Прокручивайте для путешествия</b></div></div><div class=stats><div><b>30+</b><span>лет на Арбате</span></div><div><b>100+</b><span>услуг</span></div><div><b>29</b><span>специалистов</span></div></div><div class=hint>Пять элементов · один путь</div></div></div>
 <section id=elements class=elementsMeaningSection>
 <div class=ey>Пять элементов ИТВМ</div>
 <h2>Метафора персонального маршрута лечения.</h2>
@@ -661,9 +699,7 @@ section{transition:opacity .7s ease,transform .7s ease}
   <article class=element style="--pic:url(assets/real_sauna.jpg)"><small>04</small><h3>Огонь</h3><strong>Активация</strong><p>Вернуть энергию и жизненный тонус.</p></article>
   <article class=element style="--pic:url(assets/real_clinic_room.jpg)"><small>05</small><h3>Металл</h3><strong>Точность</strong><p>Выстроить медицинские назначения и контроль.</p></article>
   <article class=element style="--pic:url(assets/real_lobby.jpg)"><small>ИТВМ</small><h3>Гармония</h3><strong>Персональный маршрут</strong><p>Собрать всё в единую систему здоровья.</p></article>
-</div></section>
-<section id=story class=instituteFilmSection><div class=instituteFilmWrap><video class=instituteFilm autoplay muted loop playsinline preload=auto><source src="assets/institute-veo.mp4" type="video/mp4"></video><div class=instituteFilmShade></div></div><div class=story><div class=storyPic></div><div><div class=ey>Институт</div><h2>30 лет на Арбате.<br>Искусство врачевания для жизни.</h2><p class=lead>Восточная медицинская традиция соединяется с современной клинической экспертизой и персональным подходом к здоровью и долголетию.</p><div class=facts><div class=fact><b>30+</b><span>лет практики</span></div><div class=fact><b>100+</b><span>услуг</span></div><div class=fact><b>29</b><span>специалистов</span></div></div></div></div></section>
-<section id=doctors><div class=ey>Ведущие специалисты</div><h2>Люди за медициной.</h2><div class=doctors><article class=doctor><div class=portrait><img src="assets/desyaterik.jpg"></div><h3>Десятерик Александр Евгеньевич</h3><p>Главный врач института традиционной восточной медицины</p><a href=#contact>Подробнее →</a></article><article class=doctor><div class=portrait><img src="assets/koroleva.jpg"></div><h3>Королёва Оксана Михайловна</h3><p>Руководитель департамента по науке и инновациям, к.м.н., доцент</p><a href=#contact>Подробнее →</a></article><article class=doctor><div class=portrait><img src="assets/shakhova.jpg"></div><h3>Шахова Марина Александровна</h3><p>Врач гинеколог-репродуктолог высшей квалификационной категории, д.м.н., профессор</p><a href=#contact>Подробнее →</a></article><article class=doctor><div class=portrait><img src="assets/nechaeva.jpg"></div><h3>Нечаева Ирина Анатольевна</h3><p>Врач венеролог-дерматолог высшей квалификационной категории, д.м.н.</p><a href=#contact>Подробнее →</a></article></div></section>
+</div></section><section class=story id=story><div><div class=ey>Философия</div><h2>Пять состояний.<br>Один путь.</h2><p class=lead>В ИТВМ соединяются современные медицинские подходы и традиционная восточная медицина. Мы рассматриваем лечение как последовательный маршрут: понять состояние, восстановить ресурс, создать опору, вернуть энергию и выстроить точную систему помощи.</p><div class=facts><div class=fact><b>30+</b><span>лет на Арбате</span></div><div class=fact><b>29</b><span>специалистов</span></div><div class=fact><b>100+</b><span>услуг</span></div></div></div><div class=storyPic></div></section>
 <section class=palazzo id=palazzo>
 <video class=palazzoFilm autoplay muted loop playsinline preload=auto><source src="assets/palazzo-veo.mp4" type="video/mp4"></video>
 <div class=palazzoShade></div>
@@ -675,7 +711,6 @@ section{transition:opacity .7s ease,transform .7s ease}
   <a class=palazzoLink href=#programs>Посмотреть программу →</a>
 </div>
 </section>
-
 <section id=services class=contentSection>
 <div class=sectionHead>
   <div><div class=ey>Чем мы можем помочь</div><h2>Медицинские направления.</h2></div>
@@ -708,7 +743,6 @@ section{transition:opacity .7s ease,transform .7s ease}
 <article><b>09</b><h3>Гирудотерапия</h3><p>Метод с использованием медицинских пиявок по медицинским показаниям.</p></article>
 <article><b>10</b><h3>Озонотерапия</h3><p>Метод, применяемый в клинике в составе медицинских программ по показаниям.</p></article>
 </div></div></section>
-
 <section id=programs class="contentSection programsSection">
 <div class=sectionHead>
   <div><div class=ey>Комплексные программы</div><h2>Не отдельная процедура, а маршрут.</h2></div>
@@ -724,10 +758,7 @@ section{transition:opacity .7s ease,transform .7s ease}
 <article class=programCard><small>07</small><h3>Институт обоняния и ольфакторной патологии</h3><p>Профильное направление диагностики и лечения нарушений обоняния.</p></article>
 <article class=programCard><small>08</small><h3>Программы для сердца и сосудов</h3><p>Профилактика и лечение сердечно-сосудистых заболеваний в рамках комплексного подхода.</p></article>
 </div></section>
-
-
-
-
+<section id=doctors><div class=ey>Команда</div><h2>Наши врачи</h2><p class=lead>Специалисты клиники соединяют клинический опыт и методы традиционной восточной медицины.</p><div class=doctors><article class=doctor><div class=portrait><img src="assets/doctor_1.jpg" alt="Александр Евгеньевич Десятерик"></div><h3>Александр Десятерик</h3><p>Главный врач · врач традиционной восточной медицины</p><a href=#contact>Записаться →</a></article><article class=doctor><div class=portrait><img src="assets/doctor_2.jpg" alt="Оксана Михайловна Королёва"></div><h3>Оксана Королёва</h3><p>Руководитель департамента по науке и инновациям</p><a href=#contact>Записаться →</a></article><article class=doctor><div class=portrait><img src="assets/doctor_3.jpg" alt="Марина Александровна Шахова"></div><h3>Марина Шахова</h3><p>Врач акушер-гинеколог · репродуктолог</p><a href=#contact>Записаться →</a></article><article class=doctor><div class=portrait><img src="assets/doctor_4.jpg" alt="Ирина Анатольевна Нечаева"></div><h3>Ирина Нечаева</h3><p>Врач дерматолог · доктор медицинских наук</p><a href=#contact>Записаться →</a></article></div></section>
 <section id=conditions class="contentSection conditionsSection">
 <div class=sectionHead>
   <div><div class=ey>С чем обращаются</div><h2>Найдите своё направление.</h2></div>
@@ -743,23 +774,8 @@ section{transition:opacity .7s ease,transform .7s ease}
 <a href=#contact><span>07</span><h3>Эндокринная система</h3><p>Состояния, связанные с обменом веществ и функцией щитовидной железы.</p></a>
 <a href=#contact><span>08</span><h3>Мужское здоровье</h3><p>Урологические заболевания и комплексные программы мужского здоровья.</p></a>
 </div></section>
-<section id=clinicReal class=clinicReal>
-  <div class=ey>Реальная клиника</div>
-  <h2>Пространства ИТВМ.</h2>
-  <p class=lead>Реальные кабинеты, зоны ожидания и пространства для лечения и восстановления.</p>
-  <div class=clinicMosaic>
-    <figure class=wide><img src="assets/real_reception_water.jpg"><figcaption>Ресепшен</figcaption></figure>
-    <figure><img src="assets/real_lobby.jpg"><figcaption>Клиника</figcaption></figure>
-    <figure><img src="assets/real_waiting_warm.jpg"><figcaption>Зона ожидания</figcaption></figure>
-    <figure><img src="assets/real_corridor.jpg"><figcaption>Интерьеры</figcaption></figure>
-    <figure><img src="assets/real_clinic_room.jpg"><figcaption>Медицинский кабинет</figcaption></figure>
-    <figure><img src="assets/real_treatment_bamboo.jpg"><figcaption>Процедурный кабинет</figcaption></figure>
-    <figure><img src="assets/real_mountain_room.jpg"><figcaption>Кабинет консультаций</figcaption></figure>
-    <figure><img src="assets/real_wood_tub.jpg"><figcaption>Зона восстановления</figcaption></figure>
-    <figure><img src="assets/real_sauna.jpg"><figcaption>Сауна</figcaption></figure>
-  </div>
-</section>
-
+<section id=clinicReal class=clinicReal><div class=ey>Реальная клиника</div><h2>Пространство ИТВМ</h2><p class=lead>Интерьеры клиники на Арбате — реальные кабинеты, зоны ожидания и восстановления.</p><div class=clinicMosaic><figure class=wide><img src="assets/real_lobby.jpg" alt="Интерьер клиники ИТВМ"><figcaption>Клиника на Арбате</figcaption></figure><figure><img src="assets/real_treatment_bamboo.jpg" alt="Процедурный кабинет ИТВМ"><figcaption>Процедурный кабинет</figcaption></figure><figure><img src="assets/real_reception_water.jpg" alt="Ресепшен ИТВМ"><figcaption>Ресепшен</figcaption></figure><figure><img src="assets/real_sauna.jpg" alt="Сауна ИТВМ"><figcaption>Восстановление</figcaption></figure><figure><img src="assets/real_mountain_room.jpg" alt="Кабинет ИТВМ"><figcaption>Кабинет</figcaption></figure></div></section>
+<section class="instituteFilmSection" id="instituteFilmSection"><div class="instituteFilmWrap"><video class="instituteFilm" autoplay muted loop playsinline preload="metadata"><source src="assets/institute-veo.mp4" type="video/mp4"></video><div class="instituteFilmShade"></div></div><div class=ey>Институт</div><h2>Медицина, которая видит человека целиком.</h2><p class=lead>ИТВМ объединяет медицинскую диагностику, лечение и восстановление без случайных и спорных кадров.</p></section>
 <section id=prices class="contentSection priceSection">
 <div class=priceIntro>
   <div><div class=ey>Стоимость</div><h2>Понятный первый шаг.</h2><p class=lead>На сайте ИТВМ опубликован подробный прайс. На главной оставляем несколько ориентиров, а полный список лучше вынести на отдельную страницу.</p></div>
@@ -782,15 +798,9 @@ section{transition:opacity .7s ease,transform .7s ease}
 <a href="tel:+74956916672">+7 (495) 691-66-72</a>
 <span>Запись и справочная информация</span>
 </div></section>
-<footer id=contact class=cinematicFinal>
-<video class=finalFilm autoplay muted loop playsinline preload=auto><source src="assets/final-harmony-veo.mp4" type="video/mp4"></video>
-<div class=finalShade></div>
-<div class=finalContent><div class=ey>ИТВМ · ГАРМОНИЯ</div><h2>Ваш путь<br>начинается здесь.</h2><p class=lead>Персональная медицина, восстановление и долголетие — в единой системе заботы о человеке.</p><a class=cta href="tel:+74955209736">Записаться на консультацию</a></div>
+<footer id=contact class=cinematicFinal><video class=finalFilm autoplay muted loop playsinline preload=metadata><source src="assets/final-harmony-veo.mp4" type="video/mp4"></video><div class=finalShade></div><div class=finalContent><div class=ey>ИТВМ · Арбат</div><h2>Ваш путь к восстановлению начинается здесь.</h2><p class=lead>Диагностика, медицина и традиционные практики — в единой системе заботы о здоровье.</p><a class=cta href="tel:+74995209736">Записаться на консультацию</a><div class=legalLine>Медицинская лицензия № ЛО-77-01-018273 от 24.06.2019. Информация на сайте носит информационный характер и не является публичной офертой.</div></div>
 </footer>
 <script>
-const hero=document.querySelector('.hero');
-const scenes=[...document.querySelectorAll('.scene')];
-const buttons=[...document.querySelectorAll('.rail button')];
 const data=[
 ['01 / ВОДА','ПОНЯТЬ<br>СОСТОЯНИЕ','ЭТАП 1 · ДИАГНОСТИКА','Вода — образ ясности и движения. Начинаем с диагностики: оцениваем состояние организма и определяем дальнейший маршрут.'],
 ['02 / ДЕРЕВО','ВЕРНУТЬ<br>РЕСУРС','ЭТАП 2 · ВОССТАНОВЛЕНИЕ','Дерево — образ роста и обновления. Подбираем методы, которые помогают организму восстановить ресурс и естественные процессы.'],
@@ -799,45 +809,19 @@ const data=[
 ['05 / МЕТАЛЛ','НАСТРОИТЬ<br>ЛЕЧЕНИЕ','ЭТАП 5 · ТОЧНОСТЬ','Металл — образ точности и структуры. Анализы, медицинские назначения и контроль результата собираются в понятную систему.'],
 ['ИТВМ / ГАРМОНИЯ','СОБРАТЬ<br>В СИСТЕМУ','ИТОГ · ПЕРСОНАЛЬНЫЙ МАРШРУТ','Гармония — итог всего пути. Диагностика, лечение и восстановление объединяются в единую персональную программу здоровья.']
 ];
-let last=-1;
-function activateScene(i){
-  scenes.forEach((s,j)=>s.classList.toggle('active',j===i));
-  buttons.forEach((b,j)=>b.classList.toggle('active',j===i));
-  chapter.innerHTML=data[i][0];
+const hero=document.getElementById('journey'),scenes=[...document.querySelectorAll('.scene')],rail=document.querySelector('.rail'),chapter=document.getElementById('chapter'),heroTitle=document.getElementById('heroTitle'),heroText=document.getElementById('heroText');
+let active=-1;
+data.forEach((d,i)=>{let b=document.createElement('button');b.innerHTML=`<span>${String(i+1).padStart(2,'0')}</span><b>${['ВОДА','ДЕРЕВО','ЗЕМЛЯ','ОГОНЬ','МЕТАЛЛ','ГАРМОНИЯ'][i]}</b>`;b.onclick=()=>window.scrollTo({top:hero.offsetTop+(i+.1)*(hero.offsetHeight-innerHeight)/5,behavior:'smooth'});rail.appendChild(b)});
+const buttons=[...rail.children];
+function activate(i){if(i===active)return;active=i;scenes.forEach((s,k)=>s.classList.toggle('active',k===i));buttons.forEach((b,k)=>b.classList.toggle('active',k===i));chapter.innerHTML=data[i][0];
   heroTitle.innerHTML=data[i][1];
   elementMeaning.innerHTML=data[i][2];
-  heroText.innerHTML=data[i][3];
-}
-function update(){
-  const r=hero.getBoundingClientRect();
-  const max=Math.max(1,hero.offsetHeight-innerHeight);
-  const p=Math.max(0,Math.min(.999,-r.top/max));
-  const i=Math.min(5,Math.floor(p*6));
-  if(i===last)return;
-  last=i;
-  activateScene(i);
-}
-addEventListener('scroll',update,{passive:true});
-addEventListener('resize',update);
-buttons.forEach((b,i)=>b.onclick=()=>scrollTo({
-  top:hero.offsetTop+i*(hero.offsetHeight-innerHeight)/6,
-  behavior:'smooth'
-}));
-activateScene(0);
-update();
+  heroText.innerHTML=data[i][3];}
+function update(){let r=hero.getBoundingClientRect(),travel=hero.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/travel)),i=Math.min(5,Math.floor(p*6));activate(i);document.querySelector('.progress').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%';requestAnimationFrame(update)}update();
+setTimeout(()=>document.querySelector('.intro').classList.add('hide'),1000);
 
-let timer;function start(){timer=setTimeout(()=>{water.classList.add('open');water.innerHTML='<b>ТЕРМАЛЬНЫЙ КОМПЛЕКС · ДОБРО ПОЖАЛОВАТЬ</b>'},650)}function stop(){clearTimeout(timer)};['mousedown','touchstart'].forEach(e=>water.addEventListener(e,start));['mouseup','mouseleave','touchend','touchcancel'].forEach(e=>water.addEventListener(e,stop));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('section:not(.startHero):not(.palazzo):not(.cinematicFinal)').forEach(s=>{s.classList.add('reveal');io.observe(s)});
 
-const prog=document.querySelector('.progress');
-addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;prog.style.width=((scrollY/m)*100)+'%'},{passive:true});
-addEventListener('load',()=>setTimeout(()=>document.querySelector('.intro').classList.add('hide'),450));
-
-const palFilm=document.querySelector('.palazzoFilm'),instituteFilm=document.querySelector('.instituteFilm'),finalFilm=document.querySelector('.finalFilm');
-function ensureFilm(){if(palFilm&&palFilm.paused)palFilm.play().catch(()=>{});if(instituteFilm&&instituteFilm.paused)instituteFilm.play().catch(()=>{});if(finalFilm&&finalFilm.paused)finalFilm.play().catch(()=>{})}
-addEventListener('click',ensureFilm,{once:true});
-addEventListener('scroll',ensureFilm,{once:true,passive:true});
-
-document.querySelectorAll('section').forEach(s=>s.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(s=>io.observe(s));
+document.addEventListener('visibilitychange',()=>{document.querySelectorAll('video').forEach(v=>document.hidden?v.pause():v.play().catch(()=>{}))});
 </script></body></html>
