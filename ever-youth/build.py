@@ -1,6 +1,6 @@
 from pathlib import Path
 import html, json, re
-R=Path(__file__).parent/'dist'
+R=Path(__file__).parent/'site'
 nav=[('clinic','Клиника'),('services','Услуги и методы'),('programs','Программы'),('longevity','Долголетие'),('doctors','Врачи'),('palazzo','Palazzo & SPA'),('prices','Цены'),('contacts','Контакты')]
 def link(p):return 'index.html' if p=='home' else p+'.html'
 def button(text,url,outline=False):return f'<a class="btn {"outline" if outline else ""}" href="{url}">{text}<span aria-hidden="true">↗</span></a>'
@@ -31,3 +31,4 @@ for p in R.glob('page*.html'):p.unlink()
 (R/'robots.txt').write_text('User-agent: *\nAllow: /\n',encoding='utf-8')
 (R/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://itvm.ru/ever-youth/'+link(k)+'</loc></url>' for k in pages)+'</urlset>',encoding='utf-8')
 print('Generated',len(pages),'pages')
+
