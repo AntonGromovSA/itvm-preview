@@ -94,7 +94,16 @@ def render(key,title,body,desc=''):
  output=ctx['template'](key,title,body,desc or title+' — материалы Института традиционной восточной медицины на Арбате.')
  output=output.replace('style.css"','style.css?v=20261026-content"').replace('app.js"','app.js?v=20261026-content"')
  output=output.replace('</head>','<link rel="stylesheet" href="content.css?v=20261026-content"></head>')
+ output=output.replace('Цены перенесены с основного сайта института.','Стоимость по прайс-листу института.')
  output=output.replace('<a href="tel:+74956916669">+7 (495) 691-66-69</a>','<a href="tel:+74956916672">+7 (495) 691-66-72</a>')
+ def version_link(match):
+  value=html.unescape(match.group(1));parsed=urllib.parse.urlsplit(value)
+  if parsed.scheme or parsed.netloc or not parsed.path.endswith('.html'):return match.group(0)
+  pairs=urllib.parse.parse_qsl(parsed.query,keep_blank_values=True)
+  pairs=[(k,v) for k,v in pairs if k!='v']+ [('v','20261026-content')]
+  value=urllib.parse.urlunsplit(('', '',parsed.path,urllib.parse.urlencode(pairs),parsed.fragment))
+  return 'href="'+html.escape(value,quote=True)+'"'
+ output=re.sub(r'href="([^"]+)"',version_link,output)
  return output
 def write(filename,key,title,body,desc=''):(R/filename).write_text(render(key,E(title),body,desc),encoding='utf8')
 primary={k:[] for k in ('services','methods','programs')}
