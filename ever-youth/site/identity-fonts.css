@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/identity-a0c8dd62392c1b.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/identity-0c5880fa6a928e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/identity-8a7de2e05baaa8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/identity-62fea8924bbcd7.ttf) format('truetype');
+}
