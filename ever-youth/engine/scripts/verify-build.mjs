@@ -30,6 +30,27 @@ const search=await json('dist/replica-search.json');assert.equal(search.filter(i
 const files=async dir=>(await Promise.all((await readdir(dir,{withFileTypes:true})).map(d=>d.isDirectory()?files(join(dir,d.name)):join(dir,d.name)))).flat();
 const output=await files(built);assert.ok(output.every(p=>!/[\\/]assets[\\/]|\.ttf$|component-tests|\.php$|\.csv$|\.xls/i.test(p)),'Old assets, lab or private source in output');
 for(const f of output.filter(p=>/\.(css|js)$/.test(p)))assert.ok(!/tilda|tn-atom|t396__|static\.tildacdn/i.test(await readFile(f,'utf8')),'Vendor code remains: '+f);
+let preservedCanvasBlocks=0;
+for(const name of Object.keys(await json('src/data/compositions.json'))){
+ const old=load(await readFile(join(baseline,name),'utf8')),current=load(await readFile(join(built,name),'utf8'));
+ for(const block of old('#allrecords [data-record-type="396"]').toArray()){
+  if(old(block).closest('#t-header,#t-footer').length)continue;
+  const id=old(block).attr('id'),found=current('#'+id);assert.equal(found.length,1,'Authored block missing: '+name+' '+id);
+  assert.equal(found.find('.node-atom').length,old(block).find('.tn-atom').length,'Authored composition flattened: '+name+' '+id);
+  assert.equal(found.find('.node-group').length,old(block).find('.tn-group').length,'Authored group missing: '+name+' '+id);preservedCanvasBlocks++;
+ }
+}
+assert.deepEqual(await readFile('dist/brand/crest.png'),await readFile(join(baseline,'assets/a897742453b07a7c2ad9.png')),'Original crest must remain unchanged');
+for(const f of output.filter(p=>p.endsWith('.css'))){
+ for(const match of (await readFile(f,'utf8')).matchAll(/url\(\s*(?:"([^"]*)"|'([^']*)'|([^)]*))\s*\)/g)){
+  const value=(match[1]??match[2]??match[3]).trim();if(/^(?:[a-z]+:|\/\/|#)/i.test(value))continue;
+  const path=value.startsWith('/ever-youth/')?join(built,value.slice(12)):resolve(f,'..',value);
+  await stat(path).catch(()=>errors.push('CSS '+f+': '+value));
+ }
+}
+assert.deepEqual(errors,[],'Missing CSS resources');
 const home=load(await readFile('dist/index.html','utf8'));const shell=[];for(const n of home('script[src],link[rel="stylesheet"]').toArray()){const path=(home(n).attr('src')||home(n).attr('href')).replace('/ever-youth/','');shell.push({path,bytes:(await stat(join(built,path))).size});}
 assert.ok(!home('script[src]').toArray().some(n=>/three|react|ModelViewer/.test(home(n).attr('src'))),'Heavy island loaded on homepage');
+assert.equal(home('video.original-background-video[autoplay][muted][playsinline] source[src="video/30027af1c993f1fac795.mp4"]').length,1,'Original background video missing');
+console.log('Preserved authored composition blocks: '+preservedCanvasBlocks);
 const report={pages:120,doctors:40,priceItems:1760,tariffUnchanged:true,biographyParagraphsPreserved:biographies,vendorRuntimeRemoved:true,localReferences:references,searchEntries:search.length,homepageBytes:(await stat('dist/index.html')).size,homepageCssAndJs:shell,largestHtml:htmlSizes.sort((a,b)=>b.bytes-a.bytes).slice(0,4),errors};await mkdir('reports',{recursive:true});await writeFile('reports/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));
