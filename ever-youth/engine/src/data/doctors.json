@@ -1,0 +1,470 @@
+[
+  {
+    "name": "Каирова Альбина Хасановна",
+    "href": "doctor-hasanova.html",
+    "image": {
+      "src": "media/c6c5e4cf8d34ed-300.webp",
+      "width": 300,
+      "height": 300,
+      "srcset": "media/c6c5e4cf8d34ed-300.webp 300w",
+      "alt": "Каирова Альбина Хасановна"
+    },
+    "role": "Кмэ (комплекс медицинский экспертный)"
+  },
+  {
+    "name": "Подъячева Любовь Михайловна",
+    "href": "specialist-source-45.html",
+    "image": {
+      "src": "media/b9fcce8cd394fc-434.webp",
+      "width": 434,
+      "height": 418,
+      "srcset": "media/b9fcce8cd394fc-434.webp 434w",
+      "alt": "Подъячева Любовь Михайловна"
+    },
+    "role": "Шлем (система нелинейного анализа (nls)), портативный мрт."
+  },
+  {
+    "name": "Покладова Людмила Вячеславовна",
+    "href": "doctor-ludmila-pokladova.html",
+    "image": {
+      "src": "media/3d454d77c7b30f-480.webp",
+      "width": 480,
+      "height": 452,
+      "srcset": "media/3d454d77c7b30f-480.webp 480w",
+      "alt": "Покладова Людмила Вячеславовна"
+    },
+    "role": "Офтальмолог рефлексотерапевт"
+  },
+  {
+    "name": "Волкова Любовь Прохоровна",
+    "href": "doctor-volkova.html",
+    "image": {
+      "src": "media/8c6895ff6bc25f-435.webp",
+      "width": 435,
+      "height": 400,
+      "srcset": "media/8c6895ff6bc25f-435.webp 435w",
+      "alt": "Волкова Любовь Прохоровна"
+    },
+    "role": "Офтальмолог, (окулист) д.м.н., врач высшей категории"
+  },
+  {
+    "name": "Максимова Анна Михайловна",
+    "href": "specialist-source-48.html",
+    "image": {
+      "src": "media/76f86e8d47cdfa-300.webp",
+      "width": 300,
+      "height": 300,
+      "srcset": "media/76f86e8d47cdfa-300.webp 300w",
+      "alt": "Максимова Анна Михайловна"
+    },
+    "role": "Врач-узи"
+  },
+  {
+    "name": "Бахтина Алла Борисовна",
+    "href": "doctor-alla-bachtina.html",
+    "image": {
+      "src": "media/b9fb16bdbfc981-300.webp",
+      "width": 300,
+      "height": 300,
+      "srcset": "media/b9fb16bdbfc981-300.webp 300w",
+      "alt": "Бахтина Алла Борисовна"
+    },
+    "role": "Врач-узи"
+  },
+  {
+    "name": "Шубина Елена Александровна",
+    "href": "doctor-elena-shubina.html",
+    "image": {
+      "src": "media/4eacbab9f29795-300.webp",
+      "width": 300,
+      "height": 300,
+      "srcset": "media/4eacbab9f29795-300.webp 300w",
+      "alt": "Шубина Елена Александровна"
+    },
+    "role": "Врач-узи"
+  },
+  {
+    "name": "Вандышев Валентин Игоревич",
+    "href": "doctor-doctor-vandishev.html",
+    "image": {
+      "src": "media/f6775f36459608-170.webp",
+      "width": 170,
+      "height": 170,
+      "srcset": "media/f6775f36459608-170.webp 170w",
+      "alt": "Вандышев Валентин Игоревич"
+    },
+    "role": "Врач рефлекотерапевт, специалист по традиционной китайской медицине, член профессиональной ассоциации рефлексотерапевтов."
+  },
+  {
+    "name": "Баша Татьяна Алексеевна",
+    "href": "doctor-tatiyana-busha.html",
+    "image": {
+      "src": "media/3b961ab6e888bf-400.webp",
+      "width": 400,
+      "height": 400,
+      "srcset": "media/3b961ab6e888bf-400.webp 400w",
+      "alt": "Баша Татьяна Алексеевна"
+    },
+    "role": "Гирудотерапевт"
+  },
+  {
+    "name": "Фёдорова Юлия Сергеевна",
+    "href": "specialist-source-53.html",
+    "image": {
+      "src": "media/379eb62714baba-218.webp",
+      "width": 218,
+      "height": 314,
+      "srcset": "media/379eb62714baba-218.webp 218w",
+      "alt": "Фёдорова Юлия Сергеевна"
+    },
+    "role": "Главная медицинская сестра"
+  },
+  {
+    "name": "Ганджа Сергей Александрович",
+    "href": "specialist-source-55.html",
+    "image": {
+      "src": "media/d397e235b9165a-480.webp",
+      "width": 480,
+      "height": 410,
+      "srcset": "media/d397e235b9165a-480.webp 480w",
+      "alt": "Ганджа Сергей Александрович"
+    },
+    "role": "Врач общей практики (семейный врач, лимфолог, физиотерпевт, ревматолог)"
+  },
+  {
+    "name": "Искандарова Наталия Александровна",
+    "href": "doctor-iskanderova-nurticia.html",
+    "image": {
+      "src": "media/587639fcd7cfbf-300.webp",
+      "width": 300,
+      "height": 300,
+      "srcset": "media/587639fcd7cfbf-300.webp 300w",
+      "alt": "Искандарова Наталия Александровна"
+    },
+    "role": "Диетолог, нутрициолог, терапевт, врач высшей категории,"
+  },
+  {
+    "name": "Николаева Элеонора Анатольевна",
+    "href": "specialist-source-58.html",
+    "image": {
+      "src": "media/7a39d590c0c4b5-462.webp",
+      "width": 462,
+      "height": 400,
+      "srcset": "media/7a39d590c0c4b5-462.webp 462w",
+      "alt": "Николаева Элеонора Анатольевна"
+    },
+    "role": "Кардиолог, эхо, кг"
+  },
+  {
+    "name": "Кузнецова Елена Валентиновна",
+    "href": "specialist-source-59.html",
+    "image": {
+      "src": "media/d3c44600eba318-118.webp",
+      "width": 118,
+      "height": 140,
+      "srcset": "media/d3c44600eba318-118.webp 118w",
+      "alt": "Кузнецова Елена Валентиновна"
+    },
+    "role": "Кардиолог"
+  },
+  {
+    "name": "Панов Геннадий Александрович",
+    "href": "doctor-panov-gennadii-aleksandrovich.html",
+    "image": {
+      "src": "media/8cb5591800aa21-480.webp",
+      "width": 480,
+      "height": 369,
+      "srcset": "media/8cb5591800aa21-480.webp 480w",
+      "alt": "Панов Геннадий Александрович"
+    },
+    "role": "Невролог, рефлекотерапевт, остеопат, к.м.н., врач высшей категории,"
+  },
+  {
+    "name": "Владимирова Наталья Юрьевна",
+    "href": "specialist-source-62.html",
+    "image": {
+      "src": "media/5802cbc9cd87f4-480.webp",
+      "width": 480,
+      "height": 521,
+      "srcset": "media/5802cbc9cd87f4-480.webp 480w",
+      "alt": "Владимирова Наталья Юрьевна"
+    },
+    "role": "Невролог врач высшей категории"
+  },
+  {
+    "name": "Чекунов Олег Владимирович",
+    "href": "doctor-chekunov-oleg-vladimirovich.html",
+    "image": {
+      "src": "media/c606d1d4ba4ed1-411.webp",
+      "width": 411,
+      "height": 400,
+      "srcset": "media/c606d1d4ba4ed1-411.webp 411w",
+      "alt": "Чекунов Олег Владимирович"
+    },
+    "role": "Остеопат"
+  },
+  {
+    "name": "Набиулина Эльмира Руслановна",
+    "href": "specialist-source-66.html",
+    "image": {
+      "src": "media/4e78e537b6df60-240.webp",
+      "width": 240,
+      "height": 240,
+      "srcset": "media/4e78e537b6df60-240.webp 240w",
+      "alt": "Набиулина Эльмира Руслановна"
+    },
+    "role": "Эндокринолог"
+  },
+  {
+    "name": "Гуреева Кира Анатольевна",
+    "href": "doctor-bolshe-ne-bolit-givot.html",
+    "image": {
+      "src": "media/b6b20907f78634-250.webp",
+      "width": 250,
+      "height": 274,
+      "srcset": "media/b6b20907f78634-250.webp 250w",
+      "alt": "Гуреева Кира Анатольевна"
+    },
+    "role": "Гастроэнтеролог, врач высшей категории,"
+  },
+  {
+    "name": "Алексеева Марина Михайловна",
+    "href": "doctor-doctor-alexeeva.html",
+    "image": {
+      "src": "media/21c01114716b2d-372.webp",
+      "width": 372,
+      "height": 400,
+      "srcset": "media/21c01114716b2d-372.webp 372w",
+      "alt": "Алексеева Марина Михайловна"
+    },
+    "role": "Гинеколог, гинеколог -эндокринолог, врач высшей категории,"
+  },
+  {
+    "name": "Шахова Марина Александровна",
+    "href": "doctor-shahova-dr.html",
+    "image": {
+      "src": "media/d7c43ca7b8a472-461.webp",
+      "width": 461,
+      "height": 458,
+      "srcset": "media/d7c43ca7b8a472-461.webp 461w",
+      "alt": "Шахова Марина Александровна"
+    },
+    "role": "Гинеколог - репродуктолог, врач акушер-гинеколог, профессор, д.м.н.,"
+  },
+  {
+    "name": "Добрецов Константин Григорьевич",
+    "href": "doctor-doctor-dobrecov.html",
+    "image": {
+      "src": "media/0a0879484143cc-480.webp",
+      "width": 480,
+      "height": 357,
+      "srcset": "media/0a0879484143cc-480.webp 480w",
+      "alt": "Добрецов Константин Григорьевич"
+    },
+    "role": "Д.м.н. врач высшей категории"
+  },
+  {
+    "name": "Шаламова Юлия Анатольевна",
+    "href": "doctor-yulia-shalamova.html",
+    "image": {
+      "src": "media/2a6e93088774df-474.webp",
+      "width": 474,
+      "height": 346,
+      "srcset": "media/2a6e93088774df-474.webp 474w",
+      "alt": "Шаламова Юлия Анатольевна"
+    },
+    "role": "Специалист по нейрореабилитации методом транскраниальной элетростимуляции защитных механизмов мозга (тэс)"
+  },
+  {
+    "name": "Нечаева Ирина Анатольевна",
+    "href": "doctor-doctor-nechaeva.html",
+    "image": {
+      "src": "media/5b2d904bf9bee0-480.webp",
+      "width": 480,
+      "height": 570,
+      "srcset": "media/5b2d904bf9bee0-480.webp 480w",
+      "alt": "Нечаева Ирина Анатольевна"
+    },
+    "role": "Дерматолог, венеролог, к.м.н., врач высшей категории,"
+  },
+  {
+    "name": "Акутса Татьяна Дмитриевна",
+    "href": "doctor-tatiana-akutsa.html",
+    "image": {
+      "src": "media/199c586cb4ad8e-480.webp",
+      "width": 480,
+      "height": 403,
+      "srcset": "media/199c586cb4ad8e-480.webp 480w",
+      "alt": "Акутса Татьяна Дмитриевна"
+    },
+    "role": "Врач-косметолог"
+  },
+  {
+    "name": "Олейник Наталия Павловна",
+    "href": "doctor-doctor-oleynik.html",
+    "image": {
+      "src": "media/db4eb2d365507c-270.webp",
+      "width": 270,
+      "height": 267,
+      "srcset": "media/db4eb2d365507c-270.webp 270w",
+      "alt": "Олейник Наталия Павловна"
+    },
+    "role": "Врач-дерматовенеролог, косметолог, трихолог"
+  },
+  {
+    "name": "Чабан Татьяна Николаевна",
+    "href": "doctor-chaban-tatyana-nikolaevna.html",
+    "image": {
+      "src": "media/c4a82539050a18-390.webp",
+      "width": 390,
+      "height": 400,
+      "srcset": "media/c4a82539050a18-390.webp 390w",
+      "alt": "Чабан Татьяна Николаевна"
+    },
+    "role": "Гирудотерапевт"
+  },
+  {
+    "name": "Лу Минлян",
+    "href": "specialist-source-92.html",
+    "image": {
+      "src": "media/f91e94194ec88f-480.webp",
+      "width": 480,
+      "height": 421,
+      "srcset": "media/f91e94194ec88f-480.webp 480w",
+      "alt": "Лу Минлян"
+    },
+    "role": "Врач ткм"
+  },
+  {
+    "name": "Сун Лицян",
+    "href": "specialist-source-93.html",
+    "image": {
+      "src": "media/aca614c278436b-300.webp",
+      "width": 300,
+      "height": 300,
+      "srcset": "media/aca614c278436b-300.webp 300w",
+      "alt": "Сун Лицян"
+    },
+    "role": "Врач ткм"
+  },
+  {
+    "name": "Янь Цзиншань",
+    "href": "specialist-source-94.html",
+    "image": {
+      "src": "media/89507ee85cf960-342.webp",
+      "width": 342,
+      "height": 325,
+      "srcset": "media/89507ee85cf960-342.webp 342w",
+      "alt": "Янь Цзиншань"
+    },
+    "role": "Врач ткм"
+  },
+  {
+    "name": "Лоскутов Сергей Владимирович",
+    "href": "doctor-massageryzdom.html",
+    "image": {
+      "src": "media/0a9fab95dd778c-480.webp",
+      "width": 480,
+      "height": 480,
+      "srcset": "media/0a9fab95dd778c-480.webp 480w",
+      "alt": "Лоскутов Сергей Владимирович"
+    },
+    "role": "Массажист кинезиотейпирование, баночный массаж"
+  },
+  {
+    "name": "Гудкова Светлана Владимировна",
+    "href": "doctor-doctor-gudkova.html",
+    "image": {
+      "src": "media/7d9bf5865241e8-124.webp",
+      "width": 124,
+      "height": 129,
+      "srcset": "media/7d9bf5865241e8-124.webp 124w",
+      "alt": "Гудкова Светлана Владимировна"
+    },
+    "role": "Массажист тейпирование обертывание баночный массаж скрабирование"
+  },
+  {
+    "name": "Иванова Дарья Александровна",
+    "href": "doctor-darya-ivanova.html",
+    "image": null,
+    "role": "Иванова Дарья Александровна\n\nВрач гинеколог-хирург с 12-летним стажем\n\nЗдравствуйте! Меня зовут Иванова Дарья Александровна, я врач гинеколог-хирург. Уже\n\n12 лет я помога"
+  },
+  {
+    "name": "Шаков Исмаил Магометович",
+    "href": "doctor-doctor-shakov.html",
+    "image": {
+      "src": "media/6944184c4e68ee-480.webp",
+      "width": 480,
+      "height": 480,
+      "srcset": "media/6944184c4e68ee-480.webp 480w",
+      "alt": "Шаков Исмаил Магометович"
+    },
+    "role": "Шаков Исмаил Магометович, врач-дерматовенеролог, уролог, венеролог кандидат медицинских наук. "
+  },
+  {
+    "name": "Десятерик Александр Евгеньевич",
+    "href": "doctor-glavnyy-vrach.html",
+    "image": {
+      "src": "media/9d8f43b6fd34dd-960.webp",
+      "width": 960,
+      "height": 1285,
+      "srcset": "media/9d8f43b6fd34dd-480.webp 480w, media/9d8f43b6fd34dd-960.webp 960w",
+      "alt": "Десятерик Александр Евгеньевич"
+    },
+    "role": "1. СГМУ. Врач ЧЛХ."
+  },
+  {
+    "name": "Королёва Оксана Михайловна",
+    "href": "doctor-koroleva.html",
+    "image": {
+      "src": "media/60c35ed658a3d9-480.webp",
+      "width": 480,
+      "height": 720,
+      "srcset": "media/60c35ed658a3d9-480.webp 480w",
+      "alt": "Королёва Оксана Михайловна"
+    },
+    "role": "Приём в Институте традиционной восточной медицины"
+  },
+  {
+    "name": "Маневская Юлия Бариевна",
+    "href": "doctor-manaevskaya-ginekolog.html",
+    "image": {
+      "src": "media/52b8a40ebbe392-480.webp",
+      "width": 480,
+      "height": 480,
+      "srcset": "media/52b8a40ebbe392-480.webp 480w",
+      "alt": "Маневская Юлия Бариевна"
+    },
+    "role": " Врач акушер-гинеколог, хирург\n\n     Ведет амбулатоный прием (диагностика и лечение инфекций передающихся половым путем, нарушение менструального цикла, лечение овуляторн"
+  },
+  {
+    "name": "Соболева Виктория Александровна",
+    "href": "doctor-soboleva-vika.html",
+    "image": {
+      "src": "media/902308658a5d5a-480.webp",
+      "width": 480,
+      "height": 480,
+      "srcset": "media/902308658a5d5a-480.webp 480w",
+      "alt": "Соболева Виктория Александровна"
+    },
+    "role": "Приём в Институте традиционной восточной медицины"
+  },
+  {
+    "name": "Минаенков Александр Сергеевич",
+    "href": "doctor-spa-man.html",
+    "image": {
+      "src": "media/16e5ee0f1f5958-480.webp",
+      "width": 480,
+      "height": 480,
+      "srcset": "media/16e5ee0f1f5958-480.webp 480w",
+      "alt": "Минаенков Александр Сергеевич"
+    },
+    "role": "Приём в Институте традиционной восточной медицины"
+  },
+  {
+    "name": "Бывальцев Вячеслав Олегович",
+    "href": "doctor-vycheslav-byvalcev.html",
+    "image": null,
+    "role": "Главный врач"
+  }
+]

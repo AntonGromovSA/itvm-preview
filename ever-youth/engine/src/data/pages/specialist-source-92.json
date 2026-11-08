@@ -1,0 +1,45 @@
+{
+  "name": "specialist-source-92.html",
+  "title": "Лу Минлян",
+  "description": "Лу Минлян. Информация клиники, услуги, цены и запись на приём. Москва, Филипповский переулок, 18. +7 (495) 646-07-73.",
+  "kind": "doctor",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Лу Минлян",
+      "html": "<p>Специалисты института</p>\n<p>Ткм (традиционная китайская медицина). Врач ткм</p>",
+      "images": [
+        {
+          "src": "media/f91e94194ec88f-480.webp",
+          "width": 480,
+          "height": 421,
+          "srcset": "media/f91e94194ec88f-480.webp 480w",
+          "alt": "Лу Минлян"
+        }
+      ],
+      "links": [
+        {
+          "href": "page178607409.html#price-list",
+          "title": "Все услуги и цены"
+        }
+      ],
+      "videos": []
+    }
+  ],
+  "priceRows": [
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+  ],
+  "portrait": {
+    "src": "media/f91e94194ec88f-480.webp",
+    "width": 480,
+    "height": 421,
+    "srcset": "media/f91e94194ec88f-480.webp 480w",
+    "alt": "Лу Минлян"
+  }
+}

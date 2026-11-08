@@ -1,7 +1,4 @@
 ---
-import { fragment } from '../lib/content';
-import type { PageDefinition } from '../lib/types';
-interface Props { file: string; page: PageDefinition }
-const { file, page } = Astro.props;
+import clinic from '../data/clinic.json';
 ---
-<Fragment set:html={fragment(file, page)} />
+<footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="wordmark" href="index.html">ИТВМ <span>АРБАТ</span></a><p>Институт традиционной<br/>восточной медицины</p><p class="muted">Москва, Филипповский переулок, 18<br/>м. Арбатская, Кропоткинская</p></div><div><p class="eyebrow">Институт</p><a href="page178631709.html">О клинике</a><a href="page172957109.html">Специалисты</a><a href="page178642509.html">Услуги и направления</a><a href="page178607409.html">Цены</a><a href="page171071209.html">Palazzo Termale</a></div><div><p class="eyebrow">Связаться с нами</p>{clinic.phones.map(p=><a href={'tel:'+p.e164}>{p.display}</a>)}<a href={clinic.whatsapp.url}>WhatsApp: {clinic.whatsapp.display}</a><a href={clinic.vk} rel="noopener noreferrer" target="_blank">ВКонтакте ↗</a><p class="muted">Пн–Сб · 09:00–21:00</p></div></div><div class="container footer-legal"><span>© ИТВМ, 2026</span><p>Лицензия № ЛО-77-01-018273 от 24.06.2019. Клиническая база ИВМ РУДН.<br/>Информация на сайте не является публичной офертой. Пациенты имеют право получить медицинскую помощь по Программе государственных гарантий в других учреждениях.</p><a href="privacy.html">Конфиденциальность</a></div></footer>

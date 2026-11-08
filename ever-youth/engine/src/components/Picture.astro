@@ -1,0 +1,4 @@
+---
+import type{Picture}from'../lib/types';interface Props{image:Picture;class?:string;eager?:boolean;sizes?:string}const{image,class:className,eager=false,sizes='(max-width:700px) 100vw, 50vw'}=Astro.props;
+---
+<img class={className} src={image.src} srcset={image.srcset} width={image.width} height={image.height} alt={image.alt} loading={eager?'eager':'lazy'} fetchpriority={eager?'high':'auto'} decoding="async" sizes={sizes}/>

@@ -1,10 +1,11 @@
 ---
+import visuals from '../../data/visuals.json';
 import SlideShow from '../../components/SlideShow.astro';
 import ModelViewer from '../../components/ModelViewer';
 export function getStaticPaths() {return process.env.CLINIC_COMPONENT_LAB?[{params:{component:'interactive'}}]:[];}
 ---
 <html lang="ru"><head><meta charset="UTF-8"/><meta name="robots" content="noindex"/><title>Проверка компонентов</title></head><body style="background:#161414;color:#e9dfcf;margin:24px">
   <h1>Проверка компонентов</h1>
-  <SlideShow id="lab-slides" label="Тестовый слайдер" slides={[{image:'../assets/clinic-interior-real.jpg',alt:'Интерьер клиники',title:'Первый слайд'},{image:'../assets/clinic-interior-real.jpg',alt:'Интерьер клиники',title:'Второй слайд'}]}/>
-  <ModelViewer src="../component-lab.gltf" label="Тестовая 3D-модель" client:load/>
+  <SlideShow id="lab-slides" label="Тестовый слайдер" slides={[{image:'/ever-youth/'+visuals.clinic.src,alt:'Интерьер клиники',title:'Первый слайд'},{image:'/ever-youth/'+visuals.clinic.src,alt:'Интерьер клиники',title:'Второй слайд'}]}/>
+  <ModelViewer src="/ever-youth/component-lab.gltf" label="Тестовая 3D-модель" client:load/>
 </body></html>

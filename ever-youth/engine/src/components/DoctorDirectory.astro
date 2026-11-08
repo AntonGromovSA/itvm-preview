@@ -1,0 +1,6 @@
+---
+import{doctors}from'../lib/content';import Picture from './Picture.astro';
+interface Props{limit?:number}const{limit}=Astro.props;const list=limit?doctors.slice(0,limit):doctors;
+---
+{!limit&&<div class="doctor-filter"><label class="sr-only" for="doctor-search">Найти специалиста</label><input id="doctor-search" type="search" placeholder="Фамилия или специальность"/><p role="status" class="doctor-status">{list.length} специалистов</p></div>}<div class="doctors-grid">{list.map(d=><article class="doctor-card" data-doctor={(d.name+' '+d.role).toLocaleLowerCase('ru')}><a href={d.href}>{d.image?<Picture image={d.image} sizes="(max-width:760px) 45vw, 25vw"/>:<div class="doctor-placeholder" aria-hidden="true">{d.name[0]}</div>}<h3>{d.name}</h3></a><p>{d.role}</p><a class="text-link" href={d.href}>О специалисте ↗</a></article>)}</div>
+<script>const input=document.querySelector<HTMLInputElement>('#doctor-search');input?.addEventListener('input',()=>{let count=0;const words=input.value.toLocaleLowerCase('ru').trim().split(/\s+/);document.querySelectorAll<HTMLElement>('[data-doctor]').forEach(card=>{card.hidden=!words.every(w=>card.dataset.doctor!.includes(w));if(!card.hidden)count++;});document.querySelector('.doctor-status')!.textContent='Найдено: '+count;});</script>

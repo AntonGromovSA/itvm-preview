@@ -1,0 +1,16 @@
+{
+  "clinic": {
+    "src": "media/6f402b55547ef2-960.webp",
+    "width": 960,
+    "height": 540,
+    "srcset": "media/6f402b55547ef2-480.webp 480w, media/6f402b55547ef2-960.webp 960w",
+    "alt": "Холл Института традиционной восточной медицины"
+  },
+  "spa": {
+    "src": "media/8b34cf3a8ec57f-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "srcset": "media/8b34cf3a8ec57f-480.webp 480w, media/8b34cf3a8ec57f-960.webp 960w, media/8b34cf3a8ec57f-1440.webp 1440w",
+    "alt": "Palazzo Termale"
+  }
+}

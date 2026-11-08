@@ -29,8 +29,8 @@ export default function ModelViewer({src,poster,label}:Props) {
     })().catch(()=>{if(!cancelled)setStatus('Просмотр 3D недоступен в этом браузере.');});
     return()=>{cancelled=true;dispose();};
   },[src,label]);
-  return <figure data-component="model-viewer" style={{margin:'48px auto',maxWidth:1120,color:'#e9dfcf'}}>
-    <div ref={host} style={{height:'min(65vh,560px)',minHeight:280,background:poster?`#161414 url("${poster}") center/contain no-repeat`:'#161414'}} />
+  return <figure data-component="model-viewer" style={{margin:'48px auto',maxWidth:1120,color:'var(--ink, #263d33)' }}>
+    <div ref={host} style={{height:'min(65vh,560px)',minHeight:280,background:poster?`#edf1e8 url("${poster}") center/contain no-repeat`:'#edf1e8'}} />
     <figcaption><strong>{label}</strong><p role="status">{status}</p><span>Повернуть — перетащите мышью или пальцем. Масштаб — колёсико или жест двумя пальцами.</span></figcaption>
   </figure>;
 }

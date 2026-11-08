@@ -1,0 +1,39 @@
+{
+  "name": "specialist-source-93.html",
+  "title": "Сун Лицян",
+  "description": "Сун Лицян. Информация клиники, услуги, цены и запись на приём. Москва, Филипповский переулок, 18. +7 (495) 646-07-73.",
+  "kind": "doctor",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Сун Лицян",
+      "html": "<p>Специалисты института</p>\n<p>Ткм (традиционная китайская медицина). Врач ткм</p>",
+      "images": [
+        {
+          "src": "media/aca614c278436b-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/aca614c278436b-300.webp 300w",
+          "alt": "Сун Лицян"
+        }
+      ],
+      "links": [
+        {
+          "href": "page178607409.html#price-list",
+          "title": "Все услуги и цены"
+        }
+      ],
+      "videos": []
+    }
+  ],
+  "priceRows": [
+    148
+  ],
+  "portrait": {
+    "src": "media/aca614c278436b-300.webp",
+    "width": 300,
+    "height": 300,
+    "srcset": "media/aca614c278436b-300.webp 300w",
+    "alt": "Сун Лицян"
+  }
+}

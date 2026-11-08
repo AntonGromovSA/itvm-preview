@@ -1,7 +1,21 @@
 ---
-import { fragment } from '../lib/content';
-import type { PageDefinition } from '../lib/types';
-interface Props { file: string; page: PageDefinition }
-const { file, page } = Astro.props;
+import clinic from '../data/clinic.json';
+const nav=[['Клиника','page178631709.html'],['Услуги','page178642509.html'],['Методы','page174904109.html'],['Программы','page168915909.html'],['Врачи','page172957109.html'],['Цены','page178607409.html'],['Контакты','page171084309.html']];
+const {current=''}=Astro.props;
 ---
-<Fragment set:html={fragment(file, page)} />
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<header class="site-header"><div class="header-inner">
+ <button class="menu-toggle icon-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+ <a class="brand" href="index.html" aria-label="ИТВМ Арбат — главная"><svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22"/><path d="M24 8C12 18 12 30 24 40C36 30 36 18 24 8ZM8 24C18 12 30 12 40 24C30 36 18 36 8 24Z"/><circle cx="24" cy="24" r="4"/></svg><span><strong>ИТВМ</strong><small>МОСКВА · АРБАТ</small></span></a>
+ <nav id="main-nav" class="main-nav" aria-label="Основная навигация">{nav.map(([label,url])=><a href={url} aria-current={current===url?'page':undefined}>{label}</a>)}<a class="mobile-spa" href="page171071209.html">Palazzo & SPA</a><a class="mobile-spa" href="page170676909.html">Записаться на приём ↗</a></nav>
+ <div class="header-actions"><a class="header-phone" href={'tel:'+clinic.phones[0].e164}>{clinic.phones[0].display}</a><button class="icon-button search-open" aria-label="Поиск по сайту"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button><a class="button button-small" href="page170676909.html">Записаться <span aria-hidden="true">↗</span></a><a class="mobile-call icon-button" href={'tel:'+clinic.phones[0].e164} aria-label="Позвонить в клинику"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3h4l2 5-3 2c2 4 3 5 7 7l2-3 5 2v4c0 2-3 3-6 1C9 18 6 15 3 8 2 5 3 3 5 3Z"/></svg></a></div>
+</div></header>
+<dialog class="search-dialog" aria-labelledby="search-heading"><div class="search-top"><h2 id="search-heading">Поиск по сайту</h2><button class="icon-button search-close" aria-label="Закрыть поиск">×</button></div><label class="sr-only" for="site-query">Услуга или фамилия врача</label><input id="site-query" type="search" placeholder="Услуга, программа или фамилия врача" autocomplete="off"/><p class="search-status" role="status">Введите не менее двух символов</p><div class="search-results"></div></dialog>
+<script>
+ const menu=document.querySelector<HTMLButtonElement>('.menu-toggle')!;const nav=document.querySelector<HTMLElement>('#main-nav')!;
+ const closeMenu=()=>{menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Открыть меню');nav.classList.remove('is-open');};
+ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');nav.classList.toggle('is-open',open);});nav.addEventListener('click',e=>{if((e.target as Element).closest('a'))closeMenu();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+ const dialog=document.querySelector<HTMLDialogElement>('.search-dialog')!;const query=dialog.querySelector<HTMLInputElement>('input')!;const results=dialog.querySelector<HTMLElement>('.search-results')!;const status=dialog.querySelector<HTMLElement>('.search-status')!;let index:Promise<{title:string;url:string;text:string}[]>|undefined;let version=0;
+ document.querySelector('.search-open')!.addEventListener('click',()=>{closeMenu();dialog.showModal();query.focus();});document.querySelector('.search-close')!.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+ query.addEventListener('input',async()=>{const token=++version;const q=query.value.trim().toLocaleLowerCase('ru');results.replaceChildren();if(q.length<2){status.textContent='Введите не менее двух символов';return;}status.textContent='Ищем…';try{index??=fetch('replica-search.json').then(r=>{if(!r.ok)throw Error();return r.json();});const rows=await index;if(token!==version)return;const words=q.split(/\s+/);const found=rows.filter(r=>words.every(w=>(r.title+' '+r.text).toLocaleLowerCase('ru').includes(w))).sort((a,b)=>Number(b.title.toLocaleLowerCase('ru').includes(q))-Number(a.title.toLocaleLowerCase('ru').includes(q)));status.textContent=found.length?'Найдено: '+found.length:'Ничего не найдено. Попробуйте другое название.';for(const row of found.slice(0,24)){const a=document.createElement('a');a.href=row.url;const title=document.createElement('strong');title.textContent=row.title;const detail=document.createElement('span');detail.textContent=row.text.slice(0,150);a.append(title,detail);results.append(a);}}catch{index=undefined;status.textContent='Поиск временно недоступен. Позвоните администратору.';}});
+</script>

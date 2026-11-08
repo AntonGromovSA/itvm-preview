@@ -1,45 +1,35 @@
-import {readFile,readdir,stat,writeFile,mkdir} from 'node:fs/promises';
-import {resolve,join,relative} from 'node:path';
-import {load} from 'cheerio';
-import assert from 'node:assert/strict';
-const root=process.cwd();const built=resolve(root,'dist');const baseline=resolve(root,'../site');
-const catalog=JSON.parse(await readFile('src/data/prices.json','utf8'));
-const outputCatalog=JSON.parse(await readFile('dist/price-catalog.json','utf8'));
-assert.deepEqual(outputCatalog,catalog,'Built tariff must equal the editable source');
-const priceItems=catalog.flatMap(c=>c.groups.flatMap(g=>g.items));
-assert.equal(priceItems.length,1760);assert.equal(new Set(priceItems.map(i=>i.sourceRow)).size,1760);
-assert.equal(priceItems.filter(i=>i.price===null).length,2);
-const oldCatalog=JSON.parse(await readFile(join(baseline,'price-catalog.json'),'utf8'));assert.deepEqual(catalog,oldCatalog,'Migration must not change prices or services');
-const htmlNames=(await readdir(baseline)).filter(n=>n.endsWith('.html'));
-// Astro adds whitespace between component boundaries; compare the actual characters.
-const normalize=text=>text.replace(/\s+/g,'');
-const issues=[];const pages=[];
-for(const name of htmlNames){
- const before=load(await readFile(join(baseline,name),'utf8'));const after=load(await readFile(join(built,name),'utf8'));
- before('script,style').remove();after('script,style').remove();
- if(normalize(before('body').text())!==normalize(after('body').text()))issues.push({page:name,issue:'visible-text-changed'});
- for(const selector of ['#t-header','#t-footer']){
-  if(before(selector).length!==after(selector).length)issues.push({page:name,issue:'shared-component-missing',selector});
+import{readFile,readdir,stat,writeFile,mkdir}from'node:fs/promises';import{join,resolve}from'node:path';import{load}from'cheerio';import assert from'node:assert/strict';
+const built=resolve('dist'),baseline=resolve('../site');const json=async p=>JSON.parse(await readFile(p,'utf8'));
+const pages=await Promise.all((await readdir('src/data/pages')).map(n=>json('src/data/pages/'+n)));const catalog=await json('src/data/prices.json');const people=await json('src/data/doctors.json');
+assert.deepEqual(await json('dist/price-catalog.json'),catalog);assert.deepEqual(catalog,await json('../site/price-catalog.json'),'Approved tariff changed');
+const items=catalog.flatMap(c=>c.groups.flatMap(g=>g.items));const priceMap=new Map(items.map(i=>[i.sourceRow,i]));assert.equal(items.length,1760);assert.equal(catalog.length,14);assert.equal(items.filter(i=>i.price===null).length,2);
+const normalize=s=>s.replace(/\s+/g,'');const amount=p=>p===null?'Стоимость уточняйте':new Intl.NumberFormat('ru-RU').format(p)+' ₽';let references=0;let biographies=0;const errors=[];const htmlSizes=[];
+for(const page of pages){
+ const html=await readFile(join(built,page.name),'utf8');const $=load(html);htmlSizes.push({page:page.name,bytes:Buffer.byteLength(html)});
+ assert.ok(!/tilda|tn-atom|t396__|t_onReady|data-record-type|t-slds/i.test(html),'Vendor markup remains: '+page.name);
+ assert.equal($('h1').length,1,'One main heading: '+page.name);assert.equal($('header.site-header').length,1);assert.equal($('footer.site-footer').length,1);
+ assert.ok(!$('style').length,'Styles should be cached as separate files: '+page.name);assert.ok(!$('form[action]').length,'Unexpected form submission');
+ const ids=$('[id]').map((_,n)=>$(n).attr('id')).get();assert.equal(new Set(ids).size,ids.length,'Duplicate ids: '+page.name);
+ if(page.alias)assert.ok($('meta[http-equiv="refresh"]').attr('content')?.includes(page.alias));
+ for(const tr of $('tr[data-price-row]').toArray()){const item=priceMap.get(Number($(tr).attr('data-price-row')));assert.ok(item);const cells=$(tr).find('td');assert.equal(normalize(cells.first().text()),normalize(item.name));assert.equal(normalize(cells.last().text()),normalize(amount(item.price)));}
+ if(page.kind==='doctor'){
+  assert.ok(people.some(p=>p.href===page.name),'Profile missing from native directory');
+  const old=load(await readFile(join(baseline,page.name),'utf8'));const current=normalize($('main').text());
+  for(const para of old('section#details p,section#details li').toArray()){
+   const t=normalize(old(para).text());if(t.length>55&&!/Профильиобразование/.test(t)){assert.ok(current.includes(t),'Biography paragraph missing: '+page.name+' '+t.slice(0,70));biographies++;}
+  }
+  assert.equal($('tr[data-price-row]').length,page.priceRows.length,'Profile tariff rows missing');
  }
- const urls=$=> $('a[href],img[src],video[src],source[src],iframe[src]').map((_,e)=>$(e).attr('href')||$(e).attr('src')).get();
- if(JSON.stringify(urls(before))!==JSON.stringify(urls(after)))issues.push({page:name,issue:'link-or-media-changed'});
- const records=$=>$('.t-rec[id]').map((_,e)=>$(e).attr('id')).get();
- if(JSON.stringify(records(before))!==JSON.stringify(records(after)))issues.push({page:name,issue:'visual-records-changed'});
- pages.push(name);
-}
-assert.equal(issues.length,0,JSON.stringify(issues.slice(0,20)));
-const search=JSON.parse(await readFile('dist/replica-search.json','utf8'));
-assert.equal(search.filter(i=>i.url.includes('&center=')).length,1760);
-for(const name of htmlNames){
- const html=await readFile(join(built,name),'utf8');assert.ok(!html.includes('__CLINIC_'),'Unresolved content token in '+name);
- const $=load(html);for(const element of $('[src],[href]').toArray()){
-  const value=$(element).attr('src')||$(element).attr('href');if(!value||/^(?:[a-z]+:|\/\/|#)/i.test(value))continue;
-  let path=decodeURIComponent(value.split(/[?#]/)[0]);if(!path)continue;
-  if(path.startsWith('/ever-youth/'))path=path.slice('/ever-youth/'.length);else if(path.startsWith('/'))continue;
-  await stat(join(built,path)).catch(()=>{throw new Error('Missing local asset '+name+': '+path)});
+ for(const n of $('[src],[href],[poster],[srcset]').toArray()){
+  const el=$(n);const values=[el.attr('src'),el.attr('href'),el.attr('poster'),...(el.attr('srcset')||'').split(',').map(s=>s.trim().split(/\s+/)[0])].filter(Boolean);
+  for(let value of values){if(/^(?:[a-z]+:|\/\/|#)/i.test(value))continue;let path=decodeURIComponent(value.split(/[?#]/)[0]);if(!path)continue;if(path.startsWith('/ever-youth/'))path=path.slice(12);else if(path.startsWith('/'))continue;references++;await stat(join(built,path)).catch(()=>errors.push(page.name+': '+path));}
  }
 }
-assert.ok(!(await readdir(built)).includes('component-lab.html'),'Development lab must not be deployed');
-await stat(join(built,'component-tests/interactive.html')).then(()=>{throw new Error('Component lab leaked into production')},()=>{});
-await mkdir('reports',{recursive:true});await writeFile('reports/verification.json',JSON.stringify({pages:pages.length,visibleTextUnchanged:true,linksAndMediaUnchanged:true,visualRecordIdsUnchanged:true,priceItems:1760,tariffUnchanged:true,searchEntries:search.length,issues},null,2));
-console.log(JSON.stringify({pages:pages.length,priceItems:1760,issues:0,visualTextLinksAndMedia:'unchanged'}));
+assert.deepEqual(errors,[],'Missing public references');assert.equal(pages.length,120);assert.equal(load(await readFile('dist/page178607409.html','utf8'))('tr[data-price-row]').length,1760);
+const search=await json('dist/replica-search.json');assert.equal(search.filter(i=>i.url.includes('&center=')).length,1760);assert.equal(people.length,40);
+const files=async dir=>(await Promise.all((await readdir(dir,{withFileTypes:true})).map(d=>d.isDirectory()?files(join(dir,d.name)):join(dir,d.name)))).flat();
+const output=await files(built);assert.ok(output.every(p=>!/[\\/]assets[\\/]|\.ttf$|component-tests|\.php$|\.csv$|\.xls/i.test(p)),'Old assets, lab or private source in output');
+for(const f of output.filter(p=>/\.(css|js)$/.test(p)))assert.ok(!/tilda|tn-atom|t396__|static\.tildacdn/i.test(await readFile(f,'utf8')),'Vendor code remains: '+f);
+const home=load(await readFile('dist/index.html','utf8'));const shell=[];for(const n of home('script[src],link[rel="stylesheet"]').toArray()){const path=(home(n).attr('src')||home(n).attr('href')).replace('/ever-youth/','');shell.push({path,bytes:(await stat(join(built,path))).size});}
+assert.ok(!home('script[src]').toArray().some(n=>/three|react|ModelViewer/.test(home(n).attr('src'))),'Heavy island loaded on homepage');
+const report={pages:120,doctors:40,priceItems:1760,tariffUnchanged:true,biographyParagraphsPreserved:biographies,vendorRuntimeRemoved:true,localReferences:references,searchEntries:search.length,homepageBytes:(await stat('dist/index.html')).size,homepageCssAndJs:shell,largestHtml:htmlSizes.sort((a,b)=>b.bytes-a.bytes).slice(0,4),errors};await mkdir('reports',{recursive:true});await writeFile('reports/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));

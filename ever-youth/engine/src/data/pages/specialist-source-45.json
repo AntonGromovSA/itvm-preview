@@ -1,0 +1,41 @@
+{
+  "name": "specialist-source-45.html",
+  "title": "Подъячева Любовь Михайловна",
+  "description": "Подъячева Любовь Михайловна. Информация клиники, услуги, цены и запись на приём. Москва, Филипповский переулок, 18. +7 (495) 646-07-73.",
+  "kind": "doctor",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Подъячева Любовь Михайловна",
+      "html": "<p>Специалисты института</p>\n<p>Диагностика. Шлем (система нелинейного анализа (nls))</p>",
+      "images": [
+        {
+          "src": "media/b9fcce8cd394fc-434.webp",
+          "width": 434,
+          "height": 418,
+          "srcset": "media/b9fcce8cd394fc-434.webp 434w",
+          "alt": "Подъячева Любовь Михайловна"
+        }
+      ],
+      "links": [
+        {
+          "href": "page178607409.html#price-list",
+          "title": "Все услуги и цены"
+        }
+      ],
+      "videos": []
+    }
+  ],
+  "priceRows": [
+    1836,
+    1837,
+    1838
+  ],
+  "portrait": {
+    "src": "media/b9fcce8cd394fc-434.webp",
+    "width": 434,
+    "height": 418,
+    "srcset": "media/b9fcce8cd394fc-434.webp 434w",
+    "alt": "Подъячева Любовь Михайловна"
+  }
+}

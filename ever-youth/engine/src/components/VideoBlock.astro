@@ -1,0 +1,5 @@
+---
+import type{Video,Picture}from'../lib/types';import PictureView from './Picture.astro';interface Props{video:Video;poster?:Picture}const{video,poster}=Astro.props;
+---
+<figure class="video-block">{video.kind==='file'?<video controls playsinline preload="none" poster={poster?.src} aria-label={video.title}><source src={video.src} type="video/mp4"/><a href={video.src}>Открыть видео</a></video>:<div class="video-embed" data-embed={video.src}><button class="embed-play" type="button" aria-label={'Смотреть: '+video.title}>{poster&&<PictureView image={poster}/>}<span class="play-circle" aria-hidden="true">▶</span><span class="play-label">Смотреть видео</span></button></div>}<figcaption>{video.title}</figcaption></figure>
+<script>document.querySelectorAll<HTMLElement>('[data-embed]').forEach(host=>host.querySelector('button')?.addEventListener('click',()=>{const iframe=document.createElement('iframe');iframe.src=host.dataset.embed!;iframe.title='Видео института';iframe.allow='fullscreen; picture-in-picture';iframe.allowFullscreen=true;host.replaceChildren(iframe);},{once:true}));</script>

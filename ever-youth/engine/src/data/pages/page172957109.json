@@ -1,0 +1,726 @@
+{
+  "name": "page172957109.html",
+  "title": "Врачи",
+  "description": "Врачи. Информация клиники, услуги, цены и запись на приём. Москва, Филипповский переулок, 18. +7 (495) 646-07-73.",
+  "kind": "doctors",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Направления и специалисты",
+      "html": "<p>Приём в институте</p>\n<p>Специалисты и направления приёма. На страницах врачей приведены услуги и цены из прейскуранта клиники.</p>\n<h2>Диагностика</h2>\n<h2>Офтальмология</h2>\n<h2>Узи</h2>\n<h2>Иглорефлексотерапия, су-джок</h2>\n<h2>Лабораторная диагностика</h2>\n<h2>Терапия</h2>\n<h2>Кардиология</h2>\n<h2>Неврология</h2>\n<h2>Остеопатия</h2>\n<h2>Эндокринология</h2>\n<h2>Гастроэнтерология</h2>\n<h2>Гинекология</h2>\n<h2>Лор, восстановление обоняния</h2>\n<h2>Тэс</h2>\n<h2>Дерматология</h2>\n<h2>Косметология</h2>\n<h2>Гирудотерапия</h2>\n<h2>Ткм (традиционная китайская медицина)</h2>\n<h2>Массаж медицинский, спортивный</h2>\n<h2>Спа-процедуры</h2>",
+      "images": [
+        {
+          "src": "media/c6c5e4cf8d34ed-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/c6c5e4cf8d34ed-300.webp 300w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/b9fcce8cd394fc-434.webp",
+          "width": 434,
+          "height": 418,
+          "srcset": "media/b9fcce8cd394fc-434.webp 434w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/3d454d77c7b30f-480.webp",
+          "width": 480,
+          "height": 452,
+          "srcset": "media/3d454d77c7b30f-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/8c6895ff6bc25f-435.webp",
+          "width": 435,
+          "height": 400,
+          "srcset": "media/8c6895ff6bc25f-435.webp 435w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/76f86e8d47cdfa-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/76f86e8d47cdfa-300.webp 300w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/b9fb16bdbfc981-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/b9fb16bdbfc981-300.webp 300w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/4eacbab9f29795-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/4eacbab9f29795-300.webp 300w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/f6775f36459608-170.webp",
+          "width": 170,
+          "height": 170,
+          "srcset": "media/f6775f36459608-170.webp 170w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/3b961ab6e888bf-400.webp",
+          "width": 400,
+          "height": 400,
+          "srcset": "media/3b961ab6e888bf-400.webp 400w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/379eb62714baba-218.webp",
+          "width": 218,
+          "height": 314,
+          "srcset": "media/379eb62714baba-218.webp 218w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/d397e235b9165a-480.webp",
+          "width": 480,
+          "height": 410,
+          "srcset": "media/d397e235b9165a-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/587639fcd7cfbf-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/587639fcd7cfbf-300.webp 300w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/7a39d590c0c4b5-462.webp",
+          "width": 462,
+          "height": 400,
+          "srcset": "media/7a39d590c0c4b5-462.webp 462w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/d3c44600eba318-118.webp",
+          "width": 118,
+          "height": 140,
+          "srcset": "media/d3c44600eba318-118.webp 118w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/8cb5591800aa21-480.webp",
+          "width": 480,
+          "height": 369,
+          "srcset": "media/8cb5591800aa21-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/5802cbc9cd87f4-480.webp",
+          "width": 480,
+          "height": 521,
+          "srcset": "media/5802cbc9cd87f4-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/c606d1d4ba4ed1-411.webp",
+          "width": 411,
+          "height": 400,
+          "srcset": "media/c606d1d4ba4ed1-411.webp 411w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/4e78e537b6df60-240.webp",
+          "width": 240,
+          "height": 240,
+          "srcset": "media/4e78e537b6df60-240.webp 240w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/b6b20907f78634-250.webp",
+          "width": 250,
+          "height": 274,
+          "srcset": "media/b6b20907f78634-250.webp 250w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/21c01114716b2d-372.webp",
+          "width": 372,
+          "height": 400,
+          "srcset": "media/21c01114716b2d-372.webp 372w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/d7c43ca7b8a472-461.webp",
+          "width": 461,
+          "height": 458,
+          "srcset": "media/d7c43ca7b8a472-461.webp 461w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/0a0879484143cc-480.webp",
+          "width": 480,
+          "height": 357,
+          "srcset": "media/0a0879484143cc-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/2a6e93088774df-474.webp",
+          "width": 474,
+          "height": 346,
+          "srcset": "media/2a6e93088774df-474.webp 474w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/5b2d904bf9bee0-480.webp",
+          "width": 480,
+          "height": 570,
+          "srcset": "media/5b2d904bf9bee0-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/199c586cb4ad8e-480.webp",
+          "width": 480,
+          "height": 403,
+          "srcset": "media/199c586cb4ad8e-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/db4eb2d365507c-270.webp",
+          "width": 270,
+          "height": 267,
+          "srcset": "media/db4eb2d365507c-270.webp 270w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/c4a82539050a18-390.webp",
+          "width": 390,
+          "height": 400,
+          "srcset": "media/c4a82539050a18-390.webp 390w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/f91e94194ec88f-480.webp",
+          "width": 480,
+          "height": 421,
+          "srcset": "media/f91e94194ec88f-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/aca614c278436b-300.webp",
+          "width": 300,
+          "height": 300,
+          "srcset": "media/aca614c278436b-300.webp 300w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/89507ee85cf960-342.webp",
+          "width": 342,
+          "height": 325,
+          "srcset": "media/89507ee85cf960-342.webp 342w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/0a9fab95dd778c-480.webp",
+          "width": 480,
+          "height": 480,
+          "srcset": "media/0a9fab95dd778c-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/7d9bf5865241e8-124.webp",
+          "width": 124,
+          "height": 129,
+          "srcset": "media/7d9bf5865241e8-124.webp 124w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [
+        {
+          "href": "doctor-hasanova.html",
+          "title": "Каирова Альбина Хасановна"
+        },
+        {
+          "href": "specialist-source-45.html",
+          "title": "Подъячева Любовь Михайловна"
+        },
+        {
+          "href": "doctor-ludmila-pokladova.html",
+          "title": "Покладова Людмила Вячеславовна"
+        },
+        {
+          "href": "doctor-volkova.html",
+          "title": "Волкова Любовь Прохоровна"
+        },
+        {
+          "href": "specialist-source-48.html",
+          "title": "Максимова Анна Михайловна"
+        },
+        {
+          "href": "doctor-alla-bachtina.html",
+          "title": "Бахтина Алла Борисовна"
+        },
+        {
+          "href": "doctor-elena-shubina.html",
+          "title": "Шубина Елена Александровна"
+        },
+        {
+          "href": "doctor-doctor-vandishev.html",
+          "title": "Вандышев Валентин Игоревич"
+        },
+        {
+          "href": "doctor-tatiyana-busha.html",
+          "title": "Баша Татьяна Алексеевна"
+        },
+        {
+          "href": "specialist-source-53.html",
+          "title": "Фёдорова Юлия Сергеевна"
+        },
+        {
+          "href": "specialist-source-55.html",
+          "title": "Ганджа Сергей Александрович"
+        },
+        {
+          "href": "doctor-iskanderova-nurticia.html",
+          "title": "Искандарова Наталия Александровна"
+        },
+        {
+          "href": "specialist-source-58.html",
+          "title": "Николаева Элеонора Анатольевна"
+        },
+        {
+          "href": "specialist-source-59.html",
+          "title": "Кузнецова Елена Валентиновна"
+        },
+        {
+          "href": "doctor-panov-gennadii-aleksandrovich.html",
+          "title": "Панов Геннадий Александрович"
+        },
+        {
+          "href": "specialist-source-62.html",
+          "title": "Владимирова Наталья Юрьевна"
+        },
+        {
+          "href": "doctor-chekunov-oleg-vladimirovich.html",
+          "title": "Чекунов Олег Владимирович"
+        },
+        {
+          "href": "specialist-source-66.html",
+          "title": "Набиулина Эльмира Руслановна"
+        },
+        {
+          "href": "doctor-bolshe-ne-bolit-givot.html",
+          "title": "Гуреева Кира Анатольевна"
+        },
+        {
+          "href": "doctor-doctor-alexeeva.html",
+          "title": "Алексеева Марина Михайловна"
+        },
+        {
+          "href": "doctor-shahova-dr.html",
+          "title": "Шахова Марина Александровна"
+        },
+        {
+          "href": "doctor-doctor-dobrecov.html",
+          "title": "Добрецов Константин Григорьевич"
+        },
+        {
+          "href": "doctor-yulia-shalamova.html",
+          "title": "Шаламова Юлия Анатольевна"
+        },
+        {
+          "href": "doctor-doctor-nechaeva.html",
+          "title": "Нечаева Ирина Анатольевна"
+        },
+        {
+          "href": "doctor-tatiana-akutsa.html",
+          "title": "Акутса Татьяна Дмитриевна"
+        },
+        {
+          "href": "doctor-doctor-oleynik.html",
+          "title": "Олейник Наталия Павловна"
+        },
+        {
+          "href": "doctor-chaban-tatyana-nikolaevna.html",
+          "title": "Чабан Татьяна Николаевна"
+        },
+        {
+          "href": "specialist-source-92.html",
+          "title": "Лу Минлян"
+        },
+        {
+          "href": "specialist-source-93.html",
+          "title": "Сун Лицян"
+        },
+        {
+          "href": "specialist-source-94.html",
+          "title": "Янь Цзиншань"
+        },
+        {
+          "href": "doctor-massageryzdom.html",
+          "title": "Лоскутов Сергей Владимирович"
+        },
+        {
+          "href": "doctor-doctor-gudkova.html",
+          "title": "Гудкова Светлана Владимировна"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2969232701",
+      "title": "Врачи, которым доверяют",
+      "html": "<p>Врачи института</p>\n<p>30+</p>\n<p>29 специалистов — от главного врача до экспертов по восточной медицине, диагностике, косметологии и реабилитации. Индивидуальный подход после диагностики по методам ТКМ.</p>\n<p>ТКМ</p>\n<p>РУДН</p>",
+      "images": [
+        {
+          "src": "media/0d095a47784504-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "srcset": "media/0d095a47784504-480.webp 480w, media/0d095a47784504-960.webp 960w, media/0d095a47784504-1440.webp 1440w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [],
+      "videos": []
+    },
+    {
+      "id": "rec3260169001",
+      "title": "",
+      "html": "",
+      "images": [],
+      "links": [
+        {
+          "href": "page170676909.html",
+          "title": "Записаться на приём"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec3048357101",
+      "title": "",
+      "html": "<a href=\"index.html\">Все</a>\n<a href=\"#rec2777142601\">Руководство</a>\n<a href=\"#rec2777142701\">ТКМ и восточная медицина</a>\n<a href=\"#rec2777142801\">Женское здоровье</a>\n<a href=\"#rec2796209601\">Терапия и неврология</a>\n<a href=\"#rec2796911501\">Косметология и кожа</a>\n<a href=\"#rec2797346001\">Реабилитация</a>",
+      "images": [],
+      "links": [
+        {
+          "href": "index.html",
+          "title": "Все"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2777142601",
+      "title": "Команда специалистов",
+      "html": "<p>Руководство института традиционной восточной медицины</p>\n<p>Королёва Оксана Михайловна</p>\n<p>Десятерик Александр <br/>Евгеньевич</p>\n<p>Главный врач института традиционной восточной медицины</p>\n<p>Руководитель департамента по науке и инновациям. к. м. н., доцент.</p>",
+      "images": [
+        {
+          "src": "media/f69406d5167fc7-480.webp",
+          "width": 480,
+          "height": 511,
+          "srcset": "media/f69406d5167fc7-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/eb25d3bce44ae4-480.webp",
+          "width": 480,
+          "height": 586,
+          "srcset": "media/eb25d3bce44ae4-480.webp 480w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [
+        {
+          "href": "doctor-koroleva.html",
+          "title": "Профиль →"
+        },
+        {
+          "href": "doctor-glavnyy-vrach.html",
+          "title": "Профиль →"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2777142701",
+      "title": "Команда специалистов",
+      "html": "",
+      "images": [
+        {
+          "src": "media/06da830a2ca8b2-480.webp",
+          "width": 480,
+          "height": 640,
+          "srcset": "media/06da830a2ca8b2-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/4b0b5178d37de4-960.webp",
+          "width": 960,
+          "height": 720,
+          "srcset": "media/4b0b5178d37de4-480.webp 480w, media/4b0b5178d37de4-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/2042f4901c31c8-480.webp",
+          "width": 480,
+          "height": 450,
+          "srcset": "media/2042f4901c31c8-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/08064a58d89ee3-480.webp",
+          "width": 480,
+          "height": 634,
+          "srcset": "media/08064a58d89ee3-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/3cb302f1f395d6-960.webp",
+          "width": 960,
+          "height": 726,
+          "srcset": "media/3cb302f1f395d6-480.webp 480w, media/3cb302f1f395d6-960.webp 960w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [],
+      "videos": []
+    },
+    {
+      "id": "rec2777142801",
+      "title": "",
+      "html": "",
+      "images": [
+        {
+          "src": "media/6ffefdacbfc13a-960.webp",
+          "width": 960,
+          "height": 960,
+          "srcset": "media/6ffefdacbfc13a-480.webp 480w, media/6ffefdacbfc13a-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/bd8b2919393fbc-480.webp",
+          "width": 480,
+          "height": 549,
+          "srcset": "media/bd8b2919393fbc-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/13c1e3ca545d65-480.webp",
+          "width": 480,
+          "height": 602,
+          "srcset": "media/13c1e3ca545d65-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/ef077c3fe6e273-480.webp",
+          "width": 480,
+          "height": 614,
+          "srcset": "media/ef077c3fe6e273-480.webp 480w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [
+        {
+          "href": "doctor-darya-ivanova.html",
+          "title": "02 Врач гинеколог-хирург Иванова Дарья Женское здоровье"
+        },
+        {
+          "href": "doctor-manaevskaya-ginekolog.html",
+          "title": "Акушер-гинеколог Маневская Юлия Женское здоровье 03"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2796209601",
+      "title": "Команда специалистов",
+      "html": "",
+      "images": [
+        {
+          "src": "media/6d5b3b4602ca4f-480.webp",
+          "width": 480,
+          "height": 634,
+          "srcset": "media/6d5b3b4602ca4f-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/12db5521e7e38e-480.webp",
+          "width": 480,
+          "height": 617,
+          "srcset": "media/12db5521e7e38e-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/cfb74a91cf093e-480.webp",
+          "width": 480,
+          "height": 614,
+          "srcset": "media/cfb74a91cf093e-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/84c69b99e1495e-960.webp",
+          "width": 960,
+          "height": 960,
+          "srcset": "media/84c69b99e1495e-480.webp 480w, media/84c69b99e1495e-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/601c5fa1e2f742-960.webp",
+          "width": 960,
+          "height": 1088,
+          "srcset": "media/601c5fa1e2f742-480.webp 480w, media/601c5fa1e2f742-960.webp 960w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [
+        {
+          "href": "doctor-soboleva-vika.html",
+          "title": "Врач аллерголог. Соболева Виктория Терапия и неврология 05"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2796911501",
+      "title": "Команда специалистов",
+      "html": "",
+      "images": [
+        {
+          "src": "media/a978b5a974e7f0-960.webp",
+          "width": 960,
+          "height": 960,
+          "srcset": "media/a978b5a974e7f0-480.webp 480w, media/a978b5a974e7f0-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/70856b0fde4a0b-480.webp",
+          "width": 480,
+          "height": 549,
+          "srcset": "media/70856b0fde4a0b-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/b6afb95f6ee332-960.webp",
+          "width": 960,
+          "height": 750,
+          "srcset": "media/b6afb95f6ee332-480.webp 480w, media/b6afb95f6ee332-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/dfb08063108eee-480.webp",
+          "width": 480,
+          "height": 687,
+          "srcset": "media/dfb08063108eee-480.webp 480w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [
+        {
+          "href": "doctor-doctor-shakov.html",
+          "title": "Врач венеролог-дерматолог, к.м.н. Шаков Исмаил Косметология и кожа 04"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2797346001",
+      "title": "Команда специалистов",
+      "html": "",
+      "images": [
+        {
+          "src": "media/b774efd08484f5-480.webp",
+          "width": 480,
+          "height": 539,
+          "srcset": "media/b774efd08484f5-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/754f594235335c-960.webp",
+          "width": 960,
+          "height": 960,
+          "srcset": "media/754f594235335c-480.webp 480w, media/754f594235335c-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/c9583f744da92b-960.webp",
+          "width": 960,
+          "height": 726,
+          "srcset": "media/c9583f744da92b-480.webp 480w, media/c9583f744da92b-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/496fc16aaced7b-960.webp",
+          "width": 960,
+          "height": 960,
+          "srcset": "media/496fc16aaced7b-480.webp 480w, media/496fc16aaced7b-960.webp 960w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/3ae74a26439367-480.webp",
+          "width": 480,
+          "height": 460,
+          "srcset": "media/3ae74a26439367-480.webp 480w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [
+        {
+          "href": "doctor-spa-man.html",
+          "title": "Специалист по СПА услугам Минаенков Александр Реабилитация"
+        },
+        {
+          "href": "doctor-vycheslav-byvalcev.html",
+          "title": "Врач аюрведы, остеопат, кинезиолог Бывальцев Вячеслав Реабилитация 01"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "rec2777143201",
+      "title": "Команда специалистов",
+      "html": "",
+      "images": [
+        {
+          "src": "media/d0031648ce0962-480.webp",
+          "width": 480,
+          "height": 617,
+          "srcset": "media/d0031648ce0962-480.webp 480w",
+          "alt": "Врачи"
+        },
+        {
+          "src": "media/c7c02adf153b72-480.webp",
+          "width": 480,
+          "height": 853,
+          "srcset": "media/c7c02adf153b72-480.webp 480w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [],
+      "videos": []
+    },
+    {
+      "id": "rec2777143301",
+      "title": "Команда специалистов",
+      "html": "",
+      "images": [
+        {
+          "src": "media/b8fdcdf91f2b96-480.webp",
+          "width": 480,
+          "height": 511,
+          "srcset": "media/b8fdcdf91f2b96-480.webp 480w",
+          "alt": "Врачи"
+        }
+      ],
+      "links": [],
+      "videos": []
+    },
+    {
+      "id": "details",
+      "title": "Образование и опыт специалистов",
+      "html": "<p>КОМАНДА ИНСТИТУТА</p>",
+      "images": [],
+      "links": [],
+      "videos": []
+    }
+  ],
+  "priceRows": []
+}
