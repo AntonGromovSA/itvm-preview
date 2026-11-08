@@ -8,3 +8,4 @@
 
 .authored-carousel-controls,.authored-carousel-controls button{visibility:visible!important}
 .authored-page .node-atom{opacity:1!important}
+.authored-page .carousel,.authored-page .carousel__container,.authored-page .carousel__main,.authored-page .carousel__wrapper{visibility:visible!important}
