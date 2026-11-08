@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-lab/
+.astro/
+releases/
+reports/
+*.local

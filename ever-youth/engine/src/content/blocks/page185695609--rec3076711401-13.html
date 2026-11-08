@@ -1,0 +1,784 @@
+<div class="r t-rec" data-record-type="1370" id="rec3076711401" style=" "> <!-- T1370 --> <div class="t1370"> <!-- nominify begin --> <style>
+.vk-varicose,
+.vk-varicose * { box-sizing: border-box; }
+.vk-varicose input,
+.vk-varicose textarea,
+.vk-varicose select { font: inherit; }
+
+.vk-varicose {
+  --vk-bg: #0b0b0c;
+  --vk-bg-soft: #141416;
+  --vk-bg-card: #17171a;
+  --vk-line: #2a2724;
+  --vk-line-strong: #3a352e;
+  --vk-gold: #c9a961;
+  --vk-gold-bright: #e6cb83;
+  --vk-gold-deep: #8a7135;
+  --vk-text: #f3ede0;
+  --vk-text-soft: #b8ad97;
+  --vk-text-mute: #7a7368;
+  --vk-font-head: var(--t-headline-font, 'Georgia', serif);
+  --vk-font-text: var(--t-text-font, 'Inter', system-ui, sans-serif);
+
+  background: var(--vk-bg);
+  color: var(--vk-text);
+  font-family: var(--vk-font-text);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* ---------- HERO ---------- */
+.vk-hero {
+  position: relative;
+  padding: clamp(64px, 11vw, 140px) clamp(20px, 5vw, 80px);
+  border-bottom: 1px solid var(--vk-line);
+  background:
+    radial-gradient(ellipse 80% 60% at 80% 20%, rgba(201, 169, 97, 0.10), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 80%, rgba(201, 169, 97, 0.05), transparent 70%),
+    var(--vk-bg);
+}
+.vk-hero__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: center;
+}
+.vk-hero__caption {
+  font-family: var(--vk-font-text);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--vk-gold);
+  margin: 0 0 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.vk-hero__caption::before {
+  content: "";
+  width: 36px;
+  height: 1px;
+  background: var(--vk-gold);
+}
+.vk-hero__title {
+  font-family: var(--vk-font-head);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.6vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 0 0 28px;
+  color: var(--vk-text);
+  text-wrap: balance;
+}
+.vk-hero__title em {
+  font-style: italic;
+  color: var(--vk-gold-bright);
+  font-weight: 400;
+}
+.vk-hero__lead {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--vk-text-soft);
+  max-width: 56ch;
+  margin: 0 0 44px;
+}
+.vk-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--vk-line);
+}
+.vk-hero__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.vk-hero__meta-num {
+  font-family: var(--vk-font-head);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--vk-gold-bright);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.vk-hero__meta-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vk-text-mute);
+}
+
+/* Hero SVG graphic */
+.vk-hero__art {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  border: 1px solid var(--vk-line-strong);
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(201, 169, 97, 0.04), transparent),
+    var(--vk-bg-card);
+}
+.vk-hero__art-frame {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid var(--vk-line);
+  pointer-events: none;
+}
+.vk-hero__art-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--vk-text-mute);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.vk-hero__art-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--vk-gold);
+  box-shadow: 0 0 12px var(--vk-gold);
+}
+.vk-hero__art-svg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vk-hero__art-svg svg {
+  width: 86%;
+  height: 86%;
+}
+.vk-hero__art-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--vk-gold);
+}
+.vk-hero__art-corner--tl { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.vk-hero__art-corner--tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+.vk-hero__art-corner--bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+.vk-hero__art-corner--br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+/* ---------- INTRO ---------- */
+.vk-intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+.vk-intro__label {
+  font-family: var(--vk-font-text);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--vk-text-mute);
+  position: relative;
+  padding-top: 20px;
+}
+.vk-intro__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 1px;
+  background: var(--vk-gold);
+}
+.vk-intro__heading {
+  font-family: var(--vk-font-head);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0 0 32px;
+  color: var(--vk-text);
+  text-wrap: balance;
+}
+.vk-intro__heading span {
+  color: var(--vk-gold-bright);
+  font-style: italic;
+}
+.vk-intro__text {
+  font-size: clamp(1rem, 1.15vw, 1.125rem);
+  line-height: 1.8;
+  color: var(--vk-text-soft);
+  max-width: 72ch;
+  margin: 0 0 24px;
+}
+.vk-intro__text strong {
+  color: var(--vk-text);
+  font-weight: 500;
+}
+
+/* ---------- METHODS ---------- */
+.vk-methods {
+  background: var(--vk-bg-soft);
+  border-top: 1px solid var(--vk-line);
+  border-bottom: 1px solid var(--vk-line);
+}
+.vk-methods__head {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(64px, 9vw, 110px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+.vk-methods__title {
+  font-family: var(--vk-font-head);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--vk-text);
+  text-wrap: balance;
+}
+.vk-methods__title span {
+  color: var(--vk-gold-bright);
+  font-style: italic;
+}
+.vk-methods__sub {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--vk-text-soft);
+  margin: 0;
+  max-width: 44ch;
+}
+.vk-methods__list {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 80px) clamp(64px, 9vw, 110px);
+  display: flex;
+  flex-direction: column;
+}
+.vk-method {
+  display: grid;
+  grid-template-columns: 80px 1.1fr 1.4fr 220px;
+  gap: clamp(24px, 3vw, 56px);
+  padding: clamp(32px, 4vw, 56px) 0;
+  border-top: 1px solid var(--vk-line);
+  align-items: start;
+  position: relative;
+}
+.vk-method:last-child { border-bottom: 1px solid var(--vk-line); }
+.vk-method__num {
+  font-family: var(--vk-font-head);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  color: var(--vk-gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.vk-method__title {
+  font-family: var(--vk-font-head);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.2;
+  margin: 0 0 14px;
+  color: var(--vk-text);
+}
+.vk-method__subtitle {
+  font-size: 0.85rem;
+  color: var(--vk-gold-bright);
+  letter-spacing: 0.06em;
+  font-style: italic;
+  margin: 0 0 18px;
+  display: block;
+}
+.vk-method__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--vk-gold);
+}
+.vk-method__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--vk-text-soft);
+  margin: 0;
+}
+.vk-method__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  background: var(--vk-bg);
+  border: 1px solid var(--vk-line);
+}
+.vk-method__spec-label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vk-text-mute);
+  margin: 0 0 4px;
+}
+.vk-method__spec-value {
+  font-family: var(--vk-font-head);
+  font-size: 1.1rem;
+  color: var(--vk-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* ---------- PROCESS ---------- */
+.vk-process {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+.vk-process__sticky { position: sticky; top: 40px; }
+.vk-process__title {
+  font-family: var(--vk-font-head);
+  font-weight: 400;
+  font-size: clamp(2rem, 3.6vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 24px 0 24px;
+  color: var(--vk-text);
+  text-wrap: balance;
+}
+.vk-process__title span { color: var(--vk-gold-bright); font-style: italic; }
+.vk-process__lead {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--vk-text-soft);
+  margin: 0;
+  max-width: 36ch;
+}
+.vk-process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.vk-step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid var(--vk-line);
+  position: relative;
+}
+.vk-step:last-child { border-bottom: 1px solid var(--vk-line); }
+.vk-step__num {
+  font-family: var(--vk-font-head);
+  font-size: 1.6rem;
+  color: var(--vk-gold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.vk-step__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.vk-step__time {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vk-text-mute);
+}
+.vk-step__name {
+  font-family: var(--vk-font-head);
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  color: var(--vk-text);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.vk-step__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--vk-text-soft);
+  margin: 0;
+  max-width: 56ch;
+}
+
+/* ---------- PROMISE ---------- */
+.vk-promise {
+  background: linear-gradient(180deg, var(--vk-bg) 0%, #07070a 100%);
+  border-top: 1px solid var(--vk-line);
+}
+.vk-promise__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 80px);
+  text-align: center;
+}
+.vk-promise__quote {
+  font-family: var(--vk-font-head);
+  font-style: italic;
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--vk-text);
+  margin: 0 0 32px;
+  text-wrap: balance;
+  font-weight: 400;
+}
+.vk-promise__quote::before { content: "«"; color: var(--vk-gold); margin-right: 4px; }
+.vk-promise__quote::after { content: "»"; color: var(--vk-gold); margin-left: 4px; }
+.vk-promise__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: var(--vk-text-mute);
+  letter-spacing: 0.04em;
+}
+.vk-promise__author::before,
+.vk-promise__author::after {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--vk-line-strong);
+}
+
+/* ---------- FORM ---------- */
+.vk-form-section {
+  border-top: 1px solid var(--vk-line);
+  background: var(--vk-bg-soft);
+}
+.vk-form-section__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 6vw, 100px);
+  padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 80px);
+  align-items: start;
+}
+.vk-form-section__title {
+  font-family: var(--vk-font-head);
+  font-weight: 400;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 24px 0 32px;
+  color: var(--vk-text);
+  text-wrap: balance;
+}
+.vk-form-section__title span { color: var(--vk-gold-bright); font-style: italic; }
+.vk-form-section__text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--vk-text-soft);
+  margin: 0 0 36px;
+  max-width: 42ch;
+}
+.vk-form-section__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vk-form-section__list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--vk-text-soft);
+}
+.vk-form-section__list svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--vk-gold);
+  margin-top: 3px;
+}
+.vk-form {
+  background: var(--vk-bg);
+  border: 1px solid var(--vk-line);
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.vk-form__title {
+  font-family: var(--vk-font-head);
+  font-size: 1.3rem;
+  color: var(--vk-text);
+  margin: 0;
+  font-weight: 400;
+}
+.vk-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.vk-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.vk-form__field--full { grid-column: 1 / -1; }
+.vk-form__label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vk-text-mute);
+}
+.vk-form__input,
+.vk-form__textarea {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--vk-line-strong);
+  padding: 12px 0;
+  color: var(--vk-text);
+  font-family: var(--vk-font-text);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+  outline: none;
+}
+.vk-form__input::placeholder,
+.vk-form__textarea::placeholder {
+  color: var(--vk-text-mute);
+}
+.vk-form__input:focus,
+.vk-form__textarea:focus {
+  border-bottom-color: var(--vk-gold);
+}
+.vk-form__textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+.vk-form__consent {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--vk-text-mute);
+  margin: 0;
+}
+.vk-form__consent a {
+  color: var(--vk-gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--vk-gold-deep);
+}
+
+/* CTA button */
+.vk-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--vk-gold);
+  color: #0b0b0c;
+  border: 0;
+  padding: 18px 36px;
+  font-family: var(--vk-font-text);
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  margin-top: 8px;
+}
+.vk-cta:hover { background: var(--vk-gold-bright); }
+.vk-cta::after {
+  content: "→";
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+.vk-cta:hover::after { transform: translateX(4px); }
+
+/* Hero CTA secondary */
+.vk-hero__cta-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+.vk-hero__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--vk-text-soft);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--vk-line-strong);
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.vk-hero__cta-link:hover {
+  color: var(--vk-gold);
+  border-bottom-color: var(--vk-gold);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1080px) {
+  .vk-hero__inner,
+  .vk-intro,
+  .vk-methods__head,
+  .vk-process,
+  .vk-form-section__inner {
+    grid-template-columns: 1fr;
+  }
+  .vk-method {
+    grid-template-columns: 60px 1fr;
+    grid-template-areas:
+      "num title"
+      ". desc"
+      ". specs";
+    gap: 20px 24px;
+  }
+  .vk-method__num { grid-area: num; }
+  .vk-method__title-wrap { grid-area: title; }
+  .vk-method__desc { grid-area: desc; }
+  .vk-method__specs { grid-area: specs; }
+  .vk-process__sticky { position: static; }
+}
+
+@media (max-width: 640px) {
+  .vk-method {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "num"
+      "title"
+      "desc"
+      "specs";
+  }
+  .vk-form__row {
+    grid-template-columns: 1fr;
+  }
+  .vk-hero__meta {
+    gap: 20px;
+  }
+  .vk-hero__art { display: none; }
+}
+
+@media (max-width: 480px) {
+  .vk-cta {
+    padding: 16px 24px;
+    font-size: 0.82rem;
+    width: 100%;
+  }
+  .vk-hero__cta-wrap { flex-direction: column; align-items: stretch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style> <section class="vk-varicose"> <!-- HERO --> <header class="vk-hero"> <div class="vk-hero__inner"> <div class="vk-hero__content"> <p class="vk-hero__caption">Флебология • Лечение варикоза</p> <h1 class="vk-hero__title">Здоровые вены <em>без разрезов</em><br/>и долгой реабилитации</h1> <p class="vk-hero__lead">Эндовазальная лазерная коагуляция, склеротерапия и минифлебэктомия под контролем УЗИ — амбулаторно, за один визит. Без наркоза, без госпитализации, без заметных следов.</p> <div class="vk-hero__cta-wrap"> <a class="vk-cta" href="#consult">Записаться на приём</a> <a class="vk-hero__cta-link" href="#methods">Узнать о методах</a> </div> <div class="vk-hero__meta"> <div class="vk-hero__meta-item"> <span class="vk-hero__meta-num">45 мин</span> <span class="vk-hero__meta-label">Длительность процедуры</span> </div> <div class="vk-hero__meta-item"> <span class="vk-hero__meta-num">2–4 ч</span> <span class="vk-hero__meta-label">До выписки домой</span> </div> <div class="vk-hero__meta-item"> <span class="vk-hero__meta-num">7 дней</span> <span class="vk-hero__meta-label">Возврат к спорту</span> </div> </div> </div> <aside aria-hidden="true" class="vk-hero__art"> <span class="vk-hero__art-tag">Диагностика Duplex-УЗИ</span> <span class="vk-hero__art-corner vk-hero__art-corner--tl"></span> <span class="vk-hero__art-corner vk-hero__art-corner--tr"></span> <span class="vk-hero__art-corner vk-hero__art-corner--bl"></span> <span class="vk-hero__art-corner vk-hero__art-corner--br"></span> <div class="vk-hero__art-frame"></div> <div class="vk-hero__art-svg"> <svg fill="none" viewbox="0 0 400 460" xmlns="http://www.w3.org/2000/svg"> <defs> <lineargradient id="vkgold" x1="0%" x2="0%" y1="0%" y2="100%"> <stop offset="0%" stop-color="#e6cb83"></stop> <stop offset="100%" stop-color="#8a7135"></stop> </lineargradient> </defs> <!-- Vein path --> <path d="M200 30 C 190 80, 220 130, 195 180 C 170 230, 215 280, 195 330 C 175 380, 210 420, 200 450" fill="none" stroke="url(#vkgold)" stroke-linecap="round" stroke-width="2.5"></path> <path d="M200 30 C 190 80, 220 130, 195 180 C 170 230, 215 280, 195 330 C 175 380, 210 420, 200 450" fill="none" opacity="0.4" stroke="#c9a961" stroke-linecap="round" stroke-width="0.8" transform="translate(0,0)"></path> <!-- Reference crosshairs --> <g opacity="0.6" stroke="#c9a961" stroke-width="0.6"> <line x1="20" x2="380" y1="180" y2="180"></line> <line stroke-dasharray="2 4" x1="195" x2="195" y1="40" y2="440"></line> </g> <!-- Pulse rings --> <circle cx="200" cy="180" fill="none" opacity="0.4" r="40" stroke="#c9a961" stroke-width="0.6"></circle> <circle cx="200" cy="180" fill="none" opacity="0.25" r="80" stroke="#c9a961" stroke-dasharray="3 3" stroke-width="0.4"></circle> <circle cx="200" cy="180" fill="none" opacity="0.15" r="120" stroke="#c9a961" stroke-dasharray="3 3" stroke-width="0.3"></circle> <circle cx="200" cy="180" fill="#e6cb83" r="6"></circle> <!-- Labels with lines --> <g fill="#b8ad97" font-family="Georgia, serif" font-size="10" font-style="italic"> <text x="260" y="178">клапанная</text> <text x="260" y="192">недостаточность</text> <line opacity="0.6" stroke="#c9a961" stroke-width="0.5" x1="250" x2="208" y1="185" y2="183"></line> <text x="40" y="280">рефлюкс</text> <line opacity="0.6" stroke="#c9a961" stroke-width="0.5" x1="80" x2="160" y1="277" y2="265"></line> </g> <g fill="#7a7368" font-family="Inter, sans-serif" font-size="8" letter-spacing="0.15em"> <text x="40" y="50">BSA-01 / SECTOR PROBE 7-12 MHz</text> <text x="40" y="445">PROTOCOL: STAGE II–III</text> </g> </svg> </div> </aside> </div> </header> <!-- INTRO --> <section class="vk-intro"> <div class="vk-intro__label">О проблеме</div> <div class="vk-intro__body"> <h2 class="vk-intro__heading">Варикоз — это не косметический дефект, <span>а сосудистое заболевание</span></h2> <p class="vk-intro__text">По данным эпидемиологических исследований, хроническими заболеваниями вен нижних конечностей страдают <strong>25–35% взрослого населения</strong>. У женщин патология встречается в 3–5 раз чаще, а после 50 лет признаки венозной недостаточности выявляются у каждой второй.</p> <p class="vk-intro__text">На ранних стадиях болезнь проявляется тяжестью в ногах, отёками к вечеру и появлением сосудистых сеток. Без лечения она прогрессирует: формируются трофические язвы, тромбофлебит и тромбоз глубоких вен. Чем раньше начата терапия — тем меньше вмешательство и лучше долгосрочный результат.</p> </div> </section> <!-- METHODS --> <section class="vk-methods" id="methods"> <header class="vk-methods__head"> <h2 class="vk-methods__title">Три метода, <span>один стандарт точности</span></h2> <p class="vk-methods__sub">Каждый метод подбирается индивидуально после дуплексного сканирования — в зависимости от диаметра вены, стадии рефлюкса и анатомии пациента.</p> </header> <div class="vk-methods__list"> <article class="vk-method"> <div class="vk-method__num">I</div> <div class="vk-method__title-wrap"> <div aria-hidden="true" class="vk-method__icon"> <svg fill="none" height="56" viewbox="0 0 64 64" width="56"> <circle cx="32" cy="32" r="28" stroke="#c9a961" stroke-width="0.8"></circle> <path d="M22 32 L30 40 L44 24" stroke="#e6cb83" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path> <circle cx="32" cy="14" fill="#c9a961" r="2"></circle> <circle cx="32" cy="50" fill="#c9a961" r="2"></circle> <circle cx="14" cy="32" fill="#c9a961" r="2"></circle> <circle cx="50" cy="32" fill="#c9a961" r="2"></circle> </svg> </div> <h3 class="vk-method__title">Эндовазальная лазерная коагуляция</h3> <span class="vk-method__subtitle">ЭВЛК · 1470 нм</span> <p class="vk-method__desc">Световод вводится в поражённую вену через прокол 2 мм под постоянным УЗ-контролем. Лазерное излучение длиной волны 1470 нм вызывает равномерное термическое закрытие вены без её разрыва. Метод считается золотым стандартом при диаметре ствола более 4 мм.</p> </div> <div class="vk-method__specs"> <div> <p class="vk-method__spec-label">Анестезия</p> <p class="vk-method__spec-value">Местная, тумесцентная</p> </div> <div> <p class="vk-method__spec-label">Реабилитация</p> <p class="vk-method__spec-value">1–3 дня</p> </div> <div> <p class="vk-method__spec-label">Эффективность</p> <p class="vk-method__spec-value">98,5% по данным 5-летних наблюдений</p> </div> </div> </article> <article class="vk-method"> <div class="vk-method__num">II</div> <div class="vk-method__title-wrap"> <div aria-hidden="true" class="vk-method__icon"> <svg fill="none" height="56" viewbox="0 0 64 64" width="56"> <circle cx="32" cy="32" r="28" stroke="#c9a961" stroke-width="0.8"></circle> <path d="M32 12 L32 52 M12 32 L52 32" stroke="#e6cb83" stroke-linecap="round" stroke-width="0.8"></path> <circle cx="32" cy="32" fill="none" r="10" stroke="#e6cb83" stroke-width="1.2"></circle> <circle cx="32" cy="32" fill="#c9a961" r="3"></circle> </svg> </div> <h3 class="vk-method__title">Склеротерапия под УЗ-контролем</h3> <span class="vk-method__subtitle">Foam-form · микропенная</span> <p class="vk-method__desc">В варикозно изменённые притоки вводится склерозант в виде мелкодисперсной пены. Препарат вытесняет кровь из просвета и склеивает стенки сосуда. Подходит для вен диаметром 2–10 мм, ретикулярных сетей и телеангиэктазий. Не требует разрезов и компрессионного белья дольше 5 дней.</p> </div> <div class="vk-method__specs"> <div> <p class="vk-method__spec-label">Сеансов</p> <p class="vk-method__spec-value">1–4 процедуры</p> </div> <div> <p class="vk-method__spec-label">Анестезия</p> <p class="vk-method__spec-value">Не требуется</p> </div> <div> <p class="vk-method__spec-label">Косметический результат</p> <p class="vk-method__spec-value">Видим через 3–6 недель</p> </div> </div> </article> <article class="vk-method"> <div class="vk-method__num">III</div> <div class="vk-method__title-wrap"> <div aria-hidden="true" class="vk-method__icon"> <svg fill="none" height="56" viewbox="0 0 64 64" width="56"> <circle cx="32" cy="32" r="28" stroke="#c9a961" stroke-width="0.8"></circle> <path d="M20 40 Q26 28, 32 32 T44 24" fill="none" stroke="#e6cb83" stroke-linecap="round" stroke-width="1.6"></path> <circle cx="20" cy="40" fill="#c9a961" r="2.5"></circle> <circle cx="44" cy="24" fill="#c9a961" r="2.5"></circle> <circle cx="32" cy="32" fill="#e6cb83" r="1.5"></circle> </svg> </div> <h3 class="vk-method__title">Минифлебэктомия</h3> <span class="vk-method__subtitle">по Мюллеру · через проколы</span> <p class="vk-method__desc">Применяется для удаления крупных варикозных притоков и узлов. Доступ — через проколы кожи иглой, без разрезов и наложения швов. Часто сочетается с ЭВЛК основного ствола. Следы от проколов заживают в течение 2–4 недель, не оставляя заметных рубцов.</p> </div> <div class="vk-method__specs"> <div> <p class="vk-method__spec-label">Швы</p> <p class="vk-method__spec-value">Не накладываются</p> </div> <div> <p class="vk-method__spec-label">Шрамы</p> <p class="vk-method__spec-value">Не остаются</p> </div> <div> <p class="vk-method__spec-label">Сочетание</p> <p class="vk-method__spec-value">Дополняет ЭВЛК</p> </div> </div> </article> </div> </section> <!-- PROCESS --> <section class="vk-process"> <div class="vk-process__sticky"> <div class="vk-intro__label" style="padding-top:0">Как проходит лечение</div> <h2 class="vk-process__title">От первого визита <span>до здоровых ног</span> — пять этапов</h2> <p class="vk-process__lead">Стандартизированный протокол ведения пациента, утверждённый профильным медицинским советом клиники.</p> </div> <div class="vk-process__steps"> <div class="vk-step"> <div class="vk-step__num">01</div> <div> <div class="vk-step__head"> <span class="vk-step__time">40 минут</span> <h3 class="vk-step__name">УЗ-диагностика и консультация флеболога</h3> </div> <p class="vk-step__text">Проводится дуплексное сканирование обеих нижних конечностей. Врач оценивает состояние клапанного аппарата, диаметр стволов, наличие тромбов. По результатам составляется индивидуальный план лечения с указанием метода, объёма и точной стоимости.</p> </div> </div> <div class="vk-step"> <div class="vk-step__num">02</div> <div> <div class="vk-step__head"> <span class="vk-step__time">1 час · амбулаторно</span> <h3 class="vk-step__name">Процедура под местной анестезией</h3> </div> <p class="vk-step__text">Вмешательство проводится в условиях дневного стационара. Пациент находится в сознании, общается с врачом. После контрольного УЗИ и наложения компрессионного трикотажа разрешается вставать и ходить.</p> </div> </div> <div class="vk-step"> <div class="vk-step__num">03</div> <div> <div class="vk-step__head"> <span class="vk-step__time">30 минут</span> <h3 class="vk-step__name">Контрольное УЗИ и выписка</h3> </div> <p class="vk-step__text">Через 2–3 часа после процедуры выполняется контрольное сканирование, подтверждающее закрытие вены. Пациент получает подробные рекомендации по режиму ношения компрессии и график наблюдения.</p> </div> </div> <div class="vk-step"> <div class="vk-step__num">04</div> <div> <div class="vk-step__head"> <span class="vk-step__time">1 неделя</span> <h3 class="vk-step__name">Восстановление в привычном ритме</h3> </div> <p class="vk-step__text">К концу первой недели снимаются все ограничения, кроме интенсивных силовых нагрузок. Разрешены пешие прогулки, работа за столом, перелёты. Компрессионный трикотаж носят в дневное время.</p> </div> </div> <div class="vk-step"> <div class="vk-step__num">05</div> <div> <div class="vk-step__head"> <span class="vk-step__time">1, 6 и 12 месяцев</span> <h3 class="vk-step__name">Контрольные осмотры</h3> </div> <p class="vk-step__text">Повторные УЗИ позволяют оценить состояние обработанных вен и убедиться в стойкости результата. Все осмотры входят в стоимость лечения и не требуют дополнительной оплаты.</p> </div> </div> </div> </section> <!-- PROMISE / QUOTE --> <section class="vk-promise"> <div class="vk-promise__inner"> <p class="vk-promise__quote">Мы не просто убираем вены — мы возвращаем ощущение лёгкости в ногах, которое должно быть в тридцать, сорок и шестьдесят лет</p> <span class="vk-promise__author">Главный врач клиники · сертифицированный флеболог</span> </div> </section> <!-- FORM --> <section class="vk-form-section" id="consult"> <div class="vk-form-section__inner"> <div> <div class="vk-intro__label" style="padding-top:0">Запись на консультацию</div> <h2 class="vk-form-section__title">Начните с <span>УЗ-диагностики</span></h2> <p class="vk-form-section__text">Запишитесь на первичный приём — займёт 40 минут и даст полную картину состояния вен. Стоимость включает консультацию флеболога и дуплексное сканирование обеих конечностей.</p> <ul class="vk-form-section__list"> <li> <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="5 12 10 17 19 7" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+            УЗИ на аппарате экспертного класса с режимом цветного допплера
+          </li> <li> <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="5 12 10 17 19 7" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+            Подробный письменный план лечения в день визита
+          </li> <li> <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="5 12 10 17 19 7" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+            Повторные контрольные осмотры без дополнительной оплаты
+          </li> </ul> </div> <div class="release-booking-panel"><h3>Запись на приём</h3><p>Свяжитесь с администратором: он поможет выбрать специалиста, уточнит стоимость и время приёма.</p><div class="release-booking-links"><a href="tel:__CLINIC_PHONE_0_E164__">__CLINIC_PHONE_0_DISPLAY__</a><a href="tel:__CLINIC_PHONE_1_E164__">__CLINIC_PHONE_1_DISPLAY__</a><a href="tel:__CLINIC_PHONE_2_E164__">__CLINIC_PHONE_2_DISPLAY__</a><a href="__CLINIC_WHATSAPP_URL__" rel="noopener noreferrer" target="_blank">Написать в WhatsApp</a></div></div><form class="vk-form" data-clinic-form-disabled="true" hidden="" novalidate=""> <h3 class="vk-form__title">Оставьте заявку</h3> <div class="vk-form__row"> <div class="vk-form__field"> <label class="vk-form__label" for="vk-name">Имя</label> <input class="vk-form__input" disabled="" id="vk-name" name="name" placeholder="Как к вам обращаться" required="" type="text"/> </div> <div class="vk-form__field"> <label class="vk-form__label" for="vk-phone">Телефон</label> <input class="vk-form__input" disabled="" id="vk-phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel"/> </div> </div> <div class="vk-form__field vk-form__field--full"> <label class="vk-form__label" for="vk-message">Что вас беспокоит (необязательно)</label> <textarea class="vk-form__textarea" disabled="" id="vk-message" name="message" placeholder="Например: тяжесть в ногах к вечеру, сосудистая сетка на голени" rows="3"></textarea> </div> <p class="vk-form__consent">Нажимая «Отправить», вы соглашаетесь с <a href="#privacy">политикой обработки персональных данных</a>.</p> <button class="t-btnflex t-btnflex_md vk-cta" disabled="" style="appearance:none;-webkit-appearance:none;margin:0" type="submit">Отправить</button> </form> </div> </section> </section> <script>
+(function(){
+  'use strict';
+
+  // Phone mask: Russian format
+  var phoneInput = document.getElementById('vk-phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function(e){
+      var digits = (e.target.value || '').replace(/\D/g, '');
+      if (digits[0] === '8') digits = '7' + digits.slice(1);
+      if (!digits) { e.target.value = ''; return; }
+      if (digits[0] !== '7') digits = '7' + digits;
+      digits = digits.slice(0, 11);
+      var parts = [];
+      if (digits.length > 1) parts.push('+7');
+      if (digits.length >= 4) parts.push(' (' + digits.slice(1, 4) + ')');
+      else if (digits.length > 1) parts.push(' (' + digits.slice(1) + ')');
+      if (digits.length >= 7) parts.push(' ' + digits.slice(4, 7) + '-');
+      else if (digits.length >= 5) parts.push(' ' + digits.slice(4));
+      if (digits.length >= 9) parts.push(digits.slice(7, 9) + '-');
+      if (digits.length >= 11) parts.push(digits.slice(9, 11));
+      e.target.value = parts.join('');
+    });
+    phoneInput.addEventListener('focus', function(){
+      if (!phoneInput.value) phoneInput.value = '+7 (';
+    });
+  }
+
+  // Form submit — prevent default, show ack
+  var form = document.querySelector('.vk-form');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('.vk-cta');
+      var original = btn.textContent;
+      btn.textContent = 'Заявка отправлена ✓';
+      btn.style.background = '#7a7368';
+      btn.style.color = '#f3ede0';
+      btn.disabled = true;
+      btn.style.pointerEvents = 'none';
+      setTimeout(function(){
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+        btn.style.pointerEvents = '';
+        form.reset();
+      }, 3500);
+    });
+  }
+
+  // Reveal on scroll — gentle fade for major blocks
+  if ('IntersectionObserver' in window) {
+    var blocks = document.querySelectorAll('.vk-intro, .vk-method, .vk-step, .vk-promise__inner, .vk-form-section__inner');
+    blocks.forEach(function(el){
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1)';
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    blocks.forEach(function(el){ io.observe(el); });
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if (id.length > 1) {
+        var target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+})();
+</script> <!-- nominify end --> </div> </div>

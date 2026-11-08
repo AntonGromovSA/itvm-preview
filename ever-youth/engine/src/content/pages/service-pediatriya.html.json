@@ -1,0 +1,14 @@
+{
+  "name": "service-pediatriya.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/service-pediatriya--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/service-pediatriya--before.html",
+  "afterFile": "src/content/blocks/service-pediatriya--after.html",
+  "blocks": [],
+  "alias": true
+}

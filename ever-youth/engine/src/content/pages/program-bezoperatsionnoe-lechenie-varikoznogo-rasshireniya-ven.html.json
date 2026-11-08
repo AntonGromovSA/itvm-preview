@@ -1,0 +1,14 @@
+{
+  "name": "program-bezoperatsionnoe-lechenie-varikoznogo-rasshireniya-ven.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/program-bezoperatsionnoe-lechenie-varikoznogo-rasshireniya-ven--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/program-bezoperatsionnoe-lechenie-varikoznogo-rasshireniya-ven--before.html",
+  "afterFile": "src/content/blocks/program-bezoperatsionnoe-lechenie-varikoznogo-rasshireniya-ven--after.html",
+  "blocks": [],
+  "alias": true
+}

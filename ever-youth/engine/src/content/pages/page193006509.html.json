@@ -1,0 +1,77 @@
+{
+  "name": "page193006509.html",
+  "title": "Услуги остеопатия | ИТВМ Арбат",
+  "headFile": "src/content/blocks/page193006509--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {
+    "class": [
+      "t-body"
+    ],
+    "style": "margin:0;"
+  },
+  "recordAttributes": {
+    "class": "t-records",
+    "data-hook": "blocks-collection-content-node",
+    "data-tilda-cookie": "no",
+    "data-tilda-formskey": "18a9bfa600f400b8f82a73e227855709",
+    "data-tilda-lazy": "yes",
+    "data-tilda-page-id": "193006509",
+    "data-tilda-project-country": "RU",
+    "data-tilda-project-headcode": "yes",
+    "data-tilda-project-id": "27855709",
+    "data-tilda-root-zone": "com",
+    "id": "allrecords"
+  },
+  "beforeFile": "src/content/blocks/page193006509--before.html",
+  "afterFile": "src/content/blocks/page193006509--after.html",
+  "blocks": [
+    {
+      "kind": "legacy",
+      "id": "note-1",
+      "file": "src/content/blocks/page193006509--note-1.html"
+    },
+    {
+      "kind": "header",
+      "id": "t-header",
+      "file": "src/content/shared/header-19a059a6f0.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-5",
+      "file": "src/content/blocks/page193006509--note-5.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3098734901",
+      "file": "src/content/blocks/page193006509--rec3098734901-7.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3098735001",
+      "file": "src/content/blocks/page193006509--rec3098735001-9.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3098735101",
+      "file": "src/content/blocks/page193006509--rec3098735101-11.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-13",
+      "file": "src/content/blocks/page193006509--note-13.html"
+    },
+    {
+      "kind": "footer",
+      "id": "t-footer",
+      "file": "src/content/shared/footer-b002ed0781.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-17",
+      "file": "src/content/blocks/page193006509--note-17.html"
+    }
+  ],
+  "alias": false
+}

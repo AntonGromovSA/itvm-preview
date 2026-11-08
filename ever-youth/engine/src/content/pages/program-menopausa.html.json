@@ -1,0 +1,14 @@
+{
+  "name": "program-menopausa.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/program-menopausa--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/program-menopausa--before.html",
+  "afterFile": "src/content/blocks/program-menopausa--after.html",
+  "blocks": [],
+  "alias": true
+}

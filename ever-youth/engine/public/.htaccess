@@ -1,0 +1,18 @@
+DirectoryIndex index.html
+DirectorySlash Off
+AddDefaultCharset UTF-8
+<IfModule mod_alias.c>
+  RedirectMatch 302 ^/ever-youth/?$ https://itvm.ru/ever-youth/index.html
+</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^$ https://itvm.ru/ever-youth/index.html [R=302,L]
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive Off
+</IfModule>

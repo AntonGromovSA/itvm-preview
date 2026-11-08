@@ -1,0 +1,14 @@
+{
+  "name": "service-kosmetologiya.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/service-kosmetologiya--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/service-kosmetologiya--before.html",
+  "afterFile": "src/content/blocks/service-kosmetologiya--after.html",
+  "blocks": [],
+  "alias": true
+}

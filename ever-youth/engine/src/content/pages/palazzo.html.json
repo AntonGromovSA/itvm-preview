@@ -1,0 +1,14 @@
+{
+  "name": "palazzo.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/palazzo--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/palazzo--before.html",
+  "afterFile": "src/content/blocks/palazzo--after.html",
+  "blocks": [],
+  "alias": true
+}

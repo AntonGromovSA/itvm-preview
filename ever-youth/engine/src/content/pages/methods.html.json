@@ -1,0 +1,14 @@
+{
+  "name": "methods.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/methods--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/methods--before.html",
+  "afterFile": "src/content/blocks/methods--after.html",
+  "blocks": [],
+  "alias": true
+}

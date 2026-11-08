@@ -1,0 +1,805 @@
+<div class="r t-rec" data-record-type="1370" id="rec3064376501" style=" "> <!-- T1370 --> <div class="t1370"> <!-- nominify begin --> <style>
+  .cg-cosmo,
+  .cg-cosmo * { box-sizing: border-box; }
+  .cg-cosmo input,
+  .cg-cosmo textarea,
+  .cg-cosmo select { font: inherit; }
+
+  .cg-cosmo {
+    --cg-black: #0a0a0a;
+    --cg-black-2: #131313;
+    --cg-black-3: #1c1c1c;
+    --cg-gold: #d4af37;
+    --cg-gold-2: #c9a961;
+    --cg-gold-3: #e8c878;
+    --cg-gold-soft: #f4e4bc;
+    --cg-text: #f5f5f5;
+    --cg-text-muted: #b8b8b8;
+    --cg-line: rgba(212, 175, 55, 0.22);
+
+    font-family: var(--t-text-font), 'Helvetica Neue', Arial, sans-serif;
+    background: var(--cg-black);
+    color: var(--cg-text);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cg-cosmo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 12% 8%, rgba(212, 175, 55, 0.10) 0%, transparent 35%),
+      radial-gradient(circle at 88% 92%, rgba(212, 175, 55, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .cg-cosmo__container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ============ HERO ============ */
+  .cg-cosmo__hero {
+    padding: 110px 0 90px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--t-text-font);
+    font-size: 12px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--cg-gold-2);
+    margin-bottom: 32px;
+  }
+
+  .cg-cosmo__eyebrow::before,
+  .cg-cosmo__eyebrow::after {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cg-gold), transparent);
+  }
+
+  .cg-cosmo__title {
+    font-family: var(--t-headline-font), 'Times New Roman', serif;
+    font-size: clamp(40px, 6vw, 84px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin: 0 0 28px;
+    color: var(--cg-text);
+    letter-spacing: -0.01em;
+  }
+
+  .cg-cosmo__title em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--cg-gold-3) 0%, var(--cg-gold) 45%, var(--cg-gold-2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+  }
+
+  .cg-cosmo__subtitle {
+    font-family: var(--t-text-font);
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.65;
+    color: var(--cg-text-muted);
+    max-width: 660px;
+    margin: 0 auto 44px;
+    font-weight: 300;
+  }
+
+  .cg-cosmo__cta-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+
+  .cg-cosmo__btn-primary {
+    background: linear-gradient(135deg, var(--cg-gold) 0%, var(--cg-gold-2) 100%);
+    color: var(--cg-black);
+    border: none;
+    padding: 18px 38px;
+    font-family: var(--t-text-font);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: 0 12px 36px rgba(212, 175, 55, 0.25);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cg-cosmo__btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.7s ease;
+  }
+
+  .cg-cosmo__btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 48px rgba(212, 175, 55, 0.4);
+  }
+
+  .cg-cosmo__btn-primary:hover::after { left: 100%; }
+
+  .cg-cosmo__btn-ghost {
+    background: transparent;
+    color: var(--cg-gold-3);
+    border: 1px solid var(--cg-gold);
+    padding: 17px 36px;
+    font-family: var(--t-text-font);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cg-cosmo__btn-ghost:hover {
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--cg-gold-soft);
+  }
+
+  .cg-cosmo__hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 50px;
+    border-top: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__stat-num {
+    font-family: var(--t-headline-font), serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    background: linear-gradient(135deg, var(--cg-gold-3), var(--cg-gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .cg-cosmo__stat-text {
+    font-family: var(--t-text-font);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cg-text-muted);
+    font-weight: 300;
+  }
+
+  /* ============ SECTION HEADERS ============ */
+  .cg-cosmo__section {
+    padding: 100px 0;
+    position: relative;
+  }
+
+  .cg-cosmo__section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 70px;
+  }
+
+  .cg-cosmo__section-eyebrow {
+    font-family: var(--t-text-font);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--cg-gold-2);
+    margin-bottom: 18px;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+  }
+
+  .cg-cosmo__section-eyebrow::before,
+  .cg-cosmo__section-eyebrow::after {
+    content: "—";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cg-gold);
+    opacity: 0.5;
+  }
+  .cg-cosmo__section-eyebrow::before { left: -22px; }
+  .cg-cosmo__section-eyebrow::after { right: -22px; }
+
+  .cg-cosmo__section-title {
+    font-family: var(--t-headline-font), serif;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--cg-text);
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .cg-cosmo__section-title em {
+    font-style: italic;
+    color: var(--cg-gold-3);
+  }
+
+  .cg-cosmo__section-desc {
+    font-family: var(--t-text-font);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cg-text-muted);
+    font-weight: 300;
+  }
+
+  /* ============ SERVICES ============ */
+  .cg-cosmo__services {
+    background: linear-gradient(180deg, var(--cg-black) 0%, var(--cg-black-2) 100%);
+    border-top: 1px solid var(--cg-line);
+    border-bottom: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--cg-line);
+    border: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__service {
+    background: var(--cg-black-2);
+    padding: 48px 36px;
+    position: relative;
+    transition: background 0.4s ease;
+    overflow: hidden;
+  }
+
+  .cg-cosmo__service::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--cg-gold), var(--cg-gold-3));
+    transition: width 0.5s ease;
+  }
+
+  .cg-cosmo__service:hover {
+    background: var(--cg-black-3);
+  }
+
+  .cg-cosmo__service:hover::before { width: 100%; }
+
+  .cg-cosmo__service-num {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-family: var(--t-headline-font), serif;
+    font-size: 14px;
+    color: var(--cg-gold);
+    opacity: 0.5;
+    letter-spacing: 0.1em;
+  }
+
+  .cg-cosmo__service-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 28px;
+    color: var(--cg-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cg-gold);
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .cg-cosmo__service-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--cg-gold);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cg-cosmo__service-title {
+    font-family: var(--t-headline-font), serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--cg-text);
+    margin: 0 0 14px;
+    line-height: 1.3;
+  }
+
+  .cg-cosmo__service-text {
+    font-family: var(--t-text-font);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--cg-text-muted);
+    margin: 0 0 22px;
+    font-weight: 300;
+  }
+
+  .cg-cosmo__service-price {
+    font-family: var(--t-text-font);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cg-gold-2);
+    border-top: 1px solid var(--cg-line);
+    padding-top: 18px;
+    display: block;
+  }
+
+  .cg-cosmo__service-price strong {
+    font-family: var(--t-headline-font), serif;
+    font-size: 18px;
+    color: var(--cg-gold-3);
+    margin-left: 8px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* ============ ADVANTAGES ============ */
+  .cg-cosmo__advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  .cg-cosmo__advantage {
+    text-align: center;
+    padding: 32px 20px;
+    border: 1px solid var(--cg-line);
+    background: rgba(28, 28, 28, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .cg-cosmo__advantage:hover {
+    border-color: var(--cg-gold);
+    background: rgba(28, 28, 28, 0.8);
+    transform: translateY(-4px);
+  }
+
+  .cg-cosmo__advantage-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cg-gold);
+  }
+
+  .cg-cosmo__advantage-icon svg {
+    width: 36px;
+    height: 36px;
+    stroke: var(--cg-gold);
+    fill: none;
+    stroke-width: 1.2;
+  }
+
+  .cg-cosmo__advantage-title {
+    font-family: var(--t-headline-font), serif;
+    font-size: 17px;
+    color: var(--cg-text);
+    margin: 0 0 10px;
+    font-weight: 400;
+  }
+
+  .cg-cosmo__advantage-text {
+    font-family: var(--t-text-font);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--cg-text-muted);
+    font-weight: 300;
+    margin: 0;
+  }
+
+  /* ============ PROCESS ============ */
+  .cg-cosmo__process {
+    background: linear-gradient(180deg, var(--cg-black-2) 0%, var(--cg-black) 100%);
+    border-top: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__process-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .cg-cosmo__process-list::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cg-gold), transparent);
+    opacity: 0.4;
+  }
+
+  .cg-cosmo__step {
+    text-align: center;
+    padding: 0 18px;
+    position: relative;
+  }
+
+  .cg-cosmo__step-num {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--t-headline-font), serif;
+    font-size: 22px;
+    color: var(--cg-black);
+    background: linear-gradient(135deg, var(--cg-gold-3), var(--cg-gold));
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 6px var(--cg-black-2), 0 0 0 7px var(--cg-gold);
+  }
+
+  .cg-cosmo__step-title {
+    font-family: var(--t-headline-font), serif;
+    font-size: 19px;
+    color: var(--cg-text);
+    margin: 0 0 12px;
+    font-weight: 400;
+  }
+
+  .cg-cosmo__step-text {
+    font-family: var(--t-text-font);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--cg-text-muted);
+    font-weight: 300;
+    margin: 0;
+  }
+
+  /* ============ FORM ============ */
+  .cg-cosmo__form-section {
+    border-top: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+
+  .cg-cosmo__form-info {
+    padding-right: 20px;
+  }
+
+  .cg-cosmo__form-title {
+    font-family: var(--t-headline-font), serif;
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--cg-text);
+    margin: 0 0 22px;
+  }
+
+  .cg-cosmo__form-title em {
+    font-style: italic;
+    color: var(--cg-gold-3);
+  }
+
+  .cg-cosmo__form-text {
+    font-family: var(--t-text-font);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cg-text-muted);
+    font-weight: 300;
+    margin: 0 0 32px;
+  }
+
+  .cg-cosmo__form-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 28px;
+    border-top: 1px solid var(--cg-line);
+  }
+
+  .cg-cosmo__form-contact {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--t-text-font);
+    font-size: 15px;
+    color: var(--cg-text);
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .cg-cosmo__form-contact svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--cg-gold);
+    fill: none;
+    stroke-width: 1.5;
+    flex-shrink: 0;
+  }
+
+  .cg-cosmo__form-contact:hover { color: var(--cg-gold-3); }
+
+  .cg-cosmo__form {
+    background: var(--cg-black-2);
+    padding: 48px 44px;
+    border: 1px solid var(--cg-gold);
+    position: relative;
+  }
+
+  .cg-cosmo__form::before,
+  .cg-cosmo__form::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--cg-gold);
+  }
+
+  .cg-cosmo__form::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .cg-cosmo__form::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+  }
+
+  .cg-cosmo__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .cg-cosmo__input-group {
+    margin-bottom: 18px;
+  }
+
+  .cg-cosmo__label {
+    display: block;
+    font-family: var(--t-text-font);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cg-gold-2);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .cg-cosmo__input,
+  .cg-cosmo__textarea,
+  .cg-cosmo__select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--cg-line);
+    padding: 12px 0;
+    color: var(--cg-text);
+    font-family: var(--t-text-font);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-weight: 300;
+  }
+
+  .cg-cosmo__input:focus,
+  .cg-cosmo__textarea:focus,
+  .cg-cosmo__select:focus {
+    border-color: var(--cg-gold);
+  }
+
+  .cg-cosmo__input::placeholder,
+  .cg-cosmo__textarea::placeholder {
+    color: rgba(184, 184, 184, 0.5);
+  }
+
+  .cg-cosmo__select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    padding-right: 28px;
+  }
+
+  .cg-cosmo__select option {
+    background: var(--cg-black-2);
+    color: var(--cg-text);
+  }
+
+  .cg-cosmo__textarea {
+    min-height: 80px;
+    resize: vertical;
+    font-family: var(--t-text-font);
+  }
+
+  .cg-cosmo__input-error {
+    font-family: var(--t-text-font);
+    font-size: 12px;
+    color: #ff8a8a;
+    margin-top: 6px;
+    min-height: 16px;
+  }
+
+  .cg-cosmo__submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--cg-gold) 0%, var(--cg-gold-2) 100%);
+    color: var(--cg-black);
+    border: none;
+    padding: 18px;
+    font-family: var(--t-text-font);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 14px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cg-cosmo__submit:hover {
+    background: linear-gradient(135deg, var(--cg-gold-3), var(--cg-gold));
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.35);
+  }
+
+  .cg-cosmo__form-disclaimer {
+    font-family: var(--t-text-font);
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--cg-text-muted);
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 300;
+  }
+
+  .cg-cosmo__form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .cg-cosmo__form-success svg {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 18px;
+    stroke: var(--cg-gold);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .cg-cosmo__form-success h4 {
+    font-family: var(--t-headline-font), serif;
+    font-size: 24px;
+    color: var(--cg-text);
+    margin: 0 0 10px;
+    font-weight: 400;
+  }
+
+  .cg-cosmo__form-success p {
+    font-family: var(--t-text-font);
+    font-size: 14px;
+    color: var(--cg-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1200px) {
+    .cg-cosmo__services-grid { grid-template-columns: repeat(2, 1fr); }
+    .cg-cosmo__advantages-grid { grid-template-columns: repeat(2, 1fr); }
+    .cg-cosmo__process-list { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
+    .cg-cosmo__process-list::before { display: none; }
+  }
+
+  @media (max-width: 960px) {
+    .cg-cosmo__form-wrapper { grid-template-columns: 1fr; gap: 50px; }
+    .cg-cosmo__form-info { padding-right: 0; text-align: center; }
+    .cg-cosmo__form-contacts { align-items: center; }
+    .cg-cosmo__hero { padding: 80px 0 70px; }
+    .cg-cosmo__section { padding: 80px 0; }
+  }
+
+  @media (max-width: 640px) {
+    .cg-cosmo__container { padding: 0 20px; }
+    .cg-cosmo__services-grid { grid-template-columns: 1fr; }
+    .cg-cosmo__advantages-grid { grid-template-columns: 1fr; }
+    .cg-cosmo__process-list { grid-template-columns: 1fr; }
+    .cg-cosmo__hero-stats { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+    .cg-cosmo__form { padding: 36px 24px; }
+    .cg-cosmo__form-row { grid-template-columns: 1fr; gap: 0; }
+    .cg-cosmo__service { padding: 36px 24px; }
+  }
+
+  @media (max-width: 480px) {
+    .cg-cosmo__title { font-size: 36px; }
+    .cg-cosmo__cta-row { flex-direction: column; }
+    .cg-cosmo__btn-primary,
+    .cg-cosmo__btn-ghost { width: 100%; }
+  }
+</style> <section class="cg-cosmo"> <div class="cg-cosmo__hero"> <div class="cg-cosmo__container"> <div class="cg-cosmo__eyebrow">Премиальная косметология</div> <h1 class="cg-cosmo__title">Косметология</h1> <p class="cg-cosmo__subtitle">
+        Современные технологии омоложения и ухода в атмосфере абсолютного комфорта.
+        Индивидуальные программы, сертифицированные препараты, команда врачей с международным опытом.
+      </p> <div class="cg-cosmo__cta-row"> <button class="cg-cosmo__btn-primary" data-scroll-to=".cg-cosmo__form-section" type="button">Записаться на консультацию</button> <button class="cg-cosmo__btn-ghost" data-scroll-to=".cg-cosmo__services" type="button">Наши услуги</button> </div> <div class="cg-cosmo__hero-stats"> <div> <div class="cg-cosmo__stat-num">12+</div> <div class="cg-cosmo__stat-text">лет практики</div> </div> <div> <div class="cg-cosmo__stat-num">8500</div> <div class="cg-cosmo__stat-text">довольных пациентов</div> </div> <div> <div class="cg-cosmo__stat-num">40</div> <div class="cg-cosmo__stat-text">видов процедур</div> </div> <div> <div class="cg-cosmo__stat-num">100%</div> <div class="cg-cosmo__stat-text">стерильность</div> </div> </div> </div> </div> <div class="cg-cosmo__services cg-cosmo__section" id="cg-services"> <div class="cg-cosmo__container"> <div class="cg-cosmo__section-head"> <span class="cg-cosmo__section-eyebrow">Услуги клиники</span> <h2 class="cg-cosmo__section-title">Полный спектр <em>эстетических</em> решений</h2> <p class="cg-cosmo__section-desc">
+          От диагностики до восстановления — каждый этап под контролем врачебной команды.
+          Только сертифицированные препараты и оборудование премиум-класса.
+        </p> </div> <div class="cg-cosmo__services-grid"> <article class="cg-cosmo__service"> <span class="cg-cosmo__service-num">01</span> <div class="cg-cosmo__service-icon"> <svg viewbox="0 0 24 24"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"></path><path d="M9 17v3M15 17v3M12 14v4"></path></svg> </div> <h3 class="cg-cosmo__service-title">Инъекционная косметология</h3> <p class="cg-cosmo__service-text">Ботулинотерапия, контурная пластика, биоревитализация и мезотерапия для естественного омоложения.</p> <span class="cg-cosmo__service-price">Стоимость уточняйте</span> </article> <article class="cg-cosmo__service"> <span class="cg-cosmo__service-num">02</span> <div class="cg-cosmo__service-icon"> <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" fill="currentColor" r="1"></circle></svg> </div> <h3 class="cg-cosmo__service-title">Аппаратные методики</h3> <p class="cg-cosmo__service-text">Лазерное омоложение, RF-лифтинг, ультразвуковой SMAS-лифтинг и фотоомоложение на новейшем оборудовании.</p> <span class="cg-cosmo__service-price">Стоимость уточняйте</span> </article> <article class="cg-cosmo__service"> <span class="cg-cosmo__service-num">03</span> <div class="cg-cosmo__service-icon"> <svg viewbox="0 0 24 24"><path d="M5 12c0-3 2-6 7-6s7 3 7 6-2 6-7 6-7-3-7-6z"></path><path d="M12 6v12"></path></svg> </div> <h3 class="cg-cosmo__service-title">Химические пилинги</h3> <p class="cg-cosmo__service-text">Поверхностные, срединные и глубокие пилинги для обновления кожи, выравнивания тона и устранения дефектов.</p> <span class="cg-cosmo__service-price">Стоимость уточняйте</span> </article> <article class="cg-cosmo__service"> <span class="cg-cosmo__service-num">04</span> <div class="cg-cosmo__service-icon"> <svg viewbox="0 0 24 24"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"></path><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"></path></svg> </div> <h3 class="cg-cosmo__service-title">Эстетическая косметология</h3> <p class="cg-cosmo__service-text">Чистки, уходовые программы, массаж лица и подбор домашнего ухода с использованием премиум-косметики.</p> <span class="cg-cosmo__service-price">Стоимость уточняйте</span> </article> <article class="cg-cosmo__service"> <span class="cg-cosmo__service-num">05</span> <div class="cg-cosmo__service-icon"> <svg viewbox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h10"></path></svg> </div> <h3 class="cg-cosmo__service-title">Эстетика тела</h3> <p class="cg-cosmo__service-text">Коррекция фигуры, антицеллюлитные программы, обёртывания и аппаратные методики для идеального силуэта.</p> <span class="cg-cosmo__service-price">Стоимость уточняйте</span> </article> <article class="cg-cosmo__service"> <span class="cg-cosmo__service-num">06</span> <div class="cg-cosmo__service-icon"> <svg viewbox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"></path></svg> </div> <h3 class="cg-cosmo__service-title">Трихология и уход</h3> <p class="cg-cosmo__service-text">Диагностика и лечение волос, мезотерапия кожи головы, программы восстановления и стимуляции роста.</p> <span class="cg-cosmo__service-price">Стоимость уточняйте</span> </article> </div> </div> </div> <div class="cg-cosmo__advantages cg-cosmo__section"> <div class="cg-cosmo__container"> <div class="cg-cosmo__section-head"> <span class="cg-cosmo__section-eyebrow">Почему мы</span> <h2 class="cg-cosmo__section-title">Стандарты, которым <em>доверяют</em></h2> <p class="cg-cosmo__section-desc">
+          Мы работаем по международным протоколам и уделяем внимание каждой детали —
+          от первой консультации до восстановления после процедуры.
+        </p> </div> <div class="cg-cosmo__advantages-grid"> <div class="cg-cosmo__advantage"> <div class="cg-cosmo__advantage-icon"> <svg viewbox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"></path></svg> </div> <h3 class="cg-cosmo__advantage-title">Команда экспертов</h3> <p class="cg-cosmo__advantage-text">Врачи с опытом более 10 лет, регулярные стажировки в Европе и Азии</p> </div> <div class="cg-cosmo__advantage"> <div class="cg-cosmo__advantage-icon"> <svg viewbox="0 0 24 24"><path d="M12 2L2 7v6c0 5 4 8 10 9 6-1 10-4 10-9V7l-10-5z"></path><path d="M9 12l2 2 4-4"></path></svg> </div> <h3 class="cg-cosmo__advantage-title">Безопасность</h3> <p class="cg-cosmo__advantage-text">Стерильность, сертифицированные препараты и оборудование ведущих мировых брендов</p> </div> <div class="cg-cosmo__advantage"> <div class="cg-cosmo__advantage-icon"> <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg> </div> <h3 class="cg-cosmo__advantage-title">Без ожидания</h3> <p class="cg-cosmo__advantage-text">Запись в удобное время, отсутствие очередей и индивидуальный график посещений</p> </div> <div class="cg-cosmo__advantage"> <div class="cg-cosmo__advantage-icon"> <svg viewbox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg> </div> <h3 class="cg-cosmo__advantage-title">Забота 360°</h3> <p class="cg-cosmo__advantage-text">Сопровождение после процедур, контроль результата и поддержка на всех этапах</p> </div> </div> </div> </div> <div class="cg-cosmo__process cg-cosmo__section"> <div class="cg-cosmo__container"> <div class="cg-cosmo__section-head"> <span class="cg-cosmo__section-eyebrow">Путь к совершенству</span> <h2 class="cg-cosmo__section-title">Как проходит <em>ваше</em> преображение</h2> <p class="cg-cosmo__section-desc">
+          Прозрачный процесс из четырёх шагов — от первой встречи до стойкого результата,
+          который вы будете видеть и чувствовать каждый день.
+        </p> </div> <div class="cg-cosmo__process-list"> <div class="cg-cosmo__step"> <div class="cg-cosmo__step-num">01</div> <h3 class="cg-cosmo__step-title">Консультация</h3> <p class="cg-cosmo__step-text">Знакомство с врачом, сбор анамнеза и обсуждение ваших пожеланий</p> </div> <div class="cg-cosmo__step"> <div class="cg-cosmo__step-num">02</div> <h3 class="cg-cosmo__step-title">Диагностика</h3> <p class="cg-cosmo__step-text">Аппаратное обследование кожи и составление индивидуальной программы</p> </div> <div class="cg-cosmo__step"> <div class="cg-cosmo__step-num">03</div> <h3 class="cg-cosmo__step-title">Процедура</h3> <p class="cg-cosmo__step-text">Проведение курса в комфортной обстановке под контролем врача</p> </div> <div class="cg-cosmo__step"> <div class="cg-cosmo__step-num">04</div> <h3 class="cg-cosmo__step-title">Результат</h3> <p class="cg-cosmo__step-text">Оценка эффекта, рекомендации по уходу и план поддерживающих процедур</p> </div> </div> </div> </div> <div class="cg-cosmo__form-section cg-cosmo__section"> <div class="cg-cosmo__container"> <div class="cg-cosmo__form-wrapper"> <div class="cg-cosmo__form-info"> <span class="cg-cosmo__section-eyebrow">Запись на приём</span> <h2 class="cg-cosmo__form-title">Консультация косметолога</h2> <p class="cg-cosmo__form-text">
+            Оставьте заявку, и наш администратор свяжется с вами в течение 30 минут,
+            чтобы подобрать удобное время и специалиста для первичной консультации.
+          </p> <div class="cg-cosmo__form-contacts"><a class="cg-cosmo__form-contact" href="tel:__CLINIC_PHONE_1_E164__"> <svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+    __CLINIC_PHONE_1_DISPLAY__
+</a> <a class="cg-cosmo__form-contact" href="mailto:hello@cosmo-gold.ru"> <svg viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    itvm@mail.ru
+</a> <div class="cg-cosmo__form-contact"> <svg viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+    Москва, Филипповский переулок, 18
+</div></div> </div> <div class="release-booking-panel"><h3>Запись на приём</h3><p>Свяжитесь с администратором: он поможет выбрать специалиста, уточнит стоимость и время приёма.</p><div class="release-booking-links"><a href="tel:__CLINIC_PHONE_0_E164__">__CLINIC_PHONE_0_DISPLAY__</a><a href="tel:__CLINIC_PHONE_1_E164__">__CLINIC_PHONE_1_DISPLAY__</a><a href="tel:__CLINIC_PHONE_2_E164__">__CLINIC_PHONE_2_DISPLAY__</a><a href="__CLINIC_WHATSAPP_URL__" rel="noopener noreferrer" target="_blank">Написать в WhatsApp</a></div></div><form action="" class="cg-cosmo__form t-form js-form-proccess" data-clinic-form-disabled="true" data-error-popup="y" data-formactiontype="2" data-inputbox=".cg-cosmo__input-group" data-success-popup="y" data-vibeblock-form="true" hidden="" id="cg-cosmo-form" method="POST" name="cg-cosmo-form" novalidate=""> <div class="js-successbox cg-cosmo__form-success"> <svg viewbox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22,4 12,14.01 9,11.01"></polyline></svg> <h4>Заявка принята</h4> <p>Наш администратор свяжется с вами в ближайшие 30 минут для подтверждения записи.</p> </div> <div class="cg-cosmo__form-row"> <div class="cg-cosmo__input-group"> <label class="cg-cosmo__label" for="cg-name">Имя</label> <input class="cg-cosmo__input js-tilda-rule" data-tilda-req="1" data-tilda-rule="name" disabled="" id="cg-name" name="Name" placeholder="Ваше имя" type="text"/> <div class="cg-cosmo__input-error t-input-error"></div> </div> <div class="cg-cosmo__input-group"> <label class="cg-cosmo__label" for="cg-phone">Телефон</label> <input class="cg-cosmo__input js-tilda-rule js-tilda-mask" data-tilda-mask="+7 (999) 999-99-99" data-tilda-mask-holder="_" data-tilda-req="1" data-tilda-rule="phone" disabled="" id="cg-phone" name="Phone" placeholder="+7 (___) ___-__-__" type="tel"/> <div class="cg-cosmo__input-error t-input-error"></div> </div> </div> <div class="cg-cosmo__input-group"> <label class="cg-cosmo__label" for="cg-service">Интересующая услуга</label> <select class="cg-cosmo__select js-tilda-rule" data-tilda-req="1" disabled="" id="cg-service" name="Service"> <option value="">Выберите направление</option> <option value="injection">Инъекционная косметология</option> <option value="hardware">Аппаратные методики</option> <option value="peeling">Химические пилинги</option> <option value="aesthetic">Эстетическая косметология</option> <option value="body">Эстетика тела</option> <option value="tricho">Трихология</option> <option value="consult">Первичная консультация</option> </select> <div class="cg-cosmo__input-error t-input-error"></div> </div> <div class="cg-cosmo__input-group"> <label class="cg-cosmo__label" for="cg-message">Комментарий</label> <textarea class="cg-cosmo__textarea" disabled="" id="cg-message" name="Message" placeholder="Расскажите о своих пожеланиях или задайте вопрос"></textarea> </div> <button class="cg-cosmo__submit t-submit t-btnflex t-btnflex_md" disabled="" type="submit"> <span class="t-btnflex__text">Записаться на консультацию</span> </button> <p class="cg-cosmo__form-disclaimer">
+            Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+          </p> <div class="js-errorbox-all" style="display: none;"> <div class="js-rule-error-all"></div> </div> </form> </div> </div> </div> </section> <script>
+(function() {
+  const form = document.getElementById('cg-cosmo-form');
+  if (!form) return;
+
+  const submitButton = form.querySelector('[type="submit"]');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    window.t_forms__initBtnClick({
+      target: submitButton,
+      srcElement: submitButton,
+      preventDefault: function() {}
+    });
+  });
+
+  document.querySelectorAll('[data-scroll-to]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const target = document.querySelector(btn.getAttribute('data-scroll-to'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script> <!-- nominify end --> </div> </div>

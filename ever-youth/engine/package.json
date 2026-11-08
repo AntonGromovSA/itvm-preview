@@ -1,0 +1,31 @@
+{
+  "name": "itvm-clinic-engine",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22.23.4" },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview --host 127.0.0.1",
+    "verify": "node scripts/verify-build.mjs",
+    "package": "python scripts/package-release.py"
+  },
+  "dependencies": {
+    "astro": "7.4.7",
+    "@astrojs/react": "7.1.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0",
+    "cheerio": "1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@astrojs/check": "0.9.12",
+    "typescript": "5.9.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0"
+  }
+}

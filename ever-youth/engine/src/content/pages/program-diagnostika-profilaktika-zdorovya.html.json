@@ -1,0 +1,14 @@
+{
+  "name": "program-diagnostika-profilaktika-zdorovya.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/program-diagnostika-profilaktika-zdorovya--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/program-diagnostika-profilaktika-zdorovya--before.html",
+  "afterFile": "src/content/blocks/program-diagnostika-profilaktika-zdorovya--after.html",
+  "blocks": [],
+  "alias": true
+}

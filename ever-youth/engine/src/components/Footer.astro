@@ -1,0 +1,7 @@
+---
+import { fragment } from '../lib/content';
+import type { PageDefinition } from '../lib/types';
+interface Props { file: string; page: PageDefinition }
+const { file, page } = Astro.props;
+---
+<Fragment set:html={fragment(file, page)} />

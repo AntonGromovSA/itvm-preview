@@ -1,0 +1,142 @@
+{
+  "name": "page185863009.html",
+  "title": "Программа омоложение | ИТВМ Арбат",
+  "headFile": "src/content/blocks/page185863009--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {
+    "class": [
+      "t-body"
+    ],
+    "style": "margin:0;"
+  },
+  "recordAttributes": {
+    "class": "t-records",
+    "data-hook": "blocks-collection-content-node",
+    "data-tilda-cookie": "no",
+    "data-tilda-formskey": "18a9bfa600f400b8f82a73e227855709",
+    "data-tilda-lazy": "yes",
+    "data-tilda-page-id": "185863009",
+    "data-tilda-project-country": "RU",
+    "data-tilda-project-headcode": "yes",
+    "data-tilda-project-id": "27855709",
+    "data-tilda-root-zone": "com",
+    "id": "allrecords"
+  },
+  "beforeFile": "src/content/blocks/page185863009--before.html",
+  "afterFile": "src/content/blocks/page185863009--after.html",
+  "blocks": [
+    {
+      "kind": "legacy",
+      "id": "note-1",
+      "file": "src/content/blocks/page185863009--note-1.html"
+    },
+    {
+      "kind": "header",
+      "id": "t-header",
+      "file": "src/content/shared/header-19a059a6f0.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-5",
+      "file": "src/content/blocks/page185863009--note-5.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec2986552001",
+      "file": "src/content/blocks/page185863009--rec2986552001-7.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3079209601",
+      "file": "src/content/blocks/page185863009--rec3079209601-9.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3079694101",
+      "file": "src/content/blocks/page185863009--rec3079694101-11.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3079607101",
+      "file": "src/content/blocks/page185863009--rec3079607101-13.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3080113001",
+      "file": "src/content/blocks/page185863009--rec3080113001-15.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3081143601",
+      "file": "src/content/blocks/page185863009--rec3081143601-17.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3081055901",
+      "file": "src/content/blocks/page185863009--rec3081055901-19.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3080572601",
+      "file": "src/content/blocks/page185863009--rec3080572601-21.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3081495201",
+      "file": "src/content/blocks/page185863009--rec3081495201-23.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3081654401",
+      "file": "src/content/blocks/page185863009--rec3081654401-25.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3081892201",
+      "file": "src/content/blocks/page185863009--rec3081892201-27.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3082113901",
+      "file": "src/content/blocks/page185863009--rec3082113901-29.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3082239201",
+      "file": "src/content/blocks/page185863009--rec3082239201-31.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3082362401",
+      "file": "src/content/blocks/page185863009--rec3082362401-33.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-35",
+      "file": "src/content/blocks/page185863009--note-35.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "details",
+      "file": "src/content/blocks/page185863009--details-37.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "details",
+      "file": "src/content/blocks/page185863009--details-38.html"
+    },
+    {
+      "kind": "footer",
+      "id": "t-footer",
+      "file": "src/content/shared/footer-b002ed0781.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-41",
+      "file": "src/content/blocks/page185863009--note-41.html"
+    }
+  ],
+  "alias": false
+}

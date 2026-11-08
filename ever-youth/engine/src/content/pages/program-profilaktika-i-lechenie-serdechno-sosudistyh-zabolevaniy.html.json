@@ -1,0 +1,14 @@
+{
+  "name": "program-profilaktika-i-lechenie-serdechno-sosudistyh-zabolevaniy.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/program-profilaktika-i-lechenie-serdechno-sosudistyh-zabolevaniy--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/program-profilaktika-i-lechenie-serdechno-sosudistyh-zabolevaniy--before.html",
+  "afterFile": "src/content/blocks/program-profilaktika-i-lechenie-serdechno-sosudistyh-zabolevaniy--after.html",
+  "blocks": [],
+  "alias": true
+}

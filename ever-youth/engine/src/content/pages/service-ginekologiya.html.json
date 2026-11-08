@@ -1,0 +1,14 @@
+{
+  "name": "service-ginekologiya.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/service-ginekologiya--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/service-ginekologiya--before.html",
+  "afterFile": "src/content/blocks/service-ginekologiya--after.html",
+  "blocks": [],
+  "alias": true
+}

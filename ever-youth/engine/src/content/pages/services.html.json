@@ -1,0 +1,14 @@
+{
+  "name": "services.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/services--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/services--before.html",
+  "afterFile": "src/content/blocks/services--after.html",
+  "blocks": [],
+  "alias": true
+}

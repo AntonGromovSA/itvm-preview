@@ -1,0 +1,87 @@
+{
+  "name": "page185695609.html",
+  "title": "Программа варикозное расширение вен | ИТВМ Арбат",
+  "headFile": "src/content/blocks/page185695609--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {
+    "class": [
+      "t-body"
+    ],
+    "style": "margin:0;"
+  },
+  "recordAttributes": {
+    "class": "t-records",
+    "data-hook": "blocks-collection-content-node",
+    "data-tilda-cookie": "no",
+    "data-tilda-formskey": "18a9bfa600f400b8f82a73e227855709",
+    "data-tilda-lazy": "yes",
+    "data-tilda-page-id": "185695609",
+    "data-tilda-project-country": "RU",
+    "data-tilda-project-headcode": "yes",
+    "data-tilda-project-id": "27855709",
+    "data-tilda-root-zone": "com",
+    "id": "allrecords"
+  },
+  "beforeFile": "src/content/blocks/page185695609--before.html",
+  "afterFile": "src/content/blocks/page185695609--after.html",
+  "blocks": [
+    {
+      "kind": "legacy",
+      "id": "note-1",
+      "file": "src/content/blocks/page185695609--note-1.html"
+    },
+    {
+      "kind": "header",
+      "id": "t-header",
+      "file": "src/content/shared/header-19a059a6f0.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-5",
+      "file": "src/content/blocks/page185695609--note-5.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec2983716701",
+      "file": "src/content/blocks/page185695609--rec2983716701-7.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3075488601",
+      "file": "src/content/blocks/page185695609--rec3075488601-9.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3076546701",
+      "file": "src/content/blocks/page185695609--rec3076546701-11.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "rec3076711401",
+      "file": "src/content/blocks/page185695609--rec3076711401-13.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-15",
+      "file": "src/content/blocks/page185695609--note-15.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "details",
+      "file": "src/content/blocks/page185695609--details-17.html"
+    },
+    {
+      "kind": "footer",
+      "id": "t-footer",
+      "file": "src/content/shared/footer-b002ed0781.html"
+    },
+    {
+      "kind": "legacy",
+      "id": "note-20",
+      "file": "src/content/blocks/page185695609--note-20.html"
+    }
+  ],
+  "alias": false
+}

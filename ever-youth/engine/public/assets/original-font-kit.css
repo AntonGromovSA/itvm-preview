@@ -1,0 +1,29 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * cormorant-unicase:
+ *   - http://typekit.com/eulas/0000000000000000775d1b65
+ *   - http://typekit.com/eulas/0000000000000000775d1b68
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2026-07-30 09:28:37 UTC"}*/
+
+
+
+@font-face {
+font-family:"cormorant-unicase";
+src:url("31d488288ee0109e6884.woff2") format("woff2"),url("58525fe55096df6f17af.woff") format("woff"),url("190e4d7078f8c7ee574f.otf") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"cormorant-unicase";
+src:url("090d0bb5f062e43d7ef5.woff2") format("woff2"),url("66111bfef5dc0c44aba4.woff") format("woff"),url("0e16bcf95af527167cb9.otf") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+.tk-cormorant-unicase { font-family: "cormorant-unicase",sans-serif; }

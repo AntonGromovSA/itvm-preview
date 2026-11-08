@@ -1,0 +1,18 @@
+---
+import { fragment } from '../lib/content';
+import type { PageDefinition } from '../lib/types';
+import PageBlock from '../components/PageBlock.astro';
+interface Props { page: PageDefinition }
+const { page } = Astro.props;
+---
+<!doctype html>
+<html {...page.htmlAttributes}>
+  <head><Fragment set:html={fragment(page.headFile, page)} /><meta name="generator" content="Astro v7.4.7" /></head>
+  <body {...page.bodyAttributes}>
+    <Fragment set:html={fragment(page.beforeFile, page)} />
+    {page.recordAttributes ? <div {...page.recordAttributes}>
+      {page.blocks.map(block => <PageBlock block={block} page={page} />)}
+    </div> : null}
+    <Fragment set:html={fragment(page.afterFile, page)} />
+  </body>
+</html>

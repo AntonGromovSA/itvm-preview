@@ -1,0 +1,14 @@
+{
+  "name": "method-metody-lecheniya.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/method-metody-lecheniya--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/method-metody-lecheniya--before.html",
+  "afterFile": "src/content/blocks/method-metody-lecheniya--after.html",
+  "blocks": [],
+  "alias": true
+}

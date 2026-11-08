@@ -1,0 +1,14 @@
+{
+  "name": "program-molodost.html",
+  "title": "ИТВМ Арбат",
+  "headFile": "src/content/blocks/program-molodost--head.html",
+  "htmlAttributes": {
+    "lang": "ru"
+  },
+  "bodyAttributes": {},
+  "recordAttributes": null,
+  "beforeFile": "src/content/blocks/program-molodost--before.html",
+  "afterFile": "src/content/blocks/program-molodost--after.html",
+  "blocks": [],
+  "alias": true
+}

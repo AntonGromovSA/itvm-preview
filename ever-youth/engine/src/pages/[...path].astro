@@ -1,0 +1,9 @@
+---
+import ClinicLayout from '../layouts/ClinicLayout.astro';
+import { pages } from '../lib/content';
+export function getStaticPaths() {
+  return pages.filter(p => !['index.html','404.html'].includes(p.name)).map(page => ({params: {path:page.name.replace(/\.html$/, '')},props:{page}}));
+}
+const { page } = Astro.props;
+---
+<ClinicLayout page={page} />
