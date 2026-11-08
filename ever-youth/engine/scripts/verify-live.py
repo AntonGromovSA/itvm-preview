@@ -9,9 +9,11 @@ manifest={x['path']:x for x in json.loads((root/'releases/manifest.json').read_t
 names=json.loads((root/'releases/changed-files.json').read_text())
 def check(name):
  try:
-  with urlopen('https://itvm.ru/ever-youth/'+name+'?engine=20261108',timeout=35) as r:data=r.read();status=r.status
+  with urlopen('https://itvm.ru/ever-youth/'+name,timeout=35) as r:data=r.read();status=r.status
   return {'path':name,'status':status,'matches':hashlib.sha256(data).hexdigest()==manifest[name]['sha256']}
- except HTTPError as e:return {'path':name,'status':e.code,'matches':False}
+ except HTTPError as e:
+  if name=='.htaccess' and e.code in (403,404):return {'path':name,'status':e.code,'matches':None,'protectedConfig':True}
+  return {'path':name,'status':e.code,'matches':False}
  except Exception as e:return {'path':name,'error':type(e).__name__,'matches':False}
 results=[]
 with ThreadPoolExecutor(max_workers=12) as pool:
@@ -23,6 +25,6 @@ before=root/'reports/root-before.sha256';unchanged=None
 if before.exists():
  try:unchanged=hashlib.sha256(urlopen('https://itvm.ru/',timeout=35).read()).hexdigest()==before.read_text().strip()
  except Exception:pass
-report={'checked':len(results),'matches':sum(x['matches'] for x in results),'rootUnchanged':unchanged,'failures':[x for x in results if not x['matches']],'files':results}
+report={'checked':len(results),'matches':sum(x['matches'] is True for x in results),'protectedConfigs':sum(x.get('protectedConfig',False) for x in results),'rootUnchanged':unchanged,'failures':[x for x in results if x['matches'] is False],'files':results}
 (root/'reports/deployment.json').write_text(json.dumps(report,indent=2))
 print(json.dumps({k:v for k,v in report.items() if k!='files'}),flush=True)
