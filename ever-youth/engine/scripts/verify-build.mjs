@@ -34,7 +34,7 @@ let preservedCanvasBlocks=0;
 for(const name of Object.keys(await json('src/data/compositions.json'))){
  const old=load(await readFile(join(baseline,name),'utf8')),current=load(await readFile(join(built,name),'utf8'));
  // Explicitly requested homepage removals; all remaining compositions retain their structure.
- if(name==='page171084309.html')continue; // Replaced by the unified native booking/contact page.
+ if(['page171084309.html','page178631709.html'].includes(name))continue; // Rebuilt native contact/about pages, verified below.
  if(name==='index.html'){old('#rec2936376001').remove();old('#rec2936342401 .tn-group[data-group-id="2026080923360000010"]').remove();old('[data-group-id="2026081000075000010"]').closest('[data-record-type]').remove();}
  for(const block of old('#allrecords [data-record-type="396"]').toArray()){
   if(old(block).closest('#t-header,#t-footer').length)continue;
@@ -60,6 +60,7 @@ assert.equal(home('.advantages-list>li').length,4,'Expected four patient-facing 
 assert.equal(home('#home-programmes .programme-feature').length,2,'Readable programme panels missing');
 assert.equal(home('#home-programmes a[href="exovesicles.html"]').length,1,'New science page inaccessible');
 const contact=load(await readFile('dist/page171084309.html','utf8'));assert.equal(contact('#appointment').length,1);assert.equal(contact('#directions').length,1);assert.equal(contact('nav a[href="page171084309.html"]').length,1);assert.equal(contact('nav a[href*="#appointment"]').length,0);
+const about=load(await readFile('dist/page178631709.html','utf8'));for(const id of ['institute','care','first-visit','team','clinic-video','documents'])assert.equal(about('#'+id).length,1,'About section missing: '+id);assert.equal(about('.about-directions>a').length,6);assert.equal(about('.about-team article').length,3);assert.equal(about('.about-doc-grid a').length,3);assert.equal(about('#clinic-video video[controls][playsinline]').length,1);assert.ok(about('main').text().indexOf('Кто принимает')<about('main').text().indexOf('Лицензия и реквизиты'));
 const exo=load(await readFile('dist/exovesicles.html','utf8'));assert.equal(exo('.science-step').length,4);assert.equal(exo('[data-motion-toggle]').length,1);assert.equal(exo('.scene-fallback').length,1);
 assert.equal(home('.advantages-motion video[autoplay][muted][playsinline]').length,1,'Original five-element motion missing');
 assert.equal(home('header .brand small').length,0,'Unrequested brand subtitle remains');
