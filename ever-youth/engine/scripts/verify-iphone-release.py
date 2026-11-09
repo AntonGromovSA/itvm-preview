@@ -2,10 +2,11 @@
 from pathlib import Path
 from urllib.request import urlopen
 from concurrent.futures import ThreadPoolExecutor
-import hashlib,json,time
+import hashlib,json,time,argparse
 root=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser();parser.add_argument('--report-dir',default='reports/iphone');args=parser.parse_args();report_dir=root/args.report_dir
 manifest={x['path']:x for x in json.loads((root/'releases/manifest.json').read_text(encoding='utf-8'))}
-names=json.loads((root/'reports/iphone/changed-files.json').read_text(encoding='utf-8'))
+names=json.loads((report_dir/'changed-files.json').read_text(encoding='utf-8'))
 def check(name):
  try:
   with urlopen('https://itvm.ru/ever-youth/'+name,timeout=30) as response:data=response.read();status=response.status
@@ -17,9 +18,9 @@ for attempt in range(2):
  if not failed:break
  time.sleep(1)
  replacements={p:check(p) for p in failed};rows=[replacements.get(x['path'],x) for x in rows]
-before=(root/'reports/iphone/root-before.sha256').read_text().strip()
+before=(report_dir/'root-before.sha256').read_text().strip()
 root_same=hashlib.sha256(urlopen('https://itvm.ru/',timeout=30).read()).hexdigest()==before
 report={'checked':len(rows),'htmlPages':sum(x['path'].endswith('.html') for x in rows),'matches':sum(x['matches'] for x in rows),'rootUnchanged':root_same,'failures':[x for x in rows if not x['matches']],'files':rows}
-(root/'reports/iphone/deployment.json').write_text(json.dumps(report,indent=2))
+(report_dir/'deployment.json').write_text(json.dumps(report,indent=2))
 print(json.dumps({k:v for k,v in report.items() if k!='files'}))
 if report['failures'] or not root_same:raise SystemExit(1)

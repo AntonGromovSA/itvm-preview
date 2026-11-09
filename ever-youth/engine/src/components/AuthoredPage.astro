@@ -11,6 +11,10 @@ let html=entry?readFileSync(resolve('src/compositions',entry.htmlFile),'utf8'):'
 if(page.name==='index.html'){
  const $=load(html,{},false),section=$('<section class="mobile-directions container" aria-label="Направления института"><p class="eyebrow">Институт на Арбате</p><h2>Направления ИТВМ</h2><div class="mobile-directions-grid"></div></section>');
  for(const item of mobileDirections){const card=$('<a class="mobile-direction"></a>').attr('href',item.href);card.append($('<img loading="lazy" alt="" width="600" height="400"/>').attr('src','/ever-youth/design-media/'+item.image),$('<span class="mobile-direction-label"></span>').text(item.label),$('<h3></h3>').text(item.title),$('<span class="mobile-direction-link"></span>').text('Подробнее ↗'));section.find('.mobile-directions-grid').append(card);}
+ // Keep one set of institute metrics; remove the redundant band and obsolete shortcuts.
+ $('#rec2936376001').remove();
+ $('#rec2936342401 [data-group-id="2026080923360000029"]').remove();
+ $('#rec2936342401 [data-group-id="2026080923360000016"]').attr('id','institute-metrics');
  $('#rec2593342901').after(section);html=$.html();
 }
 if(page.name==='page186983709.html'){

@@ -33,6 +33,8 @@ for(const f of output.filter(p=>/\.(css|js)$/.test(p)))assert.ok(!/tilda|tn-atom
 let preservedCanvasBlocks=0;
 for(const name of Object.keys(await json('src/data/compositions.json'))){
  const old=load(await readFile(join(baseline,name),'utf8')),current=load(await readFile(join(built,name),'utf8'));
+ // Explicitly requested homepage removals; all remaining compositions retain their structure.
+ if(name==='index.html'){old('#rec2936376001').remove();old('#rec2936342401 .tn-group[data-group-id="2026080923360000029"]').remove();}
  for(const block of old('#allrecords [data-record-type="396"]').toArray()){
   if(old(block).closest('#t-header,#t-footer').length)continue;
   const id=old(block).attr('id'),found=current('#'+id);assert.equal(found.length,1,'Authored block missing: '+name+' '+id);
@@ -50,6 +52,10 @@ for(const f of output.filter(p=>p.endsWith('.css'))){
 }
 assert.deepEqual(errors,[],'Missing CSS resources');
 const home=load(await readFile('dist/index.html','utf8'));const shell=[];for(const n of home('script[src],link[rel="stylesheet"]').toArray()){const path=(home(n).attr('src')||home(n).attr('href')).replace('/ever-youth/','');shell.push({path,bytes:(await stat(join(built,path))).size});}
+assert.equal(home('#rec2936376001').length,0,'Duplicate homepage metrics remain');
+assert.equal(home('#rec2936342401 [data-group-id="2026080923360000029"]').length,0,'Obsolete Roman shortcuts remain');
+assert.equal(home('#rec2936342401 [data-group-id="2026080923360000016"]').length,1,'Primary institute metrics missing');
+assert.equal(home('header .brand small').length,0,'Unrequested brand subtitle remains');
 assert.ok(!home('script[src]').toArray().some(n=>/three|react|ModelViewer/.test(home(n).attr('src'))),'Heavy island loaded on homepage');
 assert.equal(home('video.original-background-video[autoplay][muted][playsinline] source[src="video/30027af1c993f1fac795.mp4"]').length,1,'Original background video missing');
 console.log('Preserved authored composition blocks: '+preservedCanvasBlocks);
