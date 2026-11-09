@@ -1,6 +1,6 @@
 {
   "name": "page170676909.html",
-  "title": "Запись",
+  "title": "Запись и контакты",
   "description": "Запись на приём в ИТВМ Арбат по телефону и WhatsApp. Выбор специалиста и времени визита: +7 (495) 646-07-73.",
   "kind": "booking",
   "sections": [
@@ -22,5 +22,6 @@
       "videos": []
     }
   ],
-  "priceRows": []
+  "priceRows": [],
+  "alias": "page171084309.html#appointment"
 }

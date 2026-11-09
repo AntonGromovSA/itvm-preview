@@ -19,6 +19,9 @@ if(page.name==='index.html'){
  benefits.find('.advantages-motion').append(motion);
  $('#rec2936342401 [data-group-id="2026080923360000010"]').replaceWith(benefits);
  $('#rec2593342901').after(section);html=$.html();
+ const programmes=$(`<section class="home-programmes container" id="home-programmes"><p class="eyebrow">Программы и направления</p><h2>Лечение, восстановление и отдых</h2><div class="programme-features"><a class="programme-feature programme-spa" href="page171071209.html"><span class="programme-number">01 / Palazzo Termale</span><h3>Термальный комплекс<br>на Арбате</h3><p>Водные процедуры, массаж и программы восстановления.</p><span class="programme-more">О комплексе <b aria-hidden="true">↗</b></span></a><a class="programme-feature programme-age" href="page185863009.html"><span class="programme-number">02 / Программа клиники</span><h3>ANTI-AGE<br>«Омоложение»</h3><p>О программе, этапах и консультации специалиста.</p><span class="programme-more">Посмотреть программу <b aria-hidden="true">↗</b></span></a></div><a class="programme-science" href="exovesicles.html"><div><span class="programme-number">Наука о клетках</span><h3>Экзовезикулы</h3><p>ДНК, внеклеточные везикулы и межклеточный обмен — в интерактивной сцене.</p></div><span aria-hidden="true">↗</span></a><div class="programme-directory" aria-label="Другие программы"></div></section>`);
+ for(const [title,href] of [['Мужское и женское здоровье','page172935509.html'],['Возвращение молодости','page172831609.html'],['Лечение менопаузы','page172574209.html'],['Восстановление после операций','page172542009.html'],['Восстановление обоняния','page185646609.html']])programmes.find('.programme-directory').append($('<a></a>').attr('href',href).text(title+' ↗'));
+ $('[data-group-id="2026081000075000010"]').closest('.art-rec').replaceWith(programmes);html=$.html();
 }
 if(page.name==='page186983709.html'){
  const $=load(html,{},false),section=$('<section class="mobile-certificate container"><p class="eyebrow">Подарочный сертификат</p><h2>Что входит</h2><p>Сертификат открывает весь центр — от СПА-программ и массажа до диагностики и приёма специалистов.</p><details><summary>Направления института</summary><ul></ul></details></section>');
@@ -31,6 +34,7 @@ if(page.name==='page178642509.html'){
  html=$.html();
 }
 if(html.includes('data-source-row')){const $=load(html,{},false);$('tr[data-source-row]').each((_,el)=>{const row=$(el),item=priceByRow.get(Number(row.attr('data-source-row')));if(item){row.attr('data-price-row',String(item.sourceRow));row.find('td').first().text(item.name);row.find('td').last().text(amount(item.price));}});html=$.html();}
+html=html.replaceAll('page170676909.html','page171084309.html#appointment');
 ---
 {entry&&<><link rel="stylesheet" href={'/ever-youth/'+entry.css}/>{!entry.hasH1&&page.kind!=='home'&&<h1 class="sr-only">{page.title}</h1>}<Fragment set:html={html}/>{page.name==='page172957109.html'&&<section class="container mobile-doctors" aria-label="Каталог специалистов"><DoctorDirectory/></section>}</>}
 <script>

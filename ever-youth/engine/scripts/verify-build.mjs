@@ -25,7 +25,7 @@ for(const page of pages){
   for(let value of values){if(/^(?:[a-z]+:|\/\/|#)/i.test(value))continue;let path=decodeURIComponent(value.split(/[?#]/)[0]);if(!path)continue;if(path.startsWith('/ever-youth/'))path=path.slice(12);else if(path.startsWith('/'))continue;references++;await stat(join(built,path)).catch(()=>errors.push(page.name+': '+path));}
  }
 }
-assert.deepEqual(errors,[],'Missing public references');assert.equal(pages.length,120);assert.equal(load(await readFile('dist/page178607409.html','utf8'))('tr[data-price-row]').length,1760);
+assert.deepEqual(errors,[],'Missing public references');assert.equal(pages.length,121);assert.equal(load(await readFile('dist/page178607409.html','utf8'))('tr[data-price-row]').length,1760);
 const search=await json('dist/replica-search.json');assert.equal(search.filter(i=>i.url.includes('&center=')).length,1760);assert.equal(people.length,40);
 const files=async dir=>(await Promise.all((await readdir(dir,{withFileTypes:true})).map(d=>d.isDirectory()?files(join(dir,d.name)):join(dir,d.name)))).flat();
 const output=await files(built);assert.ok(output.every(p=>!/[\\/]assets[\\/]|\.ttf$|component-tests|\.php$|\.csv$|\.xls/i.test(p)),'Old assets, lab or private source in output');
@@ -34,7 +34,8 @@ let preservedCanvasBlocks=0;
 for(const name of Object.keys(await json('src/data/compositions.json'))){
  const old=load(await readFile(join(baseline,name),'utf8')),current=load(await readFile(join(built,name),'utf8'));
  // Explicitly requested homepage removals; all remaining compositions retain their structure.
- if(name==='index.html'){old('#rec2936376001').remove();old('#rec2936342401 .tn-group[data-group-id="2026080923360000010"]').remove();}
+ if(name==='page171084309.html')continue; // Replaced by the unified native booking/contact page.
+ if(name==='index.html'){old('#rec2936376001').remove();old('#rec2936342401 .tn-group[data-group-id="2026080923360000010"]').remove();old('[data-group-id="2026081000075000010"]').closest('[data-record-type]').remove();}
  for(const block of old('#allrecords [data-record-type="396"]').toArray()){
   if(old(block).closest('#t-header,#t-footer').length)continue;
   const id=old(block).attr('id'),found=current('#'+id);assert.equal(found.length,1,'Authored block missing: '+name+' '+id);
@@ -56,9 +57,13 @@ assert.equal(home('#rec2936376001').length,0,'Duplicate homepage metrics remain'
 assert.equal(home('#rec2936342401 [data-group-id="2026080923360000029"]').length,0,'Obsolete Roman shortcuts remain');
 assert.equal(home('#institute-metrics.home-advantages').length,1,'Institute advantages missing');
 assert.equal(home('.advantages-list>li').length,4,'Expected four patient-facing advantages');
+assert.equal(home('#home-programmes .programme-feature').length,2,'Readable programme panels missing');
+assert.equal(home('#home-programmes a[href="exovesicles.html"]').length,1,'New science page inaccessible');
+const contact=load(await readFile('dist/page171084309.html','utf8'));assert.equal(contact('#appointment').length,1);assert.equal(contact('#directions').length,1);assert.equal(contact('nav a[href="page171084309.html"]').length,1);assert.equal(contact('nav a[href*="#appointment"]').length,0);
+const exo=load(await readFile('dist/exovesicles.html','utf8'));assert.equal(exo('.science-step').length,4);assert.equal(exo('[data-motion-toggle]').length,1);assert.equal(exo('.scene-fallback').length,1);
 assert.equal(home('.advantages-motion video[autoplay][muted][playsinline]').length,1,'Original five-element motion missing');
 assert.equal(home('header .brand small').length,0,'Unrequested brand subtitle remains');
 assert.ok(!home('script[src]').toArray().some(n=>/three|react|ModelViewer/.test(home(n).attr('src'))),'Heavy island loaded on homepage');
 assert.equal(home('video.original-background-video[autoplay][muted][playsinline] source[src="video/30027af1c993f1fac795.mp4"]').length,1,'Original background video missing');
 console.log('Preserved authored composition blocks: '+preservedCanvasBlocks);
-const report={pages:120,doctors:40,priceItems:1760,tariffUnchanged:true,biographyParagraphsPreserved:biographies,vendorRuntimeRemoved:true,localReferences:references,searchEntries:search.length,homepageBytes:(await stat('dist/index.html')).size,homepageCssAndJs:shell,largestHtml:htmlSizes.sort((a,b)=>b.bytes-a.bytes).slice(0,4),errors};await mkdir('reports',{recursive:true});await writeFile('reports/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+const report={pages:pages.length,doctors:40,priceItems:1760,tariffUnchanged:true,biographyParagraphsPreserved:biographies,vendorRuntimeRemoved:true,localReferences:references,searchEntries:search.length,homepageBytes:(await stat('dist/index.html')).size,homepageCssAndJs:shell,largestHtml:htmlSizes.sort((a,b)=>b.bytes-a.bytes).slice(0,4),errors};await mkdir('reports',{recursive:true});await writeFile('reports/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));

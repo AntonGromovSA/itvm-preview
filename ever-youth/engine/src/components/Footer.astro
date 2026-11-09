@@ -1,5 +1,5 @@
 ---
 import{readFileSync}from'node:fs';import footer from'../data/composition-footer.json';
-const html=readFileSync('src/compositions/footer.html','utf8');
+const html=readFileSync('src/compositions/footer.html','utf8').replaceAll('page170676909.html','page171084309.html#appointment');
 ---
 <footer class="site-footer restored-footer"><link rel="stylesheet" href={'/ever-youth/'+footer.css}/><Fragment set:html={html}/></footer>
