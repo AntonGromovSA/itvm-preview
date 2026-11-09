@@ -11,7 +11,7 @@ for(const page of pages){
  assert.ok(!$('style').length,'Styles should be cached as separate files: '+page.name);assert.ok(!$('form[action]').length,'Unexpected form submission');
  const ids=$('[id]').map((_,n)=>$(n).attr('id')).get();assert.equal(new Set(ids).size,ids.length,'Duplicate ids: '+page.name);
  if(page.alias)assert.ok($('meta[http-equiv="refresh"]').attr('content')?.includes(page.alias));
- for(const tr of $('tr[data-price-row]').toArray()){const item=priceMap.get(Number($(tr).attr('data-price-row')));assert.ok(item);const cells=$(tr).find('td');assert.equal(normalize(cells.first().text()),normalize(item.name));assert.equal(normalize(cells.last().text()),normalize(amount(item.price)));}
+ for(const tr of $('tr[data-price-row]').toArray()){const item=priceMap.get(Number($(tr).attr('data-price-row')));assert.ok(item);const cells=$(tr).find('td');assert.equal(normalize(cells.first().find('.service-name').length?cells.first().find('.service-name').text():cells.first().text()),normalize(item.name));assert.equal(normalize(cells.last().text()),normalize(amount(item.price)));}
  if(page.kind==='doctor'){
   assert.ok(people.some(p=>p.href===page.name),'Profile missing from native directory');
   const old=load(await readFile(join(baseline,page.name),'utf8'));const current=normalize($('main').text());

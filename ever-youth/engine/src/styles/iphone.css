@@ -1,0 +1,55 @@
+/* Preserve the authored compositions; correct their narrow-screen coordinates. */
+.mobile-doctors,.mobile-directions,.mobile-certificate{display:none}
+@media(max-width:760px){
+ html{-webkit-text-size-adjust:100%;scroll-padding-top:100px}
+ .site-header{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+ input:not([type=checkbox]),select,textarea{font-size:16px!important}
+ .authored-page .canvas__elem-flex.node-group,.authored-page .canvas__elem-flex.node-elem{max-width:100%!important;box-sizing:border-box!important}
+ .authored-page table{width:100%!important;max-width:100%;table-layout:fixed}
+ .authored-page table th,.authored-page table td{overflow-wrap:anywhere;word-break:normal;white-space:normal!important;text-align:left;line-height:1.6}
+ .authored-page table tr[data-price-row] td:last-child{width:85px;text-align:right}
+ .authored-page :is(#rec3247443301,#rec3518018801,#rec2777143201,#rec2777143301,#rec2867335401,#rec2867436301,#rec2867448001,#rec2867452301,#rec3004344301,#rec3004355901,#rec3004359701,#rec3004364801,#rec3004366101) .canvas__artboard{height:auto!important;min-height:0!important}
+ .authored-page :is(#rec3247443301,#rec3518018801,#rec2777143201,#rec2777143301,#rec2867335401,#rec2867436301,#rec2867448001,#rec2867452301,#rec3004344301,#rec3004355901,#rec3004359701,#rec3004364801,#rec3004366101) .canvas__artboard>.node-group{position:relative!important;left:0!important;top:0!important;margin-inline:auto!important;max-width:calc(100% - 40px)!important;transform:none!important;height:auto!important}
+ .authored-page :is(#rec3247443301,#rec3518018801,#rec2777143201,#rec2777143301,#rec2867335401,#rec2867436301,#rec2867448001,#rec2867452301,#rec3004344301,#rec3004355901,#rec3004359701,#rec3004364801,#rec3004366101) .canvas__artboard>.node-group>.node-molecule{height:auto!important;min-height:0!important}
+ .authored-page #rec2796209601 .canvas__artboard>.node-group{left:50%!important;transform:translateX(-50%);max-width:calc(100% - 40px)!important}
+ .authored-page .node-molecule{min-width:0}
+ .authored-page .itvm-addition-inner{max-width:100%;box-sizing:border-box;padding-inline:20px!important}
+ .authored-page .itvm-addition-inner h1{font-size:clamp(26px,7.3vw,30px)!important;line-height:1.25;overflow-wrap:break-word;hyphens:auto}
+ .authored-page .itvm-addition-inner h2{font-size:clamp(26px,7.3vw,30px)!important;line-height:1.25!important;overflow-wrap:anywhere;hyphens:auto}
+ .authored-page .itvm-addition-inner h3{font-size:24px!important;line-height:1.35!important;overflow-wrap:anywhere}
+ .authored-page .itvm-addition-inner h4{font-size:20px!important;line-height:1.4!important;overflow-wrap:anywhere}
+ .authored-page .itvm-addition-inner :is(p,li,td){font:15px/1.75 Onest,Arial,sans-serif!important;overflow-wrap:anywhere}
+ .authored-page .node-atom a{overflow-wrap:break-word}
+ .authored-page .node-atom{white-space:normal!important;overflow-wrap:break-word}
+ .authored-page[data-authored-page="page172957109.html"]>.art-rec,
+ .authored-page[data-authored-page="page172957109.html"]>#details,
+ .authored-page[data-authored-page="page172957109.html"] .ey-source-section h2,
+ .authored-page[data-authored-page="page172957109.html"] .ey-doctor-grid{display:none!important}
+ .authored-page[data-authored-page="page172957109.html"] .ey-source-section{padding:35px 0 25px!important}
+ .mobile-doctors{display:block;padding:0 0 55px}
+ .mobile-doctors .doctor-filter input{min-height:52px;background:#fff}
+ .mobile-doctors .doctor-card p{-webkit-line-clamp:4}
+ .mobile-doctors .doctor-card .text-link{min-height:44px;display:inline-flex;align-items:center}
+ .authored-page #rec2593342901,.authored-page #rec3004351001{display:none!important}
+ .authored-page .mobile-directions,.authored-page .mobile-certificate{display:block;padding-block:50px;box-sizing:border-box;font-family:Onest,Arial,sans-serif}
+ .authored-page .mobile-directions h2,.authored-page .mobile-certificate h2{font:32px/1.2 Prata,Georgia,serif;margin:0 0 28px}
+ .mobile-directions-grid{display:grid;grid-template-columns:1fr;gap:30px}
+ .mobile-direction{display:block;color:inherit;text-decoration:none}
+ .mobile-direction>img{width:100%;height:210px;object-fit:cover;border-radius:3px;margin-bottom:17px}
+ .mobile-direction-label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7a806d;margin-bottom:9px}
+ .authored-page .mobile-direction h3{font:28px/1.3 Prata,Georgia,serif!important;margin:0 0 12px}
+ .mobile-direction-link{display:inline-flex;align-items:center;min-height:44px;font-size:12px;border-bottom:1px solid #b7a27d}
+ .mobile-certificate>p:not(.eyebrow){font-size:15px;line-height:1.8;margin-bottom:25px}
+ .mobile-certificate details{border-block:1px solid #d6d9cc;padding:0}
+ .mobile-certificate summary{font-size:15px;padding:20px 0;cursor:pointer}
+ .mobile-certificate ul{padding:0 0 20px 22px;font-size:14px;line-height:2}
+ .authored-page #rec3247444301 [data-elem-id="1785622662873000012"]{transform:translateY(28px)}
+ .authored-page :is(#rec3032147601 [data-elem-id="2026080922562000004"],#rec2867898901 [data-elem-id="2026080923214000005"]){position:relative!important;left:auto!important;top:auto!important;order:2;margin:24px auto!important}
+ .authored-page :is(#rec3032147601 [data-elem-id="2026080922562000004"],#rec2867898901 [data-elem-id="2026080923214000005"]) .node-atom{font-size:80px!important;line-height:1.1!important}
+ .authored-page #rec3032147601 [data-elem-id="2026080922562000004"]::after{content:'методов лечения';display:block;text-align:center;font:11px/1.6 Onest,Arial,sans-serif;letter-spacing:.1em;color:#657269}
+ .authored-page #rec2867898901 [data-elem-id="2026080923214000005"]::after{content:'программ';display:block;text-align:center;font:11px/1.6 Onest,Arial,sans-serif;letter-spacing:.1em;color:#657269}
+}
+@media(max-width:360px){
+ .authored-page #rec2593342901 [data-ey-heading]{font-size:36px!important;max-width:calc(100vw - 40px)!important}
+ .authored-page #rec2986552001 .canvas__artboard>.node-group{left:50%!important;transform:translateX(-50%);max-width:calc(100% - 40px)!important}
+}

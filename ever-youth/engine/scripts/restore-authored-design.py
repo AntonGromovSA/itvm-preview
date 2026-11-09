@@ -51,6 +51,13 @@ def paint(name,value):
    return '#8b704b' if (r+g+b)/3>155 and r>b+25 else '#28332f' if (r+g+b)/3>155 else m[0]
   value=re.sub(r'rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,[\d.\s]+)?\)',foreground_rgb,value)
  if 'background' in name:
+  def pale_background(m):
+   h=m[1];h=''.join(c*2 for c in h) if len(h)==3 else h
+   if len(h) not in (6,8):return m[0]
+   if max(int(h[i:i+2],16) for i in (0,2,4))<70:
+    return 'rgba(250,249,246,'+str(round(int(h[6:8],16)/255,3))+')' if len(h)==8 else '#faf9f6'
+   return m[0]
+  value=re.sub(r'#([0-9a-fA-F]{3,8})(?![0-9a-fA-F])',pale_background,value)
   value=re.sub(r'rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,[\d.\s]+)?\)',lambda m:'rgba(250,249,246'+(m[4] or ',1')+')' if all(int(m[i])<70 for i in (1,2,3)) else m[0],value)
  return value
 def declarations(content):

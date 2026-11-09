@@ -2,14 +2,51 @@
 import{readFileSync}from'node:fs';import{resolve}from'node:path';import{load}from'cheerio';
 import compositionData from '../data/compositions.json';import{priceByRow,amount}from'../lib/content';import type{ClinicPage}from'../lib/types';
 import '../styles/authored.css';
+import DoctorDirectory from './DoctorDirectory.astro';
+import priceNavigation from '../data/price-navigation.json';
+import mobileDirections from '../data/home-mobile-directions.json';
 interface Props{page:ClinicPage}const{page}=Astro.props;
 const entries=compositionData as Record<string,{htmlFile:string;css:string;hasH1:boolean}>;const entry=entries[page.name];
 let html=entry?readFileSync(resolve('src/compositions',entry.htmlFile),'utf8'):'';
+if(page.name==='index.html'){
+ const $=load(html,{},false),section=$('<section class="mobile-directions container" aria-label="Направления института"><p class="eyebrow">Институт на Арбате</p><h2>Направления ИТВМ</h2><div class="mobile-directions-grid"></div></section>');
+ for(const item of mobileDirections){const card=$('<a class="mobile-direction"></a>').attr('href',item.href);card.append($('<img loading="lazy" alt="" width="600" height="400"/>').attr('src','/ever-youth/design-media/'+item.image),$('<span class="mobile-direction-label"></span>').text(item.label),$('<h3></h3>').text(item.title),$('<span class="mobile-direction-link"></span>').text('Подробнее ↗'));section.find('.mobile-directions-grid').append(card);}
+ $('#rec2593342901').after(section);html=$.html();
+}
+if(page.name==='page186983709.html'){
+ const $=load(html,{},false),section=$('<section class="mobile-certificate container"><p class="eyebrow">Подарочный сертификат</p><h2>Что входит</h2><p>Сертификат открывает весь центр — от СПА-программ и массажа до диагностики и приёма специалистов.</p><details><summary>Направления института</summary><ul></ul></details></section>');
+ for(const title of ['Консультации специалистов','Инструментальная диагностика','Лабораторная диагностика','Физиотерапия','Программы долголетия','Восстановление обоняния'])section.find('ul').append($('<li></li>').text(title));
+ $('#rec3004351001').after(section);html=$.html();
+}
+if(page.name==='page178642509.html'){
+ const $=load(html,{},false),grid=$('.ey-service-grid').empty();
+ for(const item of priceNavigation){const card=$('<a class="ey-service-card"></a>').attr('href','page178607409.html?center='+item.id+'#price-list');card.append($('<h2></h2>').text(item.title),$('<p></p>').text(item.description),$('<span></span>').text('Смотреть цены ↗'));grid.append(card);}
+ html=$.html();
+}
 if(html.includes('data-source-row')){const $=load(html,{},false);$('tr[data-source-row]').each((_,el)=>{const row=$(el),item=priceByRow.get(Number(row.attr('data-source-row')));if(item){row.attr('data-price-row',String(item.sourceRow));row.find('td').first().text(item.name);row.find('td').last().text(amount(item.price));}});html=$.html();}
 ---
-{entry&&<><link rel="stylesheet" href={'/ever-youth/'+entry.css}/>{!entry.hasH1&&page.kind!=='home'&&<h1 class="sr-only">{page.title}</h1>}<Fragment set:html={html}/></>}
+{entry&&<><link rel="stylesheet" href={'/ever-youth/'+entry.css}/>{!entry.hasH1&&page.kind!=='home'&&<h1 class="sr-only">{page.title}</h1>}<Fragment set:html={html}/>{page.name==='page172957109.html'&&<section class="container mobile-doctors" aria-label="Каталог специалистов"><DoctorDirectory/></section>}</>}
 <script>
  document.querySelectorAll<HTMLElement>('.authored-page').forEach(root=>{
+  // Exported fixed artboard heights must accommodate wrapped text on narrow screens.
+  let fitting=0;
+  const fitMobileBoards=()=>{
+   fitting=0;
+   root.querySelectorAll<HTMLElement>('.canvas__artboard').forEach(board=>{
+    board.style.minHeight='';
+    if(!matchMedia('(max-width:760px)').matches)return;
+    const bounds=board.getBoundingClientRect();if(!bounds.width||!bounds.height)return;
+    let bottom=bounds.bottom;
+    for(const atom of board.querySelectorAll<HTMLElement>('.node-atom')){
+     const rect=atom.getBoundingClientRect(),style=getComputedStyle(atom);
+     if(rect.width&&rect.height&&style.visibility!=='hidden'&&atom.textContent?.trim()&&parseFloat(style.fontSize)<80&&rect.right>bounds.left&&rect.left<bounds.right)bottom=Math.max(bottom,rect.bottom);
+    }
+    if(bottom>bounds.bottom+2)board.style.setProperty('min-height',Math.ceil(bottom-bounds.top+24)+'px','important');
+   });
+  };
+  const scheduleFit=()=>{if(!fitting)fitting=requestAnimationFrame(fitMobileBoards);};
+  window.addEventListener('resize',scheduleFit,{passive:true});
+  document.fonts.ready.then(scheduleFit);window.addEventListener('load',scheduleFit,{once:true});scheduleFit();
   root.querySelectorAll<HTMLElement>('.authored-track').forEach(track=>{const controls=track.previousElementSibling;controls?.querySelector('[data-carousel-prev]')?.addEventListener('click',()=>track.scrollBy({left:-track.clientWidth,behavior:'smooth'}));controls?.querySelector('[data-carousel-next]')?.addEventListener('click',()=>track.scrollBy({left:track.clientWidth,behavior:'smooth'}));const carousel=track.closest('.carousel')||track.parentElement;carousel?.querySelectorAll<HTMLElement>('[data-slide-direction]').forEach(button=>{button.setAttribute('role','button');button.tabIndex=0;const go=()=>track.scrollBy({left:(button.dataset.slideDirection==='left'?-1:1)*track.clientWidth,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});button.addEventListener('click',go);button.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});});
   root.querySelectorAll<HTMLElement>('.art-rec').forEach(section=>{const tabs=[...section.querySelectorAll<HTMLElement>('[data-native-targets]')];if(!tabs.length)return;const all=new Set(tabs.flatMap(t=>(t.dataset.nativeTargets||'').split(',').filter(Boolean)));const choose=(value:string)=>{const selected=new Set(value.split(','));for(const id of all){const panel=document.getElementById('rec'+id);if(panel)panel.hidden=!selected.has(id);}for(const tab of tabs){const active=tab.dataset.nativeTargets===value;tab.classList.toggle('section1281__tab_active',active);tab.classList.toggle('section976__tab_active',active);const button=tab.querySelector<HTMLButtonElement>('button');if(button){button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;}}};tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>choose(tab.dataset.nativeTargets!));tab.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();const next=tabs[(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];next.querySelector<HTMLButtonElement>('button')?.focus();choose(next.dataset.nativeTargets!);}});});section.querySelector<HTMLSelectElement>('select')?.addEventListener('change',event=>choose((event.target as HTMLSelectElement).value));choose(tabs[0].dataset.nativeTargets!);});
  });
