@@ -1,5 +1,28 @@
 /* Preserve the authored compositions; correct their narrow-screen coordinates. */
 .mobile-doctors,.mobile-directions,.mobile-certificate{display:none}
+.authored-page #rec2936342401 #molecule-2026080923360000005{opacity:1!important}
+.authored-page .home-advantages{flex:1 1 350px;align-self:center;min-width:0;max-width:560px;box-sizing:border-box;padding:34px 36px 28px;border-radius:38px 38px 38px 10px;background:#f5e5db;color:#543f36;position:relative;isolation:isolate;font-family:Onest,Arial,sans-serif}
+.advantages-intro{display:flex;align-items:center;gap:12px;justify-content:space-between;margin-bottom:24px}
+.authored-page .advantages-kicker{font-size:10px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:#976349;margin-bottom:13px}
+.authored-page .home-advantages h2{font:30px/1.3 Prata,Georgia,serif!important;color:#684a3c;letter-spacing:-.025em}
+.advantages-motion{width:70px;height:70px;flex-shrink:0;overflow:hidden;border-radius:50%;opacity:.8}
+.advantages-motion video{width:100%;height:100%;object-fit:cover}
+.authored-page .advantages-list{list-style:none;display:flex;flex-direction:column;gap:23px;margin:0;padding:0}
+.advantages-list>li{display:flex;align-items:flex-start;gap:18px}
+.advantage-mark{display:flex;align-items:center;justify-content:center;flex:0 0 48px;height:48px;border-radius:50%;background:#fff8;color:#a46349;font:26px/1 Prata,Georgia,serif;letter-spacing:-.05em}
+.authored-page .home-advantages h3{font:500 16px/1.45 Onest,Arial,sans-serif!important;letter-spacing:0!important;color:#543f36;margin:0 0 5px}
+.authored-page .home-advantages li p{font:14px/1.6 Onest,Arial,sans-serif;color:#796257;margin:0}
+.authored-page a.advantages-contact{display:flex;justify-content:space-between;align-items:center;min-height:44px;margin-top:23px;padding-top:13px;border-top:1px solid #bc917440;color:#8c513c!important;font-size:13px;text-decoration:none!important}
+@media(max-width:760px){
+ .authored-page .home-advantages{flex:none;align-self:stretch;width:100%;max-width:none;padding:29px 23px 23px;border-radius:30px 30px 30px 8px}
+ .authored-page #rec2936342401 [data-group-id="2026080923360000009"]{width:100%!important}
+ .authored-page .home-advantages h2{font-size:27px!important}
+ .advantages-motion{width:54px;height:54px}
+ .advantages-list>li{gap:14px}
+ .advantage-mark{flex-basis:42px;height:42px;font-size:24px}
+ .authored-page .home-advantages h3{font-size:15px!important}
+}
+@media(max-width:360px){.advantages-motion{display:none}.authored-page .home-advantages{padding-inline:20px}.authored-page .home-advantages h2{font-size:25px!important}.advantages-list>li{gap:12px}.advantage-mark{flex-basis:36px;height:36px;font-size:21px}}
 .brand-mark-real{width:56px;height:60px}
 .brand strong{font-size:32px}
 .header-inner{min-height:96px}

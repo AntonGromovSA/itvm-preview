@@ -14,7 +14,10 @@ if(page.name==='index.html'){
  // Keep one set of institute metrics; remove the redundant band and obsolete shortcuts.
  $('#rec2936376001').remove();
  $('#rec2936342401 [data-group-id="2026080923360000029"]').remove();
- $('#rec2936342401 [data-group-id="2026080923360000016"]').attr('id','institute-metrics');
+ const motion=$('#rec2936342401 [data-group-id="2026080923360000010"] video').first().clone().removeAttr('style');
+ const benefits=$(`<section class="home-advantages" id="institute-metrics" aria-labelledby="advantages-heading"><div class="advantages-intro"><div><p class="advantages-kicker">Знакомьтесь, ИТВМ</p><h2 id="advantages-heading">Почему выбирают<br>ИТВМ</h2></div><div class="advantages-motion" aria-hidden="true"></div></div><ul class="advantages-list"><li><span class="advantage-mark">30+</span><div><h3>Лет на Арбате</h3><p>Принимаем пациентов в историческом центре Москвы.</p></div></li><li><span class="advantage-mark" aria-hidden="true">↗</span><div><h3>От консультации до восстановления</h3><p>Специалисты, диагностика и лечебные процедуры в одном институте.</p></div></li><li><span class="advantage-mark" aria-hidden="true">≈</span><div><h3>Клиника и термальный комплекс</h3><p>Медицинские направления и Palazzo Termale по одному адресу.</p></div></li><li><span class="advantage-mark">5</span><div><h3>Минут пешком от метро</h3><p>Филипповский переулок, 18 — рядом с Арбатской и Кропоткинской.</p></div></li></ul><a class="advantages-contact" href="page171084309.html">Как нас найти <span aria-hidden="true">↗</span></a></section>`);
+ benefits.find('.advantages-motion').append(motion);
+ $('#rec2936342401 [data-group-id="2026080923360000010"]').replaceWith(benefits);
  $('#rec2593342901').after(section);html=$.html();
 }
 if(page.name==='page186983709.html'){
